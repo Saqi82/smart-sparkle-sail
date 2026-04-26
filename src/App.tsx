@@ -18,6 +18,9 @@ const Flashcards = lazy(() => import("./pages/Flashcards"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const StudyPlan = lazy(() => import("./pages/StudyPlan"));
 const ExamTips = lazy(() => import("./pages/ExamTips"));
+const Explainer = lazy(() => import("./pages/Explainer"));
+const EssayOutline = lazy(() => import("./pages/EssayOutline"));
+const Mnemonics = lazy(() => import("./pages/Mnemonics"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -32,16 +35,19 @@ function AnimatedRoutes() {
     <Suspense fallback={<Loader message="Loading page..." />}>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Landing />} />
-                <Route path="/summarizer" element={<Summarizer />} />
-                <Route path="/flashcards" element={<Flashcards />} />
-                <Route path="/quiz" element={<Quiz />} />
-                <Route path="/studyplan" element={<StudyPlan />} />
-                <Route path="/examtips" element={<ExamTips />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/summarizer" element={<Summarizer />} />
+          <Route path="/flashcards" element={<Flashcards />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/studyplan" element={<StudyPlan />} />
+          <Route path="/examtips" element={<ExamTips />} />
+          <Route path="/explainer" element={<Explainer />} />
+          <Route path="/essay-outline" element={<EssayOutline />} />
+          <Route path="/mnemonics" element={<Mnemonics />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

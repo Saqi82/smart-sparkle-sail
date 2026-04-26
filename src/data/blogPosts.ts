@@ -409,6 +409,97 @@ Know what you'll do if you blank. (Skip → return → easiest first.) A plan ki
 If anxiety stops you from showing up or sleeping, talk to a counselor. That's strength, not weakness.
 `,
   },
+  {
+    slug: "feynman-technique-step-by-step",
+    title: "The Feynman Technique: Learn Anything by Teaching It Back",
+    description:
+      "The Feynman technique turns confusion into clarity in 4 steps. Learn how to use it with an AI concept explainer to master tough topics fast.",
+    keywords: ["Feynman technique", "learning method", "concept explainer", "study smarter"],
+    category: "Study Techniques",
+    readTime: "6 min read",
+    date: "2025-02-04",
+    content: `
+## Why the Feynman technique works
+
+Nobel-winning physicist Richard Feynman had a simple rule: **if you can't explain it simply, you don't understand it.** That single idea is one of the most powerful learning tools ever created.
+
+## The 4 steps
+
+1. **Pick a concept.** Write its name at the top of a blank page.
+2. **Explain it like you're teaching a 12-year-old.** No jargon allowed.
+3. **Find the gaps.** The places where you stumble are the parts you don't actually know.
+4. **Go back to the source**, fix the gap, and try again.
+
+## Why it beats highlighting
+
+Highlighting is recognition. Teaching is **production**. Production forces your brain to organize, connect, and translate — three things passive review never does.
+
+## Use AI to speed up step 3
+
+The hard part is spotting your own gaps. Drop the concept into **StudyKro's Concept Explainer** and compare its ELI5, analogy, and detailed version against your own. The mismatches are your study targets.
+
+## Common mistakes
+
+- **Copy-pasting the textbook definition.** That's recognition, not understanding.
+- **Skipping the "explain to a kid" step.** The simplification is the whole point.
+- **Stopping at one pass.** Real mastery shows up on the second or third loop.
+
+## TL;DR
+
+Teach it. Find the holes. Patch them. Repeat. That's the entire method — and it works on anything from calculus to constitutional law.
+`,
+  },
+  {
+    slug: "memory-palace-method-for-students",
+    title: "The Memory Palace Method: Remember Lists, Dates, and Vocab With Ease",
+    description:
+      "The memory palace (method of loci) is a 2,000-year-old trick used by world memory champions. Here's how students can use it for exams.",
+    keywords: ["memory palace", "method of loci", "mnemonics", "memory techniques", "exam prep"],
+    category: "Memory & Recall",
+    readTime: "7 min read",
+    date: "2025-02-11",
+    content: `
+## What is a memory palace?
+
+A memory palace is a mental walk through a familiar place — your bedroom, your school hallway, your route to class — where you "place" the things you need to remember at specific spots.
+
+Greek orators used it to deliver hour-long speeches without notes. Modern memory champions use it to memorize the order of multiple shuffled decks of cards. **It works because your brain is wired for spatial memory.**
+
+## Build your first palace in 4 steps
+
+1. **Pick a place you know cold** — the more familiar, the better.
+2. **Pick a route through it.** Front door → hallway → kitchen → couch → bedroom. Always the same order.
+3. **Convert each item to a vivid image.** Boring images don't stick. Weird, funny, or gross ones do.
+4. **Place each image at one stop on the route.** To recall, walk the palace in your head.
+
+## Example: the planets
+
+Walking through your kitchen:
+
+- **Fridge** — a giant thermometer (Mercury)
+- **Sink** — Venus de Milo washing dishes
+- **Stove** — Earth on a frying pan
+- **Microwave** — a Mars bar melting inside
+- **Toaster** — Jupiter-sized, popping out a red spot
+
+You'll remember it tomorrow. And next month.
+
+## Where AI fits in
+
+Coming up with vivid imagery is the hard part. **StudyKro's Mnemonic Generator** spits out acronyms, stories, and memory palace walkthroughs for any list — so you can spend your time *placing* and *recalling*, not brainstorming.
+
+## What it's best for
+
+- Ordered lists (cranial nerves, presidents, taxonomies)
+- Vocabulary in a new language
+- Speech outlines and presentation points
+- Multi-step procedures (chemistry, anatomy)
+
+## TL;DR
+
+Pick a place. Walk a route. Place weird images. Recall by walking the route again. It feels silly. It works absurdly well.
+`,
+  },
 ];
 
 export const getPostBySlug = (slug: string) => blogPosts.find((p) => p.slug === slug);
