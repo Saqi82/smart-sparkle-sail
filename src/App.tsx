@@ -1,27 +1,76 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ErrorBoundary from "./components/ErrorBoundary";
+import OfflineBanner from "./components/OfflineBanner";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+
+const Landing = lazy(() => import("./pages/Landing"));
+const Summarizer = lazy(() => import("./pages/Summarizer"));
+const Flashcards = lazy(() => import("./pages/Flashcards"));
+const Quiz = lazy(() => import("./pages/Quiz"));
+const StudyPlan = lazy(() => import("./pages/StudyPlan"));
+const ExamTips = lazy(() => import("./pages/ExamTips"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <Suspense fallback={<Loader message="Loading page..." />}>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Landing />} />
+                <Route path="/summarizer" element={<Summarizer />} />
+                <Route path="/flashcards" element={<Flashcards />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/studyplan" element={<StudyPlan />} />
+                <Route path="/examtips" element={<ExamTips />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+      </AnimatePresence>
+    </Suspense>
+  );
+}
+
+function AppShell() {
+  const isOnline = useOnlineStatus();
+
+  if (!isOnline) {
+    return <OfflineBanner />;
+  }
+
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <AnimatedRoutes />
+      <Footer />
+    </BrowserRouter>
+  );
+}
+
+const App = () => (
+  <ErrorBoundary>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <AppShell />
+      </TooltipProvider>
+    </QueryClientProvider>
+  </ErrorBoundary>
 );
 
 export default App;
