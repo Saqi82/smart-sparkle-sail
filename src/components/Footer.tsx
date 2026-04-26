@@ -13,6 +13,9 @@ export default function Footer() {
     { to: "/quiz", label: "Quiz" },
     { to: "/studyplan", label: "Study Plan" },
     { to: "/examtips", label: "Exam Tips" },
+    { to: "/explainer", label: "Concept Explainer" },
+    { to: "/essay-outline", label: "Essay Outliner" },
+    { to: "/mnemonics", label: "Mnemonic Generator" },
     { to: "/about", label: "About" },
   ];
 
@@ -47,7 +50,7 @@ export default function Footer() {
           <div className="text-center lg:text-left">
             <h4 className="mb-4 text-sm font-display font-semibold">Tools</h4>
             <ul className="space-y-2">
-              {links.slice(1, 6).map((link) => (
+              {links.slice(1, 9).map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
                     <ArrowRight className="h-3.5 w-3.5" />
