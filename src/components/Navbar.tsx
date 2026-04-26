@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { FileText, Layers, ClipboardList, Calendar, Target, Menu, X, Info, Mail, ArrowRight } from "lucide-react";
+import { FileText, Layers, ClipboardList, Calendar, Target, Menu, X, Info, Mail, ArrowRight, BookOpen } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -10,6 +10,7 @@ const links = [
   { to: "/quiz", label: "Tool", sublabel: "Quiz", icon: ClipboardList },
   { to: "/studyplan", label: "Tool", sublabel: "Study Plan", icon: Calendar },
   { to: "/examtips", label: "Tool", sublabel: "Exam Tips", icon: Target },
+  { to: "/blog", label: "Read", sublabel: "Blog", icon: BookOpen },
   { to: "/about", label: "About", sublabel: "Platform", icon: Info },
   { to: "/contact", label: "Get in", sublabel: "Touch", icon: Mail },
 ];
