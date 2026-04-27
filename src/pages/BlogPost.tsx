@@ -146,15 +146,28 @@ export default function BlogPost() {
           <section className="mt-16">
             <h2 className="mb-6 font-display text-2xl font-bold">Related articles</h2>
             <div className="grid gap-4 sm:grid-cols-3">
-              {related.map((r) => (
-                <Link key={r.slug} to={`/blog/${r.slug}`} className="paper-panel block p-5 hover-lift">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">{r.category}</span>
-                  <p className="mt-2 font-display text-base font-semibold leading-snug line-clamp-3">{r.title}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                    Read <ArrowRight className="h-3 w-3" />
-                  </span>
-                </Link>
-              ))}
+              {related.map((r) => {
+                const ri = getBlogImage(r.slug);
+                return (
+                  <Link key={r.slug} to={`/blog/${r.slug}`} className="paper-panel block overflow-hidden hover-lift">
+                    <img
+                      src={ri.src}
+                      alt={ri.alt}
+                      width={1280}
+                      height={720}
+                      loading="lazy"
+                      className="aspect-[16/9] w-full object-cover"
+                    />
+                    <div className="p-4">
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">{r.category}</span>
+                      <p className="mt-2 font-display text-base font-semibold leading-snug line-clamp-3">{r.title}</p>
+                      <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                        Read <ArrowRight className="h-3 w-3" />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         )}
