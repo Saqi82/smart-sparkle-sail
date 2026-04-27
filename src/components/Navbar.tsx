@@ -1,12 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   FileText, Layers, ClipboardList, Calendar, Target, Menu, X, Info, Mail,
-  ArrowRight, BookOpen, Brain, PenLine, Sparkles, ChevronDown, Wrench
+  ArrowRight, BookOpen, Brain, PenLine, Sparkles, ChevronDown, Wrench,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { blogPosts } from "@/data/blogPosts";
+import { Button } from "@/components/ui/button";
 
 const tools = [
   { to: "/summarizer", label: "Notes Summarizer", desc: "Turn raw notes into a clean outline", icon: FileText },
@@ -35,50 +36,54 @@ export default function Navbar() {
   const isBlogPath = location.pathname.startsWith("/blog");
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border/20 bg-background/80 backdrop-blur-xl">
-      <div className="container flex h-[68px] items-center justify-between px-4 sm:h-[76px] sm:px-6">
-        <Link to="/" className="flex items-center gap-3 font-display text-lg font-bold">
-          <img src="/favicon.png" alt="StudyKro logo" className="h-10 w-10 rounded-[14px] bg-white/80 p-1.5 object-contain shadow-sm sm:h-11 sm:w-11" />
-          <div className="flex flex-col leading-none">
-            <span className="gradient-text text-base sm:text-lg">StudyKro</span>
-            <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-muted-foreground sm:text-[10px] sm:tracking-[0.26em]">AI study tools</span>
-          </div>
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70">
+      <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2.5 font-display text-base font-bold">
+          <img src="/favicon.png" alt="StudyKro logo" className="h-9 w-9 rounded-xl object-contain" />
+          <span className="text-foreground">Study<span className="text-primary">Kro</span></span>
         </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
-          {/* Tools dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setToolsOpen(true)}
-            onMouseLeave={() => setToolsOpen(false)}
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <Link
+            to="/"
+            className={cn(
+              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+              location.pathname === "/" ? "text-primary" : "text-muted-foreground hover:text-foreground"
+            )}
           >
+            Home
+          </Link>
+
+          {/* Tools mega menu */}
+          <div className="relative" onMouseEnter={() => setToolsOpen(true)} onMouseLeave={() => setToolsOpen(false)}>
             <button
               type="button"
-              onClick={() => setToolsOpen((v) => !v)}
               className={cn(
-                "flex items-center gap-1.5 rounded-[14px] px-3 py-2.5 text-sm font-medium transition-all duration-150",
-                isToolPath ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-card hover:text-foreground"
+                "flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                isToolPath ? "text-primary" : "text-muted-foreground hover:text-foreground"
               )}
               aria-expanded={toolsOpen}
             >
-              <Wrench className="h-4 w-4" />
+              <Wrench className="h-3.5 w-3.5" />
               Tools
               <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", toolsOpen && "rotate-180")} />
             </button>
             {toolsOpen && (
-              <div className="absolute left-0 top-full z-50 w-[560px] pt-2">
-                <div className="grid grid-cols-2 gap-1 rounded-[18px] border border-border/30 bg-popover p-3 shadow-xl">
+              <div className="absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-2">
+                <div className="grid grid-cols-2 gap-1 rounded-2xl border border-border bg-popover p-3 shadow-2xl">
                   {tools.map((t) => (
                     <Link
                       key={t.to}
                       to={t.to}
                       onClick={() => setToolsOpen(false)}
                       className={cn(
-                        "flex items-start gap-3 rounded-[12px] px-3 py-2.5 transition-colors",
+                        "flex items-start gap-3 rounded-xl px-3 py-3 transition-colors",
                         location.pathname === t.to ? "bg-primary/10" : "hover:bg-muted"
                       )}
                     >
-                      <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-primary/10 text-primary">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                         <t.icon className="h-4 w-4" />
                       </div>
                       <div className="min-w-0">
@@ -92,46 +97,43 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Blog dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setBlogOpen(true)}
-            onMouseLeave={() => setBlogOpen(false)}
-          >
+          {/* Blog menu */}
+          <div className="relative" onMouseEnter={() => setBlogOpen(true)} onMouseLeave={() => setBlogOpen(false)}>
             <button
               type="button"
-              onClick={() => setBlogOpen((v) => !v)}
               className={cn(
-                "flex items-center gap-1.5 rounded-[14px] px-3 py-2.5 text-sm font-medium transition-all duration-150",
-                isBlogPath ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-card hover:text-foreground"
+                "flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                isBlogPath ? "text-primary" : "text-muted-foreground hover:text-foreground"
               )}
               aria-expanded={blogOpen}
             >
-              <BookOpen className="h-4 w-4" />
+              <BookOpen className="h-3.5 w-3.5" />
               Blog
               <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", blogOpen && "rotate-180")} />
             </button>
             {blogOpen && (
-              <div className="absolute left-0 top-full z-50 w-[420px] pt-2">
-                <div className="rounded-[18px] border border-border/30 bg-popover p-3 shadow-xl">
+              <div className="absolute left-1/2 top-full z-50 w-[420px] -translate-x-1/2 pt-2">
+                <div className="rounded-2xl border border-border bg-popover p-3 shadow-2xl">
                   <Link
                     to="/blog"
                     onClick={() => setBlogOpen(false)}
-                    className="mb-2 flex items-center justify-between rounded-[12px] bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
+                    className="mb-2 flex items-center justify-between rounded-xl bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
                   >
                     All articles
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <div className="space-y-1">
+                  <div className="space-y-0.5">
                     {featuredBlogs.map((p) => (
                       <Link
                         key={p.slug}
                         to={`/blog/${p.slug}`}
                         onClick={() => setBlogOpen(false)}
-                        className="block rounded-[10px] px-3 py-2 transition-colors hover:bg-muted"
+                        className="block rounded-lg px-3 py-2 hover:bg-muted"
                       >
                         <div className="text-sm font-medium text-foreground line-clamp-1">{p.title}</div>
-                        <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{p.category} · {p.readTime}</div>
+                        <div className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                          {p.category} · {p.readTime}
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -145,107 +147,95 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={cn(
-                "flex items-center gap-1.5 rounded-[14px] px-3 py-2.5 text-sm font-medium transition-all duration-150",
-                location.pathname === link.to
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:bg-card hover:text-foreground"
+                "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                location.pathname === link.to ? "text-primary" : "text-muted-foreground hover:text-foreground"
               )}
             >
-              <link.icon className="h-4 w-4" />
               {link.label}
             </Link>
           ))}
-        </div>
+        </nav>
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <button className="rounded-full border border-border/20 bg-card/70 p-2 md:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"}>
+          <Button asChild size="sm" className="hidden sm:inline-flex">
+            <Link to="/summarizer">Try Free</Link>
+          </Button>
+          <button
+            className="rounded-lg border border-border p-2 lg:hidden"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
+      {/* Mobile menu */}
       {open && (
-        <div className="space-y-4 border-t border-border/20 bg-background/95 px-4 pb-5 pt-4 md:hidden">
+        <div className="space-y-5 border-t border-border bg-background px-4 pb-6 pt-4 lg:hidden">
+          <Link
+            to="/"
+            onClick={() => setOpen(false)}
+            className="block rounded-lg px-3 py-2.5 text-sm font-semibold"
+          >
+            Home
+          </Link>
+
           <div>
-            <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">Tools</p>
-            <div className="mt-2 space-y-2">
+            <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Tools</p>
+            <div className="mt-2 space-y-1">
               {tools.map((t) => (
                 <Link
                   key={t.to}
                   to={t.to}
                   onClick={() => setOpen(false)}
-                  className={cn(
-                    "flex items-center justify-between rounded-[14px] px-3 py-3 text-sm transition-colors",
-                    location.pathname === t.to ? "bg-primary/10 text-primary" : "paper-panel text-foreground"
-                  )}
+                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-muted"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-primary/10 text-primary">
-                      <t.icon className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <div className="font-medium">{t.label}</div>
-                      <div className="text-xs text-muted-foreground">{t.desc}</div>
-                    </div>
-                  </div>
-                  <ArrowRight className="h-4 w-4" />
+                  <t.icon className="h-4 w-4 text-primary" />
+                  <span>{t.label}</span>
                 </Link>
               ))}
             </div>
           </div>
 
           <div>
-            <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">Blog</p>
-            <div className="mt-2 space-y-2">
+            <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Blog</p>
+            <div className="mt-2 space-y-1">
               <Link
                 to="/blog"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-between rounded-[14px] bg-primary/10 px-3 py-3 text-sm font-semibold text-primary"
+                className="block rounded-lg bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
               >
                 All articles
-                <ArrowRight className="h-4 w-4" />
               </Link>
               {featuredBlogs.slice(0, 4).map((p) => (
                 <Link
                   key={p.slug}
                   to={`/blog/${p.slug}`}
                   onClick={() => setOpen(false)}
-                  className="block rounded-[14px] paper-panel px-3 py-3 text-sm"
+                  className="block rounded-lg px-3 py-2 text-sm hover:bg-muted"
                 >
-                  <div className="font-medium line-clamp-2">{p.title}</div>
-                  <div className="mt-1 text-[11px] uppercase tracking-wider text-muted-foreground">{p.category} · {p.readTime}</div>
+                  {p.title}
                 </Link>
               ))}
             </div>
           </div>
 
-          <div>
-            <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">More</p>
-            <div className="mt-2 space-y-2">
-              {primaryNav.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "flex items-center justify-between rounded-[14px] px-3 py-3 text-sm transition-colors",
-                    location.pathname === link.to ? "bg-primary/10 text-primary" : "paper-panel text-foreground"
-                  )}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-primary/10 text-primary">
-                      <link.icon className="h-4 w-4" />
-                    </div>
-                    <div className="font-medium">{link.label}</div>
-                  </div>
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              ))}
-            </div>
+          <div className="space-y-1">
+            {primaryNav.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-muted"
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

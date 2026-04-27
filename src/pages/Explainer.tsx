@@ -3,6 +3,7 @@ import { callAI } from "@/lib/ai";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { Brain, Lightbulb, BookOpen, AlertTriangle, Sparkles } from "lucide-react";
@@ -55,6 +56,23 @@ export default function Explainer() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Concept Explainer – ELI5, Analogies & Deep Dives | StudyKro"
+        description="Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique."
+        canonical="https://studykro.com/explainer"
+        keywords={["AI concept explainer","ELI5 generator","Feynman technique AI","explain like I'm 5","AI tutor","study concept breakdown"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Concept Explainer",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique.",
+          url: "https://studykro.com/explainer",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Understand</p>

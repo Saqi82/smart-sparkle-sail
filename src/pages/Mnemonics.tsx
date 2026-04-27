@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { Sparkles, Music, Eye, Building2 } from "lucide-react";
@@ -55,6 +56,23 @@ export default function Mnemonics() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Mnemonic Generator – Acronyms, Stories & Memory Palaces | StudyKro"
+        description="Free AI mnemonic generator. Turn lists, terms or facts into memorable acronyms, stories and memory palaces. Remember anything, faster."
+        canonical="https://studykro.com/mnemonics"
+        keywords={["AI mnemonic generator","memory palace generator","acronym maker","mnemonic device creator","memorization AI"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Mnemonic Generator",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI mnemonic generator. Turn lists, terms or facts into memorable acronyms, stories and memory palaces. Remember anything, faster.",
+          url: "https://studykro.com/mnemonics",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Memorize</p>

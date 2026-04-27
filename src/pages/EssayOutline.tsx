@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { PenLine, ListTree, Quote } from "lucide-react";
@@ -58,6 +59,23 @@ export default function EssayOutline() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Essay Outline Generator – Thesis, Body & Conclusion | StudyKro"
+        description="Free AI essay outline generator. Get a structured outline with thesis statement, supporting arguments, evidence and conclusion for any essay topic."
+        canonical="https://studykro.com/essay-outline"
+        keywords={["AI essay outline generator","essay outliner","thesis generator","essay structure AI","academic writing helper"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Essay Outline Generator",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI essay outline generator. Get a structured outline with thesis statement, supporting arguments, evidence and conclusion for any essay topic.",
+          url: "https://studykro.com/essay-outline",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Write</p>

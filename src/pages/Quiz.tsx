@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { ClipboardList, RotateCcw, BrainCircuit, BookOpenCheck } from "lucide-react";
@@ -116,6 +117,23 @@ export default function Quiz() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Quiz Generator – Create Practice Quizzes from Any Topic | StudyKro"
+        description="Free AI quiz generator. Create multiple-choice practice quizzes from your notes or any topic and self-test instantly. Perfect for exam prep."
+        canonical="https://studykro.com/quiz"
+        keywords={["AI quiz generator","practice quiz maker","MCQ generator","self-test AI","exam prep quiz","free quiz maker"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Quiz Generator",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI quiz generator. Create multiple-choice practice quizzes from your notes or any topic and self-test instantly. Perfect for exam prep.",
+          url: "https://studykro.com/quiz",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Smart</p>
