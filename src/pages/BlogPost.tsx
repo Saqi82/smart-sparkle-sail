@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Calendar, ChevronRight, Clock, Tag } from "lucid
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import { blogPosts, getPostBySlug } from "@/data/blogPosts";
+import { getBlogImage } from "@/data/blogImages";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import NotFound from "./NotFound";
 
