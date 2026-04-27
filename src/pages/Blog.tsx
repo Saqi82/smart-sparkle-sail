@@ -146,7 +146,16 @@ export default function Blog() {
             transition={{ duration: 0.3, delay: idx * 0.03 }}
             className="paper-panel group flex flex-col overflow-hidden hover-lift"
           >
-            <div className="aspect-[16/9] gradient-hero" />
+            <Link to={`/blog/${post.slug}`} className="block overflow-hidden">
+              <img
+                src={getBlogImage(post.slug).src}
+                alt={getBlogImage(post.slug).alt}
+                width={1280}
+                height={720}
+                loading="lazy"
+                className="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </Link>
             <div className="flex flex-1 flex-col p-5">
               <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">
                 {post.category}
