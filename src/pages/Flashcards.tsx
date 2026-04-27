@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { Layers, ChevronLeft, ChevronRight, Shuffle, Check, BookMarked, Sparkles } from "lucide-react";
@@ -93,6 +94,23 @@ export default function Flashcards() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Flashcard Generator – Make Flashcards from Notes | StudyKro"
+        description="Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition."
+        canonical="https://studykro.com/flashcards"
+        keywords={["AI flashcard generator","make flashcards from notes","free flashcard maker","active recall flashcards","study flashcards AI"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Flashcard Generator",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition.",
+          url: "https://studykro.com/flashcards",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Smart</p>

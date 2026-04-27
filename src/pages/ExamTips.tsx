@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { Target, AlertTriangle, Clock, Trophy } from "lucide-react";
@@ -63,6 +64,23 @@ export default function ExamTips() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Exam Tips – Predicted Questions & Last-Mile Prep | StudyKro"
+        description="Free AI exam tips generator. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject — in seconds."
+        canonical="https://studykro.com/examtips"
+        keywords={["AI exam tips","predicted exam questions","exam preparation guide","last-minute exam prep","exam strategy AI"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Exam Tips Generator",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI exam tips generator. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject — in seconds.",
+          url: "https://studykro.com/examtips",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Smart</p>

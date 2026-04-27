@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Checkbox } from "@/components/ui/checkbox";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { Calendar, AlertTriangle } from "lucide-react";
@@ -87,6 +88,23 @@ export default function StudyPlan() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Study Plan Generator – Personalized Revision Schedule | StudyKro"
+        description="Free AI study plan generator. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around proven study techniques."
+        canonical="https://studykro.com/studyplan"
+        keywords={["AI study plan generator","revision schedule","exam study planner","study timetable generator","personalized study plan"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Study Plan Generator",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI study plan generator. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around proven study techniques.",
+          url: "https://studykro.com/studyplan",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Smart</p>

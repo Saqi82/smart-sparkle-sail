@@ -3,6 +3,7 @@ import { callAI } from "@/lib/ai";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
 import { toast } from "sonner";
 import { FileText, Lightbulb, BookOpen, AlertTriangle, PencilRuler, Sparkles } from "lucide-react";
@@ -57,6 +58,23 @@ export default function Summarizer() {
 
   return (
     <PageWrapper>
+
+      <Seo
+        title="Free AI Notes Summarizer – Turn Long Notes into Key Points | StudyKro"
+        description="Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds."
+        canonical="https://studykro.com/summarizer"
+        keywords={["AI notes summarizer","summarize notes online","AI summary generator","study notes summarizer","lecture summary AI","free summarizer"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "AI Notes Summarizer",
+          applicationCategory: "EducationApplication",
+          operatingSystem: "Web",
+          description: "Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds.",
+          url: "https://studykro.com/summarizer",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }}
+      />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Smart</p>
