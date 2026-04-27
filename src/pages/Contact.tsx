@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import Seo from "@/components/Seo";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -64,6 +65,18 @@ export default function Contact() {
 
   return (
     <PageWrapper>
+      <Seo
+        title="Contact StudyKro – Support, Feedback & Bug Reports"
+        description="Get in touch with StudyKro. Send us feedback, report a bug, or ask a question about our free AI study tools — we read every message."
+        canonical="https://studykro.com/contact"
+        keywords={["contact StudyKro", "study app support", "feedback", "bug report"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact StudyKro",
+          url: "https://studykro.com/contact",
+        }}
+      />
       <section className="py-10 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
           <p className="note-label">Contact</p>

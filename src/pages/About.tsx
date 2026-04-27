@@ -1,81 +1,103 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, BookOpenCheck, Target, Sparkles } from "lucide-react";
+import { Shield, BookOpenCheck, Target, Sparkles, Users, Lightbulb, ArrowRight } from "lucide-react";
 import PageWrapper from "@/components/PageWrapper";
+import Seo from "@/components/Seo";
+import { Button } from "@/components/ui/button";
 
 const principles = [
-  {
-    title: "Clarity First",
-    description: "Every feature is designed to help users understand material faster and study with more structure.",
-    icon: BookOpenCheck,
-  },
-  {
-    title: "Professional by Design",
-    description: "The platform uses direct, useful language so the experience feels dependable and well managed.",
-    icon: Target,
-  },
-  {
-    title: "Ethical Use of AI",
-    description: "StudyKro supports revision and preparation without encouraging shortcuts or misuse.",
-    icon: Shield,
-  },
+  { title: "Clarity first", description: "Every feature is designed so students understand material faster and revise with structure.", icon: BookOpenCheck },
+  { title: "Evidence-based", description: "Built on active recall, spaced repetition, and the Feynman technique — not gimmicks.", icon: Target },
+  { title: "Ethical AI", description: "StudyKro supports learning. We won't write essays for you or help you cheat.", icon: Shield },
+  { title: "Free for students", description: "All 8 tools are 100% free with no sign-up. Education shouldn't be locked behind a paywall.", icon: Users },
 ];
 
 export default function About() {
   return (
     <PageWrapper>
-      <section className="py-10 text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          <p className="note-label">About</p>
-          <h1 className="mt-4 text-4xl font-display font-bold md:text-5xl">About StudyKro</h1>
-          <p className="mx-auto mb-8 mt-4 max-w-3xl text-lg text-muted-foreground">
-            StudyKro is a focused study platform that helps users summarize notes, create flashcards, generate quizzes, organize revision, and prepare with more confidence.
-          </p>
-        </motion.div>
-      </section>
+      <Seo
+        title="About StudyKro – Free AI Study Tools Built for Students"
+        description="StudyKro is a free AI study assistant with 8 tools to help students summarize notes, build flashcards, generate quizzes, plan revision, and prepare for exams."
+        canonical="https://studykro.com/about"
+        keywords={["about StudyKro", "free AI study tools", "student learning platform", "ethical AI education"]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About StudyKro",
+          url: "https://studykro.com/about",
+          description: "Learn about StudyKro — a free AI study assistant for students.",
+        }}
+      />
 
-      <section className="py-12">
-        <h2 className="mb-8 text-center text-2xl font-display font-bold">What guides the platform</h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {principles.map((item, index) => {
-            const IconComponent = item.icon;
+      <header className="mx-auto max-w-3xl text-center">
+        <span className="note-label">About</span>
+        <h1 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
+          We help students learn faster with <span className="gradient-text">AI built around real study science</span>
+        </h1>
+        <p className="mx-auto mt-5 text-lg text-muted-foreground">
+          StudyKro is a free AI study platform with 8 tools designed for one job: helping you understand,
+          remember, and apply what you study.
+        </p>
+      </header>
 
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 + index * 0.08 }}
-                className="paper-panel p-6 transition-all hover:elevated-shadow"
-              >
-                <IconComponent className="mb-4 h-8 w-8 text-primary" />
-                <h3 className="mb-2 font-display text-lg font-bold">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="mx-auto max-w-3xl">
+      <section className="mt-16 grid gap-6 sm:grid-cols-2">
+        {principles.map((p, i) => (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            key={p.title}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="paper-panel p-8"
+            transition={{ delay: i * 0.05 }}
+            className="paper-panel p-6"
           >
-            <div className="mb-4 flex gap-4">
-              <Sparkles className="h-6 w-6 flex-shrink-0 text-primary" />
-              <div>
-                <h3 className="mb-2 font-display font-bold">Our Focus</h3>
-                <p className="leading-relaxed text-muted-foreground">
-                  The goal is to provide practical AI tools that make revision more efficient, preparation more organized, and the learning experience easier to trust.
-                </p>
-              </div>
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <p.icon className="h-5 w-5" />
             </div>
+            <h2 className="font-display text-lg font-bold">{p.title}</h2>
+            <p className="mt-2 text-sm leading-7 text-muted-foreground">{p.description}</p>
           </motion.div>
+        ))}
+      </section>
+
+      <section className="mt-20 paper-panel p-8 sm:p-12">
+        <Lightbulb className="h-8 w-8 text-primary" />
+        <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">Our story</h2>
+        <div className="prose-mag mt-4 max-w-none">
+          <p>
+            StudyKro started with a simple frustration: students spend hours re-reading notes, highlighting
+            textbooks, and building flashcards by hand — only to forget most of it within a week. Cognitive
+            science has known the answer for decades. We just hadn't built the tools.
+          </p>
+          <p>
+            Today, StudyKro packages those proven techniques — active recall, spaced repetition, the Feynman
+            technique, memory palaces — into AI tools that take seconds to use. Paste your notes, get
+            ready-to-test flashcards. Type a topic, get a quiz. Describe your exam, get a study plan.
+          </p>
+          <p>
+            We don't believe in paywalls for education, sign-up forms, or selling your data. Every tool is
+            free, runs in your browser, and is built to make you a more confident student.
+          </p>
         </div>
       </section>
+
+      <section className="mt-16 text-center">
+        <h2 className="font-display text-2xl font-bold sm:text-3xl">Ready to study smarter?</h2>
+        <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+          Pick a tool, paste your notes, and get exam-ready output in seconds.
+        </p>
+        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Button asChild size="lg">
+            <Link to="/summarizer">Try a tool free <ArrowRight className="ml-2 h-4 w-4" /></Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <Link to="/blog">Read study guides</Link>
+          </Button>
+        </div>
+        <p className="mt-6 text-sm text-muted-foreground">
+          Or learn how to <Link to="/blog" className="font-semibold text-primary hover:underline">use AI for active recall</Link> in our blog.
+        </p>
+      </section>
+
+      <Sparkles className="sr-only" /> {/* keep import used */}
     </PageWrapper>
   );
 }
