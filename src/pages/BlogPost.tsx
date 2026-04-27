@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Calendar, ChevronRight, Clock, Tag } from "lucid
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import { blogPosts, getPostBySlug } from "@/data/blogPosts";
+import { getBlogImage } from "@/data/blogImages";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import NotFound from "./NotFound";
 
@@ -19,6 +20,9 @@ export default function BlogPost() {
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
 
+  const hero = getBlogImage(post.slug);
+  const absoluteImage = `https://studykro.com${hero.src}`;
+
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric", month: "long", day: "numeric",
   });
@@ -30,12 +34,20 @@ export default function BlogPost() {
         description={post.description}
         keywords={post.keywords}
         canonical={`https://studykro.com/blog/${post.slug}`}
+        ogImage={absoluteImage}
         jsonLd={[
           {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.title,
             description: post.description,
+            image: {
+              "@type": "ImageObject",
+              url: absoluteImage,
+              width: 1280,
+              height: 720,
+              caption: hero.alt,
+            },
             datePublished: post.date,
             dateModified: post.date,
             author: { "@type": "Organization", name: "StudyKro" },
@@ -93,6 +105,19 @@ export default function BlogPost() {
           </div>
         </header>
 
+        <figure className="mb-10 overflow-hidden rounded-2xl border border-border">
+          <img
+            src={hero.src}
+            alt={hero.alt}
+            width={1280}
+            height={720}
+            loading="eager"
+            fetchPriority="high"
+            className="aspect-[16/9] w-full object-cover"
+          />
+          <figcaption className="sr-only">{hero.alt}</figcaption>
+        </figure>
+
         <div className="prose-mag">
           <MarkdownLite source={post.content} />
         </div>
@@ -121,15 +146,28 @@ export default function BlogPost() {
           <section className="mt-16">
             <h2 className="mb-6 font-display text-2xl font-bold">Related articles</h2>
             <div className="grid gap-4 sm:grid-cols-3">
-              {related.map((r) => (
-                <Link key={r.slug} to={`/blog/${r.slug}`} className="paper-panel block p-5 hover-lift">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">{r.category}</span>
-                  <p className="mt-2 font-display text-base font-semibold leading-snug line-clamp-3">{r.title}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                    Read <ArrowRight className="h-3 w-3" />
-                  </span>
-                </Link>
-              ))}
+              {related.map((r) => {
+                const ri = getBlogImage(r.slug);
+                return (
+                  <Link key={r.slug} to={`/blog/${r.slug}`} className="paper-panel block overflow-hidden hover-lift">
+                    <img
+                      src={ri.src}
+                      alt={ri.alt}
+                      width={1280}
+                      height={720}
+                      loading="lazy"
+                      className="aspect-[16/9] w-full object-cover"
+                    />
+                    <div className="p-4">
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">{r.category}</span>
+                      <p className="mt-2 font-display text-base font-semibold leading-snug line-clamp-3">{r.title}</p>
+                      <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                        Read <ArrowRight className="h-3 w-3" />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         )}

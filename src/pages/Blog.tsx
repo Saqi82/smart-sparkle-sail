@@ -6,6 +6,7 @@ import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import { Input } from "@/components/ui/input";
 import { blogPosts } from "@/data/blogPosts";
+import { getBlogImage } from "@/data/blogImages";
 
 export default function Blog() {
   const [query, setQuery] = useState("");
@@ -54,6 +55,7 @@ export default function Blog() {
             datePublished: p.date,
             keywords: p.keywords.join(", "),
             description: p.description,
+            image: `https://studykro.com${getBlogImage(p.slug).src}`,
           })),
         }}
       />
@@ -77,7 +79,15 @@ export default function Blog() {
             to={`/blog/${featured.slug}`}
             className="paper-panel group block overflow-hidden hover-lift md:grid md:grid-cols-2"
           >
-            <div className="aspect-[16/9] gradient-hero md:aspect-auto md:h-full" />
+            <img
+              src={getBlogImage(featured.slug).src}
+              alt={getBlogImage(featured.slug).alt}
+              width={1280}
+              height={720}
+              loading="eager"
+              fetchPriority="high"
+              className="aspect-[16/9] h-full w-full object-cover md:aspect-auto"
+            />
             <div className="flex flex-col justify-center p-6 sm:p-10">
               <span className="note-label self-start">Featured · {featured.category}</span>
               <h2 className="mt-4 font-display text-2xl font-bold leading-tight group-hover:text-primary sm:text-3xl">
@@ -136,7 +146,16 @@ export default function Blog() {
             transition={{ duration: 0.3, delay: idx * 0.03 }}
             className="paper-panel group flex flex-col overflow-hidden hover-lift"
           >
-            <div className="aspect-[16/9] gradient-hero" />
+            <Link to={`/blog/${post.slug}`} className="block overflow-hidden">
+              <img
+                src={getBlogImage(post.slug).src}
+                alt={getBlogImage(post.slug).alt}
+                width={1280}
+                height={720}
+                loading="lazy"
+                className="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </Link>
             <div className="flex flex-1 flex-col p-5">
               <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">
                 {post.category}
