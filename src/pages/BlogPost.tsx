@@ -105,6 +105,19 @@ export default function BlogPost() {
           </div>
         </header>
 
+        <figure className="mb-10 overflow-hidden rounded-2xl border border-border">
+          <img
+            src={hero.src}
+            alt={hero.alt}
+            width={1280}
+            height={720}
+            loading="eager"
+            fetchPriority="high"
+            className="aspect-[16/9] w-full object-cover"
+          />
+          <figcaption className="sr-only">{hero.alt}</figcaption>
+        </figure>
+
         <div className="prose-mag">
           <MarkdownLite source={post.content} />
         </div>
