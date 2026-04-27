@@ -20,6 +20,9 @@ export default function BlogPost() {
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
 
+  const hero = getBlogImage(post.slug);
+  const absoluteImage = `https://studykro.com${hero.src}`;
+
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric", month: "long", day: "numeric",
   });
@@ -31,12 +34,20 @@ export default function BlogPost() {
         description={post.description}
         keywords={post.keywords}
         canonical={`https://studykro.com/blog/${post.slug}`}
+        ogImage={absoluteImage}
         jsonLd={[
           {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             headline: post.title,
             description: post.description,
+            image: {
+              "@type": "ImageObject",
+              url: absoluteImage,
+              width: 1280,
+              height: 720,
+              caption: hero.alt,
+            },
             datePublished: post.date,
             dateModified: post.date,
             author: { "@type": "Organization", name: "StudyKro" },
