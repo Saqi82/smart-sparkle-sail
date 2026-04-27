@@ -79,7 +79,15 @@ export default function Blog() {
             to={`/blog/${featured.slug}`}
             className="paper-panel group block overflow-hidden hover-lift md:grid md:grid-cols-2"
           >
-            <div className="aspect-[16/9] gradient-hero md:aspect-auto md:h-full" />
+            <img
+              src={getBlogImage(featured.slug).src}
+              alt={getBlogImage(featured.slug).alt}
+              width={1280}
+              height={720}
+              loading="eager"
+              fetchPriority="high"
+              className="aspect-[16/9] h-full w-full object-cover md:aspect-auto"
+            />
             <div className="flex flex-col justify-center p-6 sm:p-10">
               <span className="note-label self-start">Featured · {featured.category}</span>
               <h2 className="mt-4 font-display text-2xl font-bold leading-tight group-hover:text-primary sm:text-3xl">
