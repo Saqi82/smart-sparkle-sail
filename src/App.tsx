@@ -11,6 +11,7 @@ import OfflineBanner from "./components/OfflineBanner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Landing = lazy(() => import("./pages/Landing"));
 const Summarizer = lazy(() => import("./pages/Summarizer"));
@@ -62,6 +63,7 @@ function AppShell() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       {!isOnline && <OfflineBanner />}
       <AnimatedRoutes />
