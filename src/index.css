@@ -137,6 +137,13 @@
     font-family: "Plus Jakarta Sans", "Inter", sans-serif;
     letter-spacing: -0.02em;
     line-height: 1.2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
   }
 
   ::selection {
