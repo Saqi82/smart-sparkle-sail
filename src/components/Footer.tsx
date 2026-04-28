@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="container max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
           {/* Brand */}
-          <div className="lg:col-span-4">
+          <div className="sm:col-span-2 lg:col-span-4">
             <Link to="/" className="inline-flex items-center gap-2.5 font-display text-base font-bold">
               <img src="/favicon.png" alt="StudyKro" className="h-9 w-9 rounded-xl" />
               <span>Study<span className="text-primary">Kro</span></span>
