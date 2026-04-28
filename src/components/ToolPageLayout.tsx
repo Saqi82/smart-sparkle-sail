@@ -128,7 +128,7 @@ export default function ToolPageLayout({
       {howItWorks?.length ? (
         <section className="mb-16">
           <h2 className="mb-6 font-display text-2xl font-bold sm:text-3xl">How it works</h2>
-          <ol className="grid gap-4 sm:grid-cols-3">
+          <ol className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {howItWorks.map((step, i) => (
               <li key={i} className="paper-panel p-6">
                 <span className="text-sm font-semibold text-primary">Step {i + 1}</span>
@@ -161,7 +161,7 @@ export default function ToolPageLayout({
       {related?.length ? (
         <section className="mb-16">
           <h2 className="mb-6 font-display text-2xl font-bold sm:text-3xl">Related study tools</h2>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {related.map((r) => (
               <Link
                 key={r.to}
