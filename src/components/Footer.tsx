@@ -17,6 +17,7 @@ export default function Footer() {
     { to: "/explainer", label: "Concept Explainer" },
     { to: "/essay-outline", label: "Essay Outliner" },
     { to: "/mnemonics", label: "Mnemonic Generator" },
+    { to: "/plagiarism-checker", label: "Plagiarism Checker" },
   ];
 
   return (

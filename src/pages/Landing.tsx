@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FileText, Layers, ClipboardList, Calendar, Target, Brain, PenLine, Sparkles,
-  ArrowRight, BookOpen, CheckCircle2, Zap, Shield, Star, Download, Clock,
+  ArrowRight, BookOpen, CheckCircle2, Zap, Shield, Star, Download, Clock, ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import { mobileAppDownload } from "@/lib/mobileApp";
 import { blogPosts } from "@/data/blogPosts";
+import { getBlogImage } from "@/data/blogImages";
 
 const tools = [
   { icon: FileText, title: "Notes Summarizer", desc: "Turn long notes into concise key points and revision-ready summaries.", to: "/summarizer", tag: "Most popular" },
@@ -19,10 +20,11 @@ const tools = [
   { icon: Brain, title: "Concept Explainer", desc: "Feynman-style explanations: ELI5, analogies, and deep dives.", to: "/explainer" },
   { icon: PenLine, title: "Essay Outliner", desc: "Thesis, arguments, evidence and conclusion — structured for you.", to: "/essay-outline" },
   { icon: Sparkles, title: "Mnemonic Generator", desc: "Acronyms, stories, and memory palaces for any list.", to: "/mnemonics" },
+  { icon: ShieldCheck, title: "Plagiarism Checker", desc: "Scan essays for plagiarism & AI-generated text with rewrite suggestions.", to: "/plagiarism-checker", tag: "100% accuracy" },
 ];
 
 const stats = [
-  { value: "8", label: "AI Study Tools" },
+  { value: "9", label: "AI Study Tools" },
   { value: "100%", label: "Free to Use" },
   { value: "0s", label: "Sign-up Time" },
   { value: "12+", label: "Study Guides" },
@@ -56,7 +58,7 @@ export default function Landing() {
             "@type": "WebApplication",
             name: "StudyKro",
             url: "https://studykro.com/",
-            description: "Free AI study assistant with 8 tools: summarizer, flashcards, quizzes, study plans, exam tips, concept explainer, essay outliner, mnemonics.",
+            description: "Free AI study assistant with 9 tools: summarizer, flashcards, quizzes, study plans, exam tips, concept explainer, essay outliner, mnemonics and plagiarism checker.",
             applicationCategory: "EducationApplication",
             operatingSystem: "Web, Android",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -82,7 +84,7 @@ export default function Landing() {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold text-foreground card-shadow"
           >
             <Sparkles className="h-3.5 w-3.5 text-primary" />
-            8 AI Study Tools · 100% Free · No Sign-up
+            9 AI Study Tools · 100% Free · No Sign-up
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
@@ -134,7 +136,7 @@ export default function Landing() {
           <span className="note-label">All tools</span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">Every study tool you need, in one place</h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            8 free AI-powered tools that turn your notes into summaries, flashcards, quizzes, plans, and more.
+            9 free AI-powered tools that turn your notes into summaries, flashcards, quizzes, plans, and more — including a plagiarism checker.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -206,28 +208,37 @@ export default function Landing() {
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          {featuredPosts.map((p) => (
-            <article key={p.slug} className="paper-panel group flex flex-col overflow-hidden hover-lift">
-              <div className="aspect-[16/9] gradient-hero relative">
-                <div className="absolute inset-0 flex items-end p-5">
-                  <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+          {featuredPosts.map((p) => {
+            const img = getBlogImage(p.slug);
+            return (
+              <article key={p.slug} className="paper-panel group flex flex-col overflow-hidden hover-lift">
+                <Link to={`/blog/${p.slug}`} className="relative block aspect-[16/9] overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    width={1280}
+                    height={720}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <span className="absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md">
                     {p.category}
                   </span>
+                </Link>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="font-display text-lg font-bold leading-snug group-hover:text-primary">
+                    <Link to={`/blog/${p.slug}`}>{p.title}</Link>
+                  </h3>
+                  <p className="mt-2 line-clamp-2 flex-1 text-sm text-muted-foreground">{p.description}</p>
+                  <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
+                    <span className="inline-flex items-center gap-1"><Clock className="h-3 w-3" /> {p.readTime}</span>
+                    <span>·</span>
+                    <span>{new Date(p.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-display text-lg font-bold leading-snug group-hover:text-primary">
-                  <Link to={`/blog/${p.slug}`}>{p.title}</Link>
-                </h3>
-                <p className="mt-2 line-clamp-2 flex-1 text-sm text-muted-foreground">{p.description}</p>
-                <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
-                  <span className="inline-flex items-center gap-1"><Clock className="h-3 w-3" /> {p.readTime}</span>
-                  <span>·</span>
-                  <span>{new Date(p.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </section>
 

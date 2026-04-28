@@ -21,6 +21,7 @@ const ExamTips = lazy(() => import("./pages/ExamTips"));
 const Explainer = lazy(() => import("./pages/Explainer"));
 const EssayOutline = lazy(() => import("./pages/EssayOutline"));
 const Mnemonics = lazy(() => import("./pages/Mnemonics"));
+const Plagiarism = lazy(() => import("./pages/Plagiarism"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -44,6 +45,7 @@ function AnimatedRoutes() {
           <Route path="/explainer" element={<Explainer />} />
           <Route path="/essay-outline" element={<EssayOutline />} />
           <Route path="/mnemonics" element={<Mnemonics />} />
+          <Route path="/plagiarism-checker" element={<Plagiarism />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
@@ -58,13 +60,10 @@ function AnimatedRoutes() {
 function AppShell() {
   const isOnline = useOnlineStatus();
 
-  if (!isOnline) {
-    return <OfflineBanner />;
-  }
-
   return (
     <BrowserRouter>
       <Navbar />
+      {!isOnline && <OfflineBanner />}
       <AnimatedRoutes />
       <Footer />
     </BrowserRouter>
