@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   FileText, Layers, ClipboardList, Calendar, Target, Menu, X, Info, Mail,
-  ArrowRight, BookOpen, Brain, PenLine, Sparkles, ChevronDown, Wrench,
+  ArrowRight, BookOpen, Brain, PenLine, Sparkles, ChevronDown, Wrench, ShieldCheck,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
@@ -18,6 +18,7 @@ const tools = [
   { to: "/explainer", label: "Concept Explainer", desc: "ELI5, analogy & deep dive", icon: Brain },
   { to: "/essay-outline", label: "Essay Outliner", desc: "Thesis, body & conclusion", icon: PenLine },
   { to: "/mnemonics", label: "Mnemonic Generator", desc: "Acronyms, stories & palaces", icon: Sparkles },
+  { to: "/plagiarism-checker", label: "Plagiarism Checker", desc: "Originality + AI-text detector", icon: ShieldCheck },
 ];
 
 const primaryNav = [
@@ -71,7 +72,7 @@ export default function Navbar() {
               <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", toolsOpen && "rotate-180")} />
             </button>
             {toolsOpen && (
-              <div className="absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-2">
+              <div className="absolute left-1/2 top-full z-50 w-[680px] -translate-x-1/2 pt-2">
                 <div className="grid grid-cols-2 gap-1 rounded-2xl border border-border bg-popover p-3 shadow-2xl">
                   {tools.map((t) => (
                     <Link
