@@ -75,3 +75,13 @@ const FALLBACK: BlogImage = {
 export function getBlogImage(slug: string): BlogImage {
   return blogImages[slug] ?? FALLBACK;
 }
+
+/**
+ * Stable public URL for use in sitemaps, JSON-LD og:image, social shares.
+ * Files are duplicated in /public/blog/ so the URL never changes between builds.
+ */
+export function getPublicBlogImageUrl(slug: string): string {
+  const known = blogImages[slug];
+  if (!known) return "https://studykro.com/blog/spaced-repetition-explained.jpg";
+  return `https://studykro.com/blog/${slug}.jpg`;
+}
