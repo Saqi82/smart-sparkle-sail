@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Calendar, ChevronRight, Clock, Tag } from "lucid
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import { blogPosts, getPostBySlug } from "@/data/blogPosts";
-import { getBlogImage } from "@/data/blogImages";
+import { getBlogImage, getPublicBlogImageUrl } from "@/data/blogImages";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import NotFound from "./NotFound";
 
@@ -21,7 +21,7 @@ export default function BlogPost() {
     .slice(0, 3);
 
   const hero = getBlogImage(post.slug);
-  const absoluteImage = `https://studykro.com${hero.src}`;
+  const absoluteImage = getPublicBlogImageUrl(post.slug);
 
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric", month: "long", day: "numeric",

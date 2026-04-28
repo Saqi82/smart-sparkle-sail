@@ -6,7 +6,7 @@ import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import { Input } from "@/components/ui/input";
 import { blogPosts } from "@/data/blogPosts";
-import { getBlogImage } from "@/data/blogImages";
+import { getBlogImage, getPublicBlogImageUrl } from "@/data/blogImages";
 
 export default function Blog() {
   const [query, setQuery] = useState("");
@@ -55,7 +55,7 @@ export default function Blog() {
             datePublished: p.date,
             keywords: p.keywords.join(", "),
             description: p.description,
-            image: `https://studykro.com${getBlogImage(p.slug).src}`,
+            image: getPublicBlogImageUrl(p.slug),
           })),
         }}
       />
