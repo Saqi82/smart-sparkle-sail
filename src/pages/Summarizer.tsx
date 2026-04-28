@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { callAI } from "@/lib/ai";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,6 +26,13 @@ export default function Summarizer() {
   const [error, setError] = useState("");
   const checkRate = useRateLimit();
   const isOnline = useOnlineStatus();
+  const resultRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (result && resultRef.current) {
+      resultRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [result]);
 
   const handleSubmit = async () => {
     setError("");
@@ -143,7 +150,7 @@ export default function Summarizer() {
       )}
 
       {result && (
-        <section className="mt-8 space-y-6">
+        <section ref={resultRef} className="mt-8 space-y-6 scroll-mt-24">
           {result.title && (
             <div className="paper-panel p-6">
               <p className="note-label">Overview</p>
