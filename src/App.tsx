@@ -60,13 +60,10 @@ function AnimatedRoutes() {
 function AppShell() {
   const isOnline = useOnlineStatus();
 
-  if (!isOnline) {
-    return <OfflineBanner />;
-  }
-
   return (
     <BrowserRouter>
       <Navbar />
+      {!isOnline && <OfflineBanner />}
       <AnimatedRoutes />
       <Footer />
     </BrowserRouter>
