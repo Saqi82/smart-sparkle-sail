@@ -21,9 +21,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-24 border-t border-border bg-muted/30">
-      <div className="container max-w-7xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-12">
+    <footer className="mt-16 border-t border-border bg-muted/30 sm:mt-24">
+      <div className="container max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link to="/" className="inline-flex items-center gap-2.5 font-display text-base font-bold">
