@@ -93,15 +93,15 @@ export default function ToolPageLayout({
       </nav>
 
       {/* Hero */}
-      <header className="mb-10">
+      <header className="mb-8 sm:mb-10">
         <span className="note-label">{category}</span>
-        <div className="mt-4 flex items-start gap-4">
-          <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl gradient-bg text-primary-foreground">
-            <Icon className="h-6 w-6" />
+        <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-start">
+          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl gradient-bg text-primary-foreground sm:h-14 sm:w-14">
+            <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
           </div>
-          <div>
-            <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{title}</h1>
-            <p className="mt-3 max-w-2xl text-lg text-muted-foreground">{intro}</p>
+          <div className="min-w-0">
+            <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl break-words">{title}</h1>
+            <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">{intro}</p>
           </div>
         </div>
       </header>
@@ -128,7 +128,7 @@ export default function ToolPageLayout({
       {howItWorks?.length ? (
         <section className="mb-16">
           <h2 className="mb-6 font-display text-2xl font-bold sm:text-3xl">How it works</h2>
-          <ol className="grid gap-4 sm:grid-cols-3">
+          <ol className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {howItWorks.map((step, i) => (
               <li key={i} className="paper-panel p-6">
                 <span className="text-sm font-semibold text-primary">Step {i + 1}</span>
@@ -161,7 +161,7 @@ export default function ToolPageLayout({
       {related?.length ? (
         <section className="mb-16">
           <h2 className="mb-6 font-display text-2xl font-bold sm:text-3xl">Related study tools</h2>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {related.map((r) => (
               <Link
                 key={r.to}

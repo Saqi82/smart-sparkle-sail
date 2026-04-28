@@ -38,15 +38,15 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70">
-      <div className="container flex h-16 items-center justify-between px-4 sm:px-6">
+      <div className="container flex h-16 items-center justify-between gap-2 px-3 sm:px-6">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5 font-display text-base font-bold">
-          <img src="/favicon.png" alt="StudyKro logo" className="h-9 w-9 rounded-xl object-contain" />
-          <span className="text-foreground">Study<span className="text-primary">Kro</span></span>
+        <Link to="/" className="flex min-w-0 items-center gap-2 font-display text-base font-bold sm:gap-2.5">
+          <img src="/favicon.png" alt="StudyKro logo" className="h-8 w-8 rounded-xl object-contain sm:h-9 sm:w-9" />
+          <span className="truncate text-foreground">Study<span className="text-primary">Kro</span></span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 lg:flex xl:gap-1" aria-label="Primary">
           <Link
             to="/"
             className={cn(
@@ -72,8 +72,8 @@ export default function Navbar() {
               <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", toolsOpen && "rotate-180")} />
             </button>
             {toolsOpen && (
-              <div className="absolute left-1/2 top-full z-50 w-[680px] -translate-x-1/2 pt-2">
-                <div className="grid grid-cols-2 gap-1 rounded-2xl border border-border bg-popover p-3 shadow-2xl">
+              <div className="absolute left-1/2 top-full z-50 w-[min(680px,calc(100vw-2rem))] -translate-x-1/2 pt-2">
+                <div className="grid grid-cols-1 gap-1 rounded-2xl border border-border bg-popover p-3 shadow-2xl sm:grid-cols-2">
                   {tools.map((t) => (
                     <Link
                       key={t.to}
@@ -113,7 +113,7 @@ export default function Navbar() {
               <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", blogOpen && "rotate-180")} />
             </button>
             {blogOpen && (
-              <div className="absolute left-1/2 top-full z-50 w-[420px] -translate-x-1/2 pt-2">
+              <div className="absolute right-0 top-full z-50 w-[min(420px,calc(100vw-2rem))] pt-2 lg:left-1/2 lg:right-auto lg:-translate-x-1/2">
                 <div className="rounded-2xl border border-border bg-popover p-3 shadow-2xl">
                   <Link
                     to="/blog"
@@ -157,9 +157,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-shrink-0 items-center gap-1.5 sm:gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden sm:inline-flex">
+          <Button asChild size="sm" className="hidden md:inline-flex">
             <Link to="/summarizer">Try Free</Link>
           </Button>
           <button

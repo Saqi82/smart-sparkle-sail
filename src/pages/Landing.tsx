@@ -90,7 +90,7 @@ export default function Landing() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="mt-6 font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+            className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Study smarter with{" "}
             <span className="gradient-text">AI-powered</span> study tools
@@ -99,7 +99,7 @@ export default function Landing() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl"
+            className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg md:text-xl"
           >
             Summarize notes, generate flashcards & quizzes, build a study plan, and ace your exams.
             Built on proven techniques — active recall, spaced repetition, and the Feynman method.
@@ -139,7 +139,7 @@ export default function Landing() {
             9 free AI-powered tools that turn your notes into summaries, flashcards, quizzes, plans, and more — including a plagiarism checker.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {tools.map((t) => (
             <Link
               key={t.to}
@@ -244,7 +244,7 @@ export default function Landing() {
 
       {/* CTA */}
       <section className="my-16">
-        <div className="relative overflow-hidden rounded-3xl gradient-hero px-8 py-14 text-center text-white sm:px-12 sm:py-20">
+        <div className="relative overflow-hidden rounded-3xl gradient-hero px-6 py-12 text-center text-white sm:px-12 sm:py-20">
           <div className="absolute inset-0 bg-grid opacity-20" aria-hidden />
           <div className="relative mx-auto max-w-2xl">
             <BookOpen className="mx-auto h-10 w-10" />
