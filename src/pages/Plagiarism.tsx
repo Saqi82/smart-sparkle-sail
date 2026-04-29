@@ -31,10 +31,10 @@ interface PlagiarismResult {
 }
 
 const verdictMeta: Record<PlagiarismResult["verdict"], { label: string; tone: string }> = {
-  original: { label: "Looks original", tone: "text-green-600 bg-green-500/10 border-green-500/30" },
-  minor_concerns: { label: "Minor concerns", tone: "text-amber-600 bg-amber-500/10 border-amber-500/30" },
-  likely_plagiarised: { label: "Likely plagiarised", tone: "text-orange-600 bg-orange-500/10 border-orange-500/30" },
-  highly_plagiarised: { label: "Highly plagiarised", tone: "text-red-600 bg-red-500/10 border-red-500/30" },
+  original: { label: "Looks original", tone: "text-success bg-success/10 border-success/30" },
+  minor_concerns: { label: "Minor concerns", tone: "text-warning bg-warning/10 border-warning/30" },
+  likely_plagiarised: { label: "Likely plagiarised", tone: "text-warning bg-warning/15 border-warning/40" },
+  highly_plagiarised: { label: "Highly plagiarised", tone: "text-destructive bg-destructive/10 border-destructive/30" },
 };
 
 export default function Plagiarism() {
@@ -251,10 +251,10 @@ function ScoreTile({ label, value, good }: { label: string; value: number; good?
   const v = Math.max(0, Math.min(100, Math.round(value)));
   const isGoodSignal = good ? v >= 70 : v <= 30;
   const tone = isGoodSignal
-    ? "text-green-600"
+    ? "text-success"
     : (good ? v >= 40 : v <= 60)
-      ? "text-amber-600"
-      : "text-red-600";
+      ? "text-warning"
+      : "text-destructive";
   return (
     <div className="rounded-[14px] bg-muted/55 px-3 py-3">
       <div className={`font-display text-2xl font-bold ${tone}`}>{v}%</div>
