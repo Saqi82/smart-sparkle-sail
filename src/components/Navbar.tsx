@@ -195,28 +195,19 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu — full slide-in panel */}
-      <div
-        className={cn(
-          "fixed inset-0 top-14 z-40 lg:hidden sm:top-16",
-          "transition-opacity duration-200",
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        )}
-        aria-hidden={!open}
-      >
-        {/* Backdrop */}
-        <div
-          className="absolute inset-0 bg-background/60 backdrop-blur-sm"
-          onClick={() => setOpen(false)}
-        />
+      {open && (
+        <div className="fixed inset-x-0 bottom-0 top-14 z-[60] lg:hidden sm:top-16">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-background/70 backdrop-blur-sm animate-in fade-in duration-200"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
 
-        {/* Panel */}
-        <div
-          className={cn(
-            "absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl",
-            "transition-transform duration-300 ease-out",
-            open ? "translate-x-0" : "translate-x-full"
-          )}
-        >
+          {/* Panel */}
+          <div
+            className="absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl animate-in slide-in-from-right duration-300"
+          >
           <nav className="flex flex-col gap-1 px-4 py-5" aria-label="Mobile">
             <Link
               to="/"
