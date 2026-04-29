@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   FileText, Layers, ClipboardList, Calendar, Target, Menu, X, Info, Mail,
-  ArrowRight, BookOpen, Brain, PenLine, Sparkles, ChevronDown, Wrench, ShieldCheck,
+  ArrowRight, BookOpen, Brain, PenLine, Sparkles, ChevronDown, Wrench, ShieldCheck, Home,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
@@ -31,17 +31,38 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [blogOpen, setBlogOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
 
   const featuredBlogs = blogPosts.slice(0, 6);
   const isToolPath = tools.some((t) => t.to === location.pathname);
   const isBlogPath = location.pathname.startsWith("/blog");
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setOpen(false);
+    setMobileToolsOpen(false);
+    setMobileBlogOpen(false);
+  }, [location.pathname]);
+
+  // Lock body scroll when mobile menu open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70">
-      <div className="container flex h-16 items-center justify-between gap-2 px-3 sm:px-6">
+      <div className="container flex h-14 items-center justify-between gap-2 px-3 sm:h-16 sm:px-6">
         {/* Logo */}
         <Link to="/" className="flex min-w-0 items-center gap-2 font-display text-base font-bold sm:gap-2.5">
-          <img src="/favicon.png" alt="StudyKro logo" className="h-8 w-8 rounded-xl object-contain sm:h-9 sm:w-9" />
+          <img src="/favicon.png" alt="StudyKro logo" className="h-7 w-7 rounded-xl object-contain sm:h-9 sm:w-9" />
           <span className="truncate text-foreground">Study<span className="text-primary">Kro</span></span>
         </Link>
 
@@ -157,86 +178,148 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex flex-shrink-0 items-center gap-1.5 sm:gap-2">
+        <div className="flex flex-shrink-0 items-center gap-1 sm:gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden md:inline-flex">
+          <Button asChild size="sm" className="hidden lg:inline-flex">
             <Link to="/summarizer">Try Free</Link>
           </Button>
           <button
-            className="rounded-lg border border-border p-2 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-foreground transition-colors hover:bg-muted active:scale-95 lg:hidden"
             onClick={() => setOpen(!open)}
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="space-y-5 border-t border-border bg-background px-4 pb-6 pt-4 lg:hidden">
-          <Link
-            to="/"
-            onClick={() => setOpen(false)}
-            className="block rounded-lg px-3 py-2.5 text-sm font-semibold"
-          >
-            Home
-          </Link>
+      {/* Mobile menu — full slide-in panel */}
+      <div
+        className={cn(
+          "fixed inset-0 top-14 z-40 lg:hidden sm:top-16",
+          "transition-opacity duration-200",
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        )}
+        aria-hidden={!open}
+      >
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0 bg-background/60 backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+        />
 
-          <div>
-            <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Tools</p>
-            <div className="mt-2 space-y-1">
-              {tools.map((t) => (
+        {/* Panel */}
+        <div
+          className={cn(
+            "absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl",
+            "transition-transform duration-300 ease-out",
+            open ? "translate-x-0" : "translate-x-full"
+          )}
+        >
+          <nav className="flex flex-col gap-1 px-4 py-5" aria-label="Mobile">
+            <Link
+              to="/"
+              className={cn(
+                "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                location.pathname === "/" ? "bg-primary/10 text-primary" : "hover:bg-muted"
+              )}
+            >
+              <Home className="h-4 w-4" />
+              Home
+            </Link>
+
+            {/* Tools collapsible */}
+            <button
+              type="button"
+              onClick={() => setMobileToolsOpen((v) => !v)}
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                isToolPath ? "text-primary" : "hover:bg-muted"
+              )}
+              aria-expanded={mobileToolsOpen}
+            >
+              <span className="flex items-center gap-3">
+                <Wrench className="h-4 w-4" />
+                Tools
+              </span>
+              <ChevronDown className={cn("h-4 w-4 transition-transform", mobileToolsOpen && "rotate-180")} />
+            </button>
+            {mobileToolsOpen && (
+              <div className="ml-2 flex flex-col gap-0.5 border-l border-border pl-3">
+                {tools.map((t) => (
+                  <Link
+                    key={t.to}
+                    to={t.to}
+                    className={cn(
+                      "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors",
+                      location.pathname === t.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                    )}
+                  >
+                    <t.icon className="h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="truncate">{t.label}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* Blog collapsible */}
+            <button
+              type="button"
+              onClick={() => setMobileBlogOpen((v) => !v)}
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                isBlogPath ? "text-primary" : "hover:bg-muted"
+              )}
+              aria-expanded={mobileBlogOpen}
+            >
+              <span className="flex items-center gap-3">
+                <BookOpen className="h-4 w-4" />
+                Blog
+              </span>
+              <ChevronDown className={cn("h-4 w-4 transition-transform", mobileBlogOpen && "rotate-180")} />
+            </button>
+            {mobileBlogOpen && (
+              <div className="ml-2 flex flex-col gap-0.5 border-l border-border pl-3">
                 <Link
-                  key={t.to}
-                  to={t.to}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-muted"
+                  to="/blog"
+                  className="flex items-center justify-between rounded-lg bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
                 >
-                  <t.icon className="h-4 w-4 text-primary" />
-                  <span>{t.label}</span>
+                  All articles
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
-              ))}
-            </div>
-          </div>
+                {featuredBlogs.slice(0, 5).map((p) => (
+                  <Link
+                    key={p.slug}
+                    to={`/blog/${p.slug}`}
+                    className="block rounded-lg px-3 py-2 text-sm hover:bg-muted"
+                  >
+                    <span className="line-clamp-1">{p.title}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
 
-          <div>
-            <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Blog</p>
-            <div className="mt-2 space-y-1">
-              <Link
-                to="/blog"
-                onClick={() => setOpen(false)}
-                className="block rounded-lg bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
-              >
-                All articles
-              </Link>
-              {featuredBlogs.slice(0, 4).map((p) => (
-                <Link
-                  key={p.slug}
-                  to={`/blog/${p.slug}`}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2 text-sm hover:bg-muted"
-                >
-                  {p.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-1">
             {primaryNav.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
-                onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-muted"
+                className={cn(
+                  "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                  location.pathname === l.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                )}
               >
+                <l.icon className="h-4 w-4" />
                 {l.label}
               </Link>
             ))}
-          </div>
+
+            <Button asChild size="lg" className="mt-4 w-full">
+              <Link to="/summarizer">Try Free</Link>
+            </Button>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }
