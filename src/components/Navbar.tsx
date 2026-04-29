@@ -310,7 +310,8 @@ export default function Navbar() {
             </Button>
           </nav>
         </div>
-      </div>
+        </div>
+      )}
     </header>
   );
 }
