@@ -79,6 +79,32 @@ export default function About() {
         </div>
       </section>
 
+      <section className="mt-16 paper-panel p-8 sm:p-12">
+        <Users className="h-8 w-8 text-primary" />
+        <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">Built by the team</h2>
+        <p className="mt-4 text-base leading-7 text-muted-foreground">
+          StudyKro is developed by <span className="font-semibold text-foreground">Saqib Nawaz</span> and his team
+          at <span className="font-semibold text-foreground">TEVTA</span>, Department of{" "}
+          <span className="font-semibold text-foreground">CIT (Computer Information Technology)</span>. The team
+          combines hands-on classroom insight with modern AI engineering to build study tools that actually help
+          students learn — not just complete homework.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-xl border border-border bg-background/40 p-4">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">Lead Developer</p>
+            <p className="mt-1 font-display text-lg font-bold">Saqib Nawaz</p>
+          </div>
+          <div className="rounded-xl border border-border bg-background/40 p-4">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">Institution</p>
+            <p className="mt-1 font-display text-lg font-bold">TEVTA</p>
+          </div>
+          <div className="rounded-xl border border-border bg-background/40 p-4">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">Department</p>
+            <p className="mt-1 font-display text-lg font-bold">CIT</p>
+          </div>
+        </div>
+      </section>
+
       <section className="mt-16 text-center">
         <h2 className="font-display text-2xl font-bold sm:text-3xl">Ready to study smarter?</h2>
         <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
