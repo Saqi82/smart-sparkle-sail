@@ -195,19 +195,30 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu — full slide-in panel */}
-      {open && (
-        <div className="fixed inset-x-0 bottom-0 top-14 z-[60] lg:hidden sm:top-16">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-background/70 backdrop-blur-sm animate-in fade-in duration-200"
-            onClick={() => setOpen(false)}
-            aria-hidden="true"
-          />
+      <div
+        className={cn(
+          "fixed inset-x-0 bottom-0 top-14 z-[60] sm:top-16 lg:hidden",
+          open ? "pointer-events-auto" : "pointer-events-none"
+        )}
+        aria-hidden={!open}
+      >
+        {/* Backdrop */}
+        <div
+          className={cn(
+            "absolute inset-0 bg-background/70 backdrop-blur-sm transition-opacity duration-200",
+            open ? "opacity-100" : "opacity-0"
+          )}
+          onClick={() => setOpen(false)}
+          aria-hidden="true"
+        />
 
-          {/* Panel */}
-          <div
-            className="absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl animate-in slide-in-from-right duration-300"
-          >
+        {/* Panel */}
+        <div
+          className={cn(
+            "absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl transition-transform duration-300 ease-out",
+            open ? "translate-x-0" : "translate-x-full"
+          )}
+        >
           <nav className="flex flex-col gap-1 px-4 py-5" aria-label="Mobile">
             <Link
               to="/"
@@ -290,6 +301,27 @@ export default function Navbar() {
                 ))}
               </div>
             )}
+
+            {primaryNav.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className={cn(
+                  "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                  location.pathname === l.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                )}
+              >
+                <l.icon className="h-4 w-4" />
+                {l.label}
+              </Link>
+            ))}
+
+            <Button asChild size="lg" className="mt-4 w-full">
+              <Link to="/summarizer">Try Free</Link>
+            </Button>
+          </nav>
+        </div>
+      </div>
 
             {primaryNav.map((l) => (
               <Link
