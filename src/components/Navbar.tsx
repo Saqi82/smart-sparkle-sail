@@ -195,134 +195,137 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu — full slide-in panel */}
-      <div
-        className={cn(
-          "fixed inset-x-0 bottom-0 top-14 z-[60] sm:top-16 lg:hidden",
-          open ? "pointer-events-auto" : "pointer-events-none"
-        )}
-        aria-hidden={!open}
-      >
-        {/* Backdrop */}
+      {/* Mobile menu — rendered via portal to escape header's backdrop-filter stacking context */}
+      {typeof document !== "undefined" && createPortal(
         <div
           className={cn(
-            "absolute inset-0 bg-background/70 backdrop-blur-sm transition-opacity duration-200",
-            open ? "opacity-100" : "opacity-0"
+            "fixed inset-0 z-[100] lg:hidden",
+            open ? "pointer-events-auto" : "pointer-events-none"
           )}
-          onClick={() => setOpen(false)}
-          aria-hidden="true"
-        />
-
-        {/* Panel */}
-        <div
-          className={cn(
-            "absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl transition-transform duration-300 ease-out",
-            open ? "translate-x-0" : "translate-x-full"
-          )}
+          aria-hidden={!open}
         >
-          <nav className="flex flex-col gap-1 px-4 py-5" aria-label="Mobile">
-            <Link
-              to="/"
-              className={cn(
-                "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
-                location.pathname === "/" ? "bg-primary/10 text-primary" : "hover:bg-muted"
-              )}
-            >
-              <Home className="h-4 w-4" />
-              Home
-            </Link>
-
-            {/* Tools collapsible */}
-            <button
-              type="button"
-              onClick={() => setMobileToolsOpen((v) => !v)}
-              className={cn(
-                "flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
-                isToolPath ? "text-primary" : "hover:bg-muted"
-              )}
-              aria-expanded={mobileToolsOpen}
-            >
-              <span className="flex items-center gap-3">
-                <Wrench className="h-4 w-4" />
-                Tools
-              </span>
-              <ChevronDown className={cn("h-4 w-4 transition-transform", mobileToolsOpen && "rotate-180")} />
-            </button>
-            {mobileToolsOpen && (
-              <div className="ml-2 flex flex-col gap-0.5 border-l border-border pl-3">
-                {tools.map((t) => (
-                  <Link
-                    key={t.to}
-                    to={t.to}
-                    className={cn(
-                      "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors",
-                      location.pathname === t.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
-                    )}
-                  >
-                    <t.icon className="h-4 w-4 flex-shrink-0 text-primary" />
-                    <span className="truncate">{t.label}</span>
-                  </Link>
-                ))}
-              </div>
+          {/* Backdrop */}
+          <div
+            className={cn(
+              "absolute inset-0 bg-background/70 backdrop-blur-sm transition-opacity duration-200",
+              open ? "opacity-100" : "opacity-0"
             )}
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
 
-            {/* Blog collapsible */}
-            <button
-              type="button"
-              onClick={() => setMobileBlogOpen((v) => !v)}
-              className={cn(
-                "flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
-                isBlogPath ? "text-primary" : "hover:bg-muted"
-              )}
-              aria-expanded={mobileBlogOpen}
-            >
-              <span className="flex items-center gap-3">
-                <BookOpen className="h-4 w-4" />
-                Blog
-              </span>
-              <ChevronDown className={cn("h-4 w-4 transition-transform", mobileBlogOpen && "rotate-180")} />
-            </button>
-            {mobileBlogOpen && (
-              <div className="ml-2 flex flex-col gap-0.5 border-l border-border pl-3">
-                <Link
-                  to="/blog"
-                  className="flex items-center justify-between rounded-lg bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
-                >
-                  All articles
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                {featuredBlogs.slice(0, 5).map((p) => (
-                  <Link
-                    key={p.slug}
-                    to={`/blog/${p.slug}`}
-                    className="block rounded-lg px-3 py-2 text-sm hover:bg-muted"
-                  >
-                    <span className="line-clamp-1">{p.title}</span>
-                  </Link>
-                ))}
-              </div>
+          {/* Panel */}
+          <div
+            className={cn(
+              "absolute right-0 top-0 h-full w-[min(360px,90vw)] overflow-y-auto border-l border-border bg-background shadow-2xl transition-transform duration-300 ease-out",
+              open ? "translate-x-0" : "translate-x-full"
             )}
-
-            {primaryNav.map((l) => (
+          >
+            <nav className="flex flex-col gap-1 px-4 py-5" aria-label="Mobile">
               <Link
-                key={l.to}
-                to={l.to}
+                to="/"
                 className={cn(
                   "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
-                  location.pathname === l.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                  location.pathname === "/" ? "bg-primary/10 text-primary" : "hover:bg-muted"
                 )}
               >
-                <l.icon className="h-4 w-4" />
-                {l.label}
+                <Home className="h-4 w-4" />
+                Home
               </Link>
-            ))}
 
-            <Button asChild size="lg" className="mt-4 w-full">
-              <Link to="/summarizer">Try Free</Link>
-            </Button>
-          </nav>
-        </div>
-      </div>
+              {/* Tools collapsible */}
+              <button
+                type="button"
+                onClick={() => setMobileToolsOpen((v) => !v)}
+                className={cn(
+                  "flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                  isToolPath ? "text-primary" : "hover:bg-muted"
+                )}
+                aria-expanded={mobileToolsOpen}
+              >
+                <span className="flex items-center gap-3">
+                  <Wrench className="h-4 w-4" />
+                  Tools
+                </span>
+                <ChevronDown className={cn("h-4 w-4 transition-transform", mobileToolsOpen && "rotate-180")} />
+              </button>
+              {mobileToolsOpen && (
+                <div className="ml-2 flex flex-col gap-0.5 border-l border-border pl-3">
+                  {tools.map((t) => (
+                    <Link
+                      key={t.to}
+                      to={t.to}
+                      className={cn(
+                        "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors",
+                        location.pathname === t.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                      )}
+                    >
+                      <t.icon className="h-4 w-4 flex-shrink-0 text-primary" />
+                      <span className="truncate">{t.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {/* Blog collapsible */}
+              <button
+                type="button"
+                onClick={() => setMobileBlogOpen((v) => !v)}
+                className={cn(
+                  "flex items-center justify-between gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                  isBlogPath ? "text-primary" : "hover:bg-muted"
+                )}
+                aria-expanded={mobileBlogOpen}
+              >
+                <span className="flex items-center gap-3">
+                  <BookOpen className="h-4 w-4" />
+                  Blog
+                </span>
+                <ChevronDown className={cn("h-4 w-4 transition-transform", mobileBlogOpen && "rotate-180")} />
+              </button>
+              {mobileBlogOpen && (
+                <div className="ml-2 flex flex-col gap-0.5 border-l border-border pl-3">
+                  <Link
+                    to="/blog"
+                    className="flex items-center justify-between rounded-lg bg-primary/10 px-3 py-2.5 text-sm font-semibold text-primary"
+                  >
+                    All articles
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  {featuredBlogs.slice(0, 5).map((p) => (
+                    <Link
+                      key={p.slug}
+                      to={`/blog/${p.slug}`}
+                      className="block rounded-lg px-3 py-2 text-sm hover:bg-muted"
+                    >
+                      <span className="line-clamp-1">{p.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {primaryNav.map((l) => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  className={cn(
+                    "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
+                    location.pathname === l.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                  )}
+                >
+                  <l.icon className="h-4 w-4" />
+                  {l.label}
+                </Link>
+              ))}
+
+              <Button asChild size="lg" className="mt-4 w-full">
+                <Link to="/summarizer">Try Free</Link>
+              </Button>
+            </nav>
+          </div>
+        </div>,
+        document.body
+      )}
     </header>
   );
 }
