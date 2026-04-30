@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
