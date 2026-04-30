@@ -322,28 +322,7 @@ export default function Navbar() {
           </nav>
         </div>
       </div>
-
-            {primaryNav.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={cn(
-                  "flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition-colors",
-                  location.pathname === l.to ? "bg-primary/10 text-primary" : "hover:bg-muted"
-                )}
-              >
-                <l.icon className="h-4 w-4" />
-                {l.label}
-              </Link>
-            ))}
-
-            <Button asChild size="lg" className="mt-4 w-full">
-              <Link to="/summarizer">Try Free</Link>
-            </Button>
-          </nav>
-        </div>
-        </div>
-      )}
     </header>
   );
 }
+
