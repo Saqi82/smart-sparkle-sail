@@ -1,4 +1,11 @@
+# https://studykro.com — robots.txt
 User-agent: *
 Allow: /
 
+# Block crawling of internal/auth/utility paths
+Disallow: /offline.html
+Disallow: /~oauth
+Disallow: /api/
+
+# Sitemap
 Sitemap: https://studykro.com/sitemap.xml
