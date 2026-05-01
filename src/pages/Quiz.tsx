@@ -2,6 +2,7 @@ import { useState } from "react";
 import { callAI } from "@/lib/ai";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
@@ -179,17 +180,18 @@ export default function Quiz() {
               />
             </div>
             <div className="mt-4">
-              <Input
-                placeholder="…or type a topic (e.g., Photosynthesis)"
+              <Textarea
+                placeholder="…or type a topic / paste notes (e.g., Photosynthesis)"
                 value={topic}
                 onChange={(e) => {
                   setTopic(e.target.value);
                   setError("");
                 }}
                 maxLength={60000}
-                className={error ? "border-destructive" : ""}
+                className={`min-h-[100px] ${error ? "border-destructive" : ""}`}
               />
               {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
+              <p className="mt-1 text-xs text-muted-foreground">{topic.length.toLocaleString()} / 60,000 characters</p>
             </div>
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div>
