@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
+import DocumentUploader from "@/components/DocumentUploader";
 import { toast } from "sonner";
 import { FileText, Lightbulb, BookOpen, AlertTriangle, PencilRuler, Sparkles } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
@@ -112,21 +113,31 @@ export default function Summarizer() {
         </div>
 
         <div className="field-shell">
-          <label className="text-sm font-semibold text-foreground">Paste your notes</label>
+          <label className="text-sm font-semibold text-foreground">Paste your notes or upload a document</label>
           <p className="micro-note mt-1">Aim for complete thoughts instead of fragments. The clearer the source, the more teachable the summary.</p>
+          <div className="mt-4">
+            <DocumentUploader
+              label="Upload notes (PDF, DOCX, PPTX, TXT, image)"
+              disabled={loading}
+              onText={(text) => {
+                setNotes(text);
+                setError("");
+              }}
+            />
+          </div>
           <Textarea
-            placeholder="Paste your lecture notes here..."
+            placeholder="…or paste your lecture notes here"
             value={notes}
             onChange={(e) => {
               setNotes(e.target.value);
               setError("");
             }}
-            maxLength={10000}
+            maxLength={60000}
             className={`mt-4 min-h-[220px] ${error ? "border-destructive" : ""}`}
           />
           {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
           <div className="mt-3 flex items-center justify-between gap-4">
-            <span className="text-sm text-muted-foreground">{notes.length.toLocaleString()} / 10,000 characters</span>
+            <span className="text-sm text-muted-foreground">{notes.length.toLocaleString()} / 60,000 characters</span>
             <span className="text-xs text-muted-foreground">Think of this as page 1 of your revision pack.</span>
           </div>
           <Button onClick={handleSubmit} disabled={loading} className="mt-5 gradient-bg text-primary-foreground">

@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
+import DocumentUploader from "@/components/DocumentUploader";
 import { toast } from "sonner";
 import {
   ShieldCheck, AlertTriangle, FileSearch, Sparkles, BadgeCheck, ScanLine,
@@ -132,21 +133,31 @@ export default function Plagiarism() {
         </div>
 
         <div className="field-shell">
-          <label className="text-sm font-semibold text-foreground">Paste your text</label>
+          <label className="text-sm font-semibold text-foreground">Paste your text or upload a document</label>
           <p className="micro-note mt-1">Essay, assignment, paragraph or article — minimum 30 characters.</p>
+          <div className="mt-4">
+            <DocumentUploader
+              label="Upload essay (PDF, DOCX, TXT, image)"
+              disabled={loading}
+              onText={(extracted) => {
+                setText(extracted);
+                setError("");
+              }}
+            />
+          </div>
           <Textarea
-            placeholder="Paste the text you want to check for plagiarism..."
+            placeholder="…or paste the text you want to check for plagiarism"
             value={text}
             onChange={(e) => {
               setText(e.target.value);
               setError("");
             }}
-            maxLength={12000}
+            maxLength={60000}
             className={`mt-4 min-h-[260px] ${error ? "border-destructive" : ""}`}
           />
           {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
           <div className="mt-3 flex items-center justify-between gap-4">
-            <span className="text-sm text-muted-foreground">{text.length.toLocaleString()} / 12,000 characters</span>
+            <span className="text-sm text-muted-foreground">{text.length.toLocaleString()} / 60,000 characters</span>
             <span className="text-xs text-muted-foreground">100% private — nothing is stored.</span>
           </div>
           <Button

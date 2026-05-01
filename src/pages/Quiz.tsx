@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { callAI } from "@/lib/ai";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
+import DocumentUploader from "@/components/DocumentUploader";
 import { toast } from "sonner";
 import { ClipboardList, RotateCcw, BrainCircuit, BookOpenCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -166,19 +167,30 @@ export default function Quiz() {
         {questions.length === 0 ? (
           <div className="field-shell max-w-xl">
             <label className="text-sm font-semibold text-foreground">Choose your quiz setup</label>
-            <p className="micro-note mt-1">A specific topic makes the questions sharper and the explanations more useful.</p>
+            <p className="micro-note mt-1">A specific topic — or uploaded notes — makes the questions sharper and the explanations more useful.</p>
             <div className="mt-4">
-              <Input
-                placeholder="Topic (e.g., Photosynthesis)"
+              <DocumentUploader
+                label="Upload notes to quiz from (optional)"
+                disabled={loading}
+                onText={(text) => {
+                  setTopic(text);
+                  setError("");
+                }}
+              />
+            </div>
+            <div className="mt-4">
+              <Textarea
+                placeholder="…or type a topic / paste notes (e.g., Photosynthesis)"
                 value={topic}
                 onChange={(e) => {
                   setTopic(e.target.value);
                   setError("");
                 }}
-                maxLength={200}
-                className={error ? "border-destructive" : ""}
+                maxLength={60000}
+                className={`min-h-[100px] ${error ? "border-destructive" : ""}`}
               />
               {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
+              <p className="mt-1 text-xs text-muted-foreground">{topic.length.toLocaleString()} / 60,000 characters</p>
             </div>
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div>
