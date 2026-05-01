@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
+import DocumentUploader from "@/components/DocumentUploader";
 import { toast } from "sonner";
 import { ClipboardList, RotateCcw, BrainCircuit, BookOpenCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -166,16 +167,26 @@ export default function Quiz() {
         {questions.length === 0 ? (
           <div className="field-shell max-w-xl">
             <label className="text-sm font-semibold text-foreground">Choose your quiz setup</label>
-            <p className="micro-note mt-1">A specific topic makes the questions sharper and the explanations more useful.</p>
+            <p className="micro-note mt-1">A specific topic — or uploaded notes — makes the questions sharper and the explanations more useful.</p>
+            <div className="mt-4">
+              <DocumentUploader
+                label="Upload notes to quiz from (optional)"
+                disabled={loading}
+                onText={(text) => {
+                  setTopic(text);
+                  setError("");
+                }}
+              />
+            </div>
             <div className="mt-4">
               <Input
-                placeholder="Topic (e.g., Photosynthesis)"
+                placeholder="…or type a topic (e.g., Photosynthesis)"
                 value={topic}
                 onChange={(e) => {
                   setTopic(e.target.value);
                   setError("");
                 }}
-                maxLength={200}
+                maxLength={60000}
                 className={error ? "border-destructive" : ""}
               />
               {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
