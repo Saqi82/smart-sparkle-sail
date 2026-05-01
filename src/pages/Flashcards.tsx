@@ -6,6 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
+import DocumentUploader from "@/components/DocumentUploader";
 import { toast } from "sonner";
 import { Layers, ChevronLeft, ChevronRight, Shuffle, Check, BookMarked, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -142,20 +143,30 @@ export default function Flashcards() {
 
         {cards.length === 0 ? (
           <div className="field-shell">
-            <label className="text-sm font-semibold text-foreground">Add a topic or study notes</label>
+            <label className="text-sm font-semibold text-foreground">Add a topic, paste notes, or upload a document</label>
             <p className="micro-note mt-1">A few complete sentences usually create better prompts than a list of disconnected keywords.</p>
+            <div className="mt-4">
+              <DocumentUploader
+                label="Upload source material"
+                disabled={loading}
+                onText={(text) => {
+                  setInput(text);
+                  setError("");
+                }}
+              />
+            </div>
             <Textarea
-              placeholder="Paste notes or type a topic..."
+              placeholder="…or paste notes / type a topic"
               value={input}
               onChange={(e) => {
                 setInput(e.target.value);
                 setError("");
               }}
-              maxLength={10000}
+              maxLength={60000}
               className={`mt-4 min-h-[220px] ${error ? "border-destructive" : ""}`}
             />
             {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
-            <p className="mt-3 text-sm text-muted-foreground">{input.length.toLocaleString()} / 10,000 characters</p>
+            <p className="mt-3 text-sm text-muted-foreground">{input.length.toLocaleString()} / 60,000 characters</p>
             <Button onClick={handleGenerate} disabled={loading} className="mt-5 gradient-bg text-primary-foreground">
               Generate Flashcards
             </Button>

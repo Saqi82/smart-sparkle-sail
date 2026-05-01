@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
 import Loader from "@/components/Loader";
+import DocumentUploader from "@/components/DocumentUploader";
 import { toast } from "sonner";
 import { Brain, Lightbulb, BookOpen, AlertTriangle, Sparkles } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
@@ -92,11 +93,18 @@ export default function Explainer() {
 
         <div className="field-shell">
           <label className="text-sm font-semibold text-foreground">What should we explain?</label>
+          <div className="mt-4">
+            <DocumentUploader
+              label="Upload a chapter or notes for context"
+              disabled={loading}
+              onText={(text) => setConcept(text)}
+            />
+          </div>
           <Textarea
-            placeholder="e.g. Quantum entanglement, photosynthesis, supply and demand..."
+            placeholder="…or type a concept (e.g. Quantum entanglement)"
             value={concept}
             onChange={(e) => setConcept(e.target.value)}
-            maxLength={1000}
+            maxLength={60000}
             className="mt-4 min-h-[120px]"
           />
           <div className="mt-4">
