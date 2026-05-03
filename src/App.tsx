@@ -26,6 +26,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const UploadTest = lazy(() => import("./pages/UploadTest"));
 
 const queryClient = new QueryClient();
 
