@@ -4,6 +4,7 @@ import { Progress } from "@/components/ui/progress";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { UploadCloud, FileText, X, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const ACCEPTED_MIMES = [
   "application/pdf",
