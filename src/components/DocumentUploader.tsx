@@ -137,9 +137,46 @@ export default function DocumentUploader({ onText, disabled, label }: DocumentUp
   };
 
   const busy = stage === "uploading" || stage === "parsing";
+  const [dragOver, setDragOver] = useState(false);
+
+  const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setDragOver(false);
+    if (busy || disabled) return;
+    const files = Array.from(e.dataTransfer.files || []);
+    if (files.length === 0) return;
+    if (files.length > 1) {
+      toast.error("Please drop one file at a time.");
+      return;
+    }
+    void handleFile(files[0]);
+  };
 
   return (
-    <div className="rounded-[14px] border border-dashed border-border/40 bg-muted/30 p-4">
+    <div
+      onDragOver={(e) => {
+        e.preventDefault();
+        if (!busy && !disabled) setDragOver(true);
+      }}
+      onDragLeave={() => setDragOver(false)}
+      onDrop={onDrop}
+      onClick={() => !busy && !disabled && inputRef.current?.click()}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if ((e.key === "Enter" || e.key === " ") && !busy && !disabled) {
+          e.preventDefault();
+          inputRef.current?.click();
+        }
+      }}
+      className={cn(
+        "cursor-pointer rounded-[14px] border-2 border-dashed p-5 transition-colors",
+        dragOver
+          ? "border-primary bg-primary/5"
+          : "border-border/50 bg-muted/30 hover:border-primary/50 hover:bg-muted/50",
+        (busy || disabled) && "cursor-not-allowed opacity-80",
+      )}
+    >
       <input
         ref={inputRef}
         type="file"
@@ -157,16 +194,16 @@ export default function DocumentUploader({ onText, disabled, label }: DocumentUp
           </div>
           <div className="min-w-0">
             <p className="text-sm font-semibold text-foreground">
-              {label || "Upload a document"}
+              {label || (dragOver ? "Drop the file to upload" : "Drag & drop or click to upload")}
             </p>
             <p className="micro-note truncate">
               {fileName
                 ? `${fileName}`
-                : "PDF, DOCX, PPTX, TXT, MD or images up to 20 MB. We extract the text for you."}
+                : "Up to 20 MB. We extract the text for you."}
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
           {fileName && stage === "done" && (
             <Button type="button" variant="ghost" size="sm" onClick={reset} disabled={busy}>
               <X className="mr-1 h-4 w-4" /> Clear
@@ -193,6 +230,18 @@ export default function DocumentUploader({ onText, disabled, label }: DocumentUp
           </Button>
         </div>
       </div>
+
+      <div className="mt-3 flex flex-wrap gap-1.5">
+        {["PDF", "DOCX", "PPTX", "TXT", "MD", "PNG", "JPG", "WEBP"].map((t) => (
+          <span
+            key={t}
+            className="rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground ring-1 ring-border/50"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+
       {busy && <Progress value={progress} className="mt-3 h-1.5" />}
     </div>
   );
