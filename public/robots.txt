@@ -2,10 +2,10 @@
 User-agent: *
 Allow: /
 
-# Block crawling of internal/auth/utility paths
-Disallow: /offline.html
+# Block internal/utility paths
 Disallow: /~oauth
 Disallow: /api/
+Disallow: /upload-test
 
 # Sitemap
 Sitemap: https://studykro.com/sitemap.xml
