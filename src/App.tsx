@@ -27,6 +27,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const UploadTest = lazy(() => import("./pages/UploadTest"));
+const AiFlashcardGenerator = lazy(() => import("./pages/AiFlashcardGenerator"));
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ function AnimatedRoutes() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/upload-test" element={<UploadTest />} />
+          <Route path="/ai-flashcard-generator" element={<AiFlashcardGenerator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
