@@ -13,6 +13,7 @@ import brainFoods from "@/assets/blog/best-foods-for-studying.jpg";
 import examStress from "@/assets/blog/dealing-with-exam-stress.jpg";
 import feynman from "@/assets/blog/feynman-technique-step-by-step.jpg";
 import memoryPalace from "@/assets/blog/memory-palace-method-for-students.jpg";
+import studySmarter from "@/assets/blog/study-smarter-not-harder-ai-tools-2026.jpg";
 
 export type BlogImage = { src: string; alt: string };
 
@@ -64,6 +65,10 @@ export const blogImages: Record<string, BlogImage> = {
   "memory-palace-method-for-students": {
     src: memoryPalace,
     alt: "Memory palace illustration: a house of rooms holding study symbols connected by a path — method of loci for students",
+  },
+  "study-smarter-not-harder-ai-tools-2026": {
+    src: studySmarter,
+    alt: "Student at a laptop surrounded by AI study tool icons — flashcards, quiz, brain, checklist and lightbulb — illustrating how to study smarter not harder in 2026",
   },
 };
 
