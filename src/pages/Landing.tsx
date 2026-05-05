@@ -43,8 +43,8 @@ export default function Landing() {
   return (
     <PageWrapper>
       <Seo
-        title="StudyKro – Free AI Study Tools: Summarizer, Flashcards, Quiz & More"
-        description="Free AI study tools for students. Summarize notes, generate flashcards & quizzes, build study plans, outline essays, and ace exams with proven techniques."
+        title="Free AI Study Assistant – Flashcards, Quizzes & Summaries"
+        description="Free AI study assistant with an AI flashcard generator, AI quiz generator, notes summarizer AI, and study plan generator. Start studying free, no signup."
         keywords={[
           "AI study tools", "AI flashcard generator", "AI quiz generator",
           "notes summarizer", "study plan generator", "essay outline generator",
