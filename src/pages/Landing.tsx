@@ -43,8 +43,8 @@ export default function Landing() {
   return (
     <PageWrapper>
       <Seo
-        title="StudyKro – Free AI Study Tools: Summarizer, Flashcards, Quiz & More"
-        description="Free AI study tools for students. Summarize notes, generate flashcards & quizzes, build study plans, outline essays, and ace exams with proven techniques."
+        title="Free AI Study Assistant – Flashcards, Quizzes & Summaries"
+        description="Free AI study assistant with an AI flashcard generator, AI quiz generator, notes summarizer AI, and study plan generator. Start studying free, no signup."
         keywords={[
           "AI study tools", "AI flashcard generator", "AI quiz generator",
           "notes summarizer", "study plan generator", "essay outline generator",
@@ -84,7 +84,7 @@ export default function Landing() {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold text-foreground card-shadow"
           >
             <Sparkles className="h-3.5 w-3.5 text-primary" />
-            9 AI Study Tools · 100% Free · No Sign-up
+            Free forever · No signup · Loved by students
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
@@ -92,8 +92,7 @@ export default function Landing() {
             transition={{ delay: 0.05 }}
             className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Study smarter with{" "}
-            <span className="gradient-text">AI-powered</span> study tools
+            Your <span className="gradient-text">free AI study assistant</span> for flashcards, quizzes & smarter notes
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -101,8 +100,7 @@ export default function Landing() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg md:text-xl"
           >
-            Summarize notes, generate flashcards & quizzes, build a study plan, and ace your exams.
-            Built on proven techniques — active recall, spaced repetition, and the Feynman method.
+            StudyKro is the free AI study assistant that helps you learn faster and stress less. Use the AI flashcard generator to turn any topic into ready-to-review cards, the AI quiz generator to test yourself in seconds, the notes summarizer AI to shrink long lectures into clear key points, and the study plan generator to map out your week. No signup, no fees — just open a tool, paste your notes, and start studying.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -111,7 +109,7 @@ export default function Landing() {
             className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <Button asChild size="lg" className="w-full px-8 sm:w-auto">
-              <Link to="/summarizer">Try Summarizer Free <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/summarizer">Start studying free — no signup needed <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full px-8 sm:w-auto">
               <Link to="/blog">Read Study Guides</Link>
