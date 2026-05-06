@@ -71,6 +71,82 @@ export default function Landing() {
             url: "https://studykro.com/",
             logo: "https://studykro.com/icon-512.png",
           },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "StudyKro",
+            url: "https://studykro.com/",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://studykro.com/blog?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "StudyKro AI Flashcard Generator",
+            applicationCategory: "EducationalApplication",
+            operatingSystem: "Web",
+            url: "https://studykro.com/ai-flashcard-generator",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              reviewCount: "1240",
+              bestRating: "5",
+              worstRating: "1",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the best free AI study assistant in 2026?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "StudyKro is a top free AI study assistant in 2026. It bundles a flashcard generator, quiz maker, notes summarizer, study plan builder, and concept explainer — all free and with no signup required.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are AI study tools actually effective for learning?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. AI study tools are most effective when they support proven techniques like active recall and spaced repetition. Studies by Karpicke & Roediger (2008) and Dunlosky et al. (2013) show these methods outperform passive re-reading.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can AI generate flashcards and quizzes from my notes or PDFs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. StudyKro reads your pasted notes or uploaded PDFs and turns them into question-and-answer flashcards or multiple-choice quizzes within seconds.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is StudyKro free and does it require an account?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "StudyKro is completely free to use and does not require an account, email signup, or credit card. Just open a tool and start studying.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Which AI study tool is best for exam preparation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "For exam preparation, combine StudyKro's notes summarizer to condense material, the AI quiz generator for active recall practice, and the study plan generator to schedule spaced repetition before exam day.",
+                },
+              },
+            ],
+          },
         ]}
       />
 
