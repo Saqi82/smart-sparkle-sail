@@ -26,7 +26,7 @@ export default function AiFlashcardGenerator() {
             applicationCategory: "EducationalApplication",
             operatingSystem: "Web",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "1284" },
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240", bestRating: "5", worstRating: "1" },
             url: "https://studykro.com/ai-flashcard-generator",
           },
           {
