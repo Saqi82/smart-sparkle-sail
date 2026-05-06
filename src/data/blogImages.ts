@@ -14,6 +14,7 @@ import examStress from "@/assets/blog/dealing-with-exam-stress.jpg";
 import feynman from "@/assets/blog/feynman-technique-step-by-step.jpg";
 import memoryPalace from "@/assets/blog/memory-palace-method-for-students.jpg";
 import studySmarter from "@/assets/blog/study-smarter-not-harder-ai-tools-2026.jpg";
+import mnemonicAi from "@/assets/blog/mnemonic-devices-ai-generator.jpg";
 
 export type BlogImage = { src: string; alt: string };
 
@@ -69,6 +70,10 @@ export const blogImages: Record<string, BlogImage> = {
   "study-smarter-not-harder-ai-tools-2026": {
     src: studySmarter,
     alt: "Student at a laptop surrounded by AI study tool icons — flashcards, quiz, brain, checklist and lightbulb — illustrating how to study smarter not harder in 2026",
+  },
+  "mnemonic-devices-ai-generator": {
+    src: mnemonicAi,
+    alt: "Colorful brain illustration with rainbow ROYGBIV, memory palace house, music notes and lightbulb — AI mnemonic generator for any subject",
   },
 };
 
