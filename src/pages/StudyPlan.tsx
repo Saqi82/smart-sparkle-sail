@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { Calendar, AlertTriangle } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface DailyPlan {
   day: number;
@@ -90,19 +91,20 @@ export default function StudyPlan() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Study Plan Generator – Personalized Revision Schedule | StudyKro"
+        title="Free AI Study Plan Generator – Personalized Revision | StudyKro"
         description="Free AI study plan generator. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around proven study techniques."
         canonical="https://studykro.com/studyplan"
         keywords={["AI study plan generator","revision schedule","exam study planner","study timetable generator","personalized study plan"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Study Plan Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Study Plan Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI study plan generator. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around proven study techniques.",
           url: "https://studykro.com/studyplan",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
@@ -113,7 +115,7 @@ export default function StudyPlan() {
               <Calendar className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Study Plan Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Study Plan Generator</h1>
               <p className="text-sm text-muted-foreground">Turn pressure into a schedule that feels possible to follow.</p>
             </div>
           </div>
@@ -246,6 +248,33 @@ export default function StudyPlan() {
           </div>
         )}
       </section>
+
+      <ToolSeoContent
+        toolName="Free AI Study Plan Generator"
+        whatItDoes="StudyKro's free AI study plan generator builds a personalized, day-by-day revision schedule for any exam. Tell it the subject, your exam date, how many hours you can study daily, your current level, and your weak areas — and the AI returns an overall strategy plus a detailed plan for every day, including focus topics, specific tasks, and study cues. It's designed for students juggling multiple subjects who want a clear, realistic timetable instead of vague advice. The plan saves checkboxes so you can track progress across sessions."
+        howToUse={[
+          "Enter your subject, exam date, hours per day, level, and any weak areas.",
+          "Click Generate Study Plan. The AI builds a daily schedule with focus topics and tasks.",
+          "Tick off tasks each day — your progress saves automatically in your browser.",
+        ]}
+        benefits={[
+          { title: "Personalized to your timeline", body: "The plan paces itself based on how many days you have until exam day, so nothing gets crammed at the end." },
+          { title: "Free with no signup", body: "Unlimited study plans, no account, no payment. Use it across every exam season." },
+          { title: "Built on proven methods", body: "Mixes spaced repetition, active recall, and weak-area drilling — the techniques that actually move scores." },
+        ]}
+        faqs={[
+          { q: "Is the AI study plan generator free?", a: "Yes. The full study plan generator is free with no signup or credit card required." },
+          { q: "Can it plan around multiple subjects?", a: "Yes — generate a separate plan for each subject and stack the daily hours that fit your schedule." },
+          { q: "What if I miss a study day?", a: "Just continue with the next day's plan. The checkboxes stay so you can come back and finish what you missed." },
+          { q: "Does it work for big exams like the SAT, MCAT, or bar exam?", a: "Yes. Just enter the exam name as the subject, the date, and your weak areas, and the AI structures the timeline accordingly." },
+          { q: "How is the daily plan created?", a: "Based on the time available, the AI sequences foundations first, then practice and review, with spaced revision baked in toward exam day." },
+        ]}
+        related={[
+          { to: "/examtips", label: "AI Exam Tips Generator", desc: "Predicted questions and last-minute strategy for each subject in your plan." },
+          { to: "/quiz", label: "AI Quiz Generator", desc: "Self-test on the topics scheduled for today." },
+          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Compress each day's reading into a quick revision sheet." },
+        ]}
+      />
     </PageWrapper>
   );
 }

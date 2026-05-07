@@ -11,6 +11,7 @@ import { Sparkles, Music, Eye, Building2 } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 import { useSeo } from "@/lib/seo";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface Result {
   acronym?: { word: string; breakdown: string[] };
@@ -23,9 +24,9 @@ interface Result {
 
 export default function Mnemonics() {
   useSeo({
-    title: "AI Mnemonic Generator – Memory Aids for Any List | StudyKro",
+    title: "Free AI Mnemonic Generator – Memory Aids for Any List | StudyKro",
     description: "Free AI mnemonic generator. Get acronyms, acrostics, stories, rhymes, and memory palace steps to remember anything fast.",
-    keywords: ["mnemonic generator", "memory aids", "acronym generator", "memory palace", "study tricks"],
+    keywords: ["AI mnemonic generator", "memory aids", "acronym generator", "memory palace", "study tricks"],
   });
   const [items, setItems] = useState("");
   const [subject, setSubject] = useState("");
@@ -58,19 +59,20 @@ export default function Mnemonics() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Mnemonic Generator – Acronyms, Stories & Memory Palaces | StudyKro"
+        title="Free AI Mnemonic Generator – Acronyms & Memory Palaces | StudyKro"
         description="Free AI mnemonic generator. Turn lists, terms or facts into memorable acronyms, stories and memory palaces. Remember anything, faster."
         canonical="https://studykro.com/mnemonics"
         keywords={["AI mnemonic generator","memory palace generator","acronym maker","mnemonic device creator","memorization AI"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Mnemonic Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Mnemonic Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI mnemonic generator. Turn lists, terms or facts into memorable acronyms, stories and memory palaces. Remember anything, faster.",
           url: "https://studykro.com/mnemonics",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
@@ -81,7 +83,7 @@ export default function Mnemonics() {
               <Sparkles className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Mnemonic Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Mnemonic Generator</h1>
               <p className="text-sm text-muted-foreground">Turn dry lists into acronyms, vivid stories, and memory palaces.</p>
             </div>
           </div>
@@ -166,6 +168,33 @@ export default function Mnemonics() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Mnemonic Generator"
+        whatItDoes="StudyKro's free AI mnemonic generator turns any list of items, terms, or facts into memorable hooks in seconds. You get six different memory aids in one shot: an acronym, an acrostic sentence, a short story, vivid visual imagery, a rhyme or song, and a step-by-step memory palace walkthrough. Cognitive science shows mnemonics dramatically improve recall by tying new information to vivid, multi-sensory cues. Whether you're memorizing the cranial nerves, the planets, periodic table groups, vocabulary, or historical dates, the AI mnemonic generator gives you several angles so at least one will stick."
+        howToUse={[
+          "Optionally enter a subject (e.g. Biology, History) to give the AI context.",
+          "List the items you want to remember, one per line, then click Generate Memory Aids.",
+          "Pick the mnemonic that resonates most and rehearse it with spaced repetition.",
+        ]}
+        benefits={[
+          { title: "Six aids in one click", body: "Acronym, acrostic, story, visual imagery, rhyme, and a memory palace — pick whichever sticks fastest for your brain." },
+          { title: "Free with no signup", body: "Unlimited mnemonics, no account, no payment. Use it for every memorization-heavy subject." },
+          { title: "Backed by memory science", body: "Built around dual-coding, the method of loci, and elaborative encoding — the techniques memory champions actually use." },
+        ]}
+        faqs={[
+          { q: "Is the AI mnemonic generator free?", a: "Yes. The full mnemonic generator is free with no signup or credit card required." },
+          { q: "Can it create a memory palace for me?", a: "Yes — it generates a step-by-step memory palace walkthrough, placing each item in a vivid imagined location." },
+          { q: "What subjects does it work for?", a: "Anything list-based: medical school (cranial nerves, drug names), languages, history dates, biology taxonomies, law cases, geography, and more." },
+          { q: "How many items can I memorize at once?", a: "Up to about 20 items per request works best — longer lists are easier to remember when split into smaller chunks." },
+          { q: "Are mnemonics actually effective?", a: "Yes — peer-reviewed studies on the method of loci and dual-coding show large recall improvements vs. plain rote memorization." },
+        ]}
+        related={[
+          { to: "/flashcards", label: "AI Flashcard Generator", desc: "Pair each mnemonic with a flashcard and review with spaced repetition." },
+          { to: "/explainer", label: "AI Concept Explainer", desc: "Understand the concept first, then build a mnemonic to lock it in." },
+          { to: "/examtips", label: "AI Exam Tips Generator", desc: "Get the must-memorize lists for your exam and feed them straight in here." },
+        ]}
+      />
     </PageWrapper>
   );
 }

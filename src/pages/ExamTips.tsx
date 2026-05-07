@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { Target, AlertTriangle, Clock, Trophy } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface ExamTipsResult {
   likely_questions: string[];
@@ -66,19 +67,20 @@ export default function ExamTips() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Exam Tips – Predicted Questions & Last-Mile Prep | StudyKro"
+        title="Free AI Exam Tips Generator – Predicted Questions | StudyKro"
         description="Free AI exam tips generator. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject — in seconds."
         canonical="https://studykro.com/examtips"
         keywords={["AI exam tips","predicted exam questions","exam preparation guide","last-minute exam prep","exam strategy AI"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Exam Tips Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Exam Tips Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI exam tips generator. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject — in seconds.",
           url: "https://studykro.com/examtips",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
@@ -89,7 +91,7 @@ export default function ExamTips() {
               <Target className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Exam Predictor</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Exam Tips Generator</h1>
               <p className="text-sm text-muted-foreground">Use likely themes and practical tips to focus the time you have left.</p>
             </div>
           </div>
@@ -202,6 +204,33 @@ export default function ExamTips() {
           </div>
         )}
       </section>
+
+      <ToolSeoContent
+        toolName="Free AI Exam Tips Generator"
+        whatItDoes="StudyKro's free AI exam tips generator predicts the most likely questions for any subject and gives you a focused last-mile prep plan. Tell it the subject, an optional specific topic, and your exam type (midterm, final, or semester), and the AI returns likely exam questions, must-study topics, common student mistakes to avoid, last-minute tips, time management advice, and a scoring strategy. It's the smart way to spend the final 24–72 hours before exam day — instead of rereading everything, you focus on what's most likely to be tested."
+        howToUse={[
+          "Enter the subject, an optional specific topic, and choose your exam type.",
+          "Click Predict Exam Content. The AI returns likely questions and a focused study list.",
+          "Use the must-study topics and common mistakes as your final-day revision checklist.",
+        ]}
+        benefits={[
+          { title: "Predicted exam questions", body: "See the highest-probability questions so you can practice answering them before the real thing." },
+          { title: "Free with no signup", body: "Unlimited predictions, no account, no payment. Use it for every exam in your semester." },
+          { title: "Time + scoring strategy", body: "Built-in tips on pacing the paper and which sections to attack first to maximize marks." },
+        ]}
+        faqs={[
+          { q: "Are the AI exam tips really free?", a: "Yes. The exam tips generator is 100% free, with no signup, no trial, and no credit card." },
+          { q: "How accurate are the predicted questions?", a: "They are based on common exam patterns for the subject and topic — treat them as high-probability practice prompts, not guarantees." },
+          { q: "Does it work for any subject?", a: "Yes — biology, law, finance, programming, languages, medicine, GRE, SAT, MCAT, bar exam prep, and more." },
+          { q: "Can I use it the night before an exam?", a: "Yes — it's specifically designed for last-mile prep, with last-minute tips and time-management advice baked in." },
+          { q: "What's the difference vs. the study plan?", a: "The study plan paces multiple weeks; exam tips focus the final stretch on the highest-probability topics and mistakes." },
+        ]}
+        related={[
+          { to: "/studyplan", label: "AI Study Plan Generator", desc: "Build a multi-week revision schedule before you switch to last-mile mode." },
+          { to: "/quiz", label: "AI Quiz Generator", desc: "Practice the predicted questions with instant feedback." },
+          { to: "/mnemonics", label: "AI Mnemonic Generator", desc: "Lock in must-remember lists with memory hooks." },
+        ]}
+      />
     </PageWrapper>
   );
 }

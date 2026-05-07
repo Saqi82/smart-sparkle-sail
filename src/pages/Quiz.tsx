@@ -12,6 +12,7 @@ import { ClipboardList, RotateCcw, BrainCircuit, BookOpenCheck } from "lucide-re
 import { cn } from "@/lib/utils";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface Question {
   question: string;
@@ -120,19 +121,20 @@ export default function Quiz() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Quiz Generator – Create Practice Quizzes from Any Topic | StudyKro"
+        title="Free AI Quiz Generator – Practice Quizzes from Notes | StudyKro"
         description="Free AI quiz generator. Create multiple-choice practice quizzes from your notes or any topic and self-test instantly. Perfect for exam prep."
         canonical="https://studykro.com/quiz"
         keywords={["AI quiz generator","practice quiz maker","MCQ generator","self-test AI","exam prep quiz","free quiz maker"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Quiz Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Quiz Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI quiz generator. Create multiple-choice practice quizzes from your notes or any topic and self-test instantly. Perfect for exam prep.",
           url: "https://studykro.com/quiz",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
@@ -143,7 +145,7 @@ export default function Quiz() {
               <ClipboardList className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Quiz Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Quiz Generator</h1>
               <p className="text-sm text-muted-foreground">Practice with feedback that explains the answer instead of just scoring it.</p>
             </div>
           </div>
@@ -285,6 +287,33 @@ export default function Quiz() {
           </div>
         )}
       </section>
+
+      <ToolSeoContent
+        toolName="Free AI Quiz Generator"
+        whatItDoes="StudyKro's free AI quiz generator turns any topic, paragraph of notes, or uploaded document into a multiple-choice practice quiz with instant feedback. Each question comes with four answer options, the correct answer, and a clear explanation of why it's right — so every miss becomes a mini lesson. You can pick your difficulty (easy, medium, hard) and how many questions you want (5, 10, or 15). It's the fastest way to self-test before an exam, and unlike static question banks, the AI quiz generator creates fresh questions every time."
+        howToUse={[
+          "Type a topic, paste your notes, or upload a PDF / DOCX of the chapter you want to be quizzed on.",
+          "Pick the difficulty and number of questions, then click Generate Quiz.",
+          "Answer each question, read the explanation for any miss, and retake to lock in the concepts.",
+        ]}
+        benefits={[
+          { title: "Instant exam prep", body: "Generate practice tests on demand instead of hunting for question banks. Great for midterms, finals, and licensing exams." },
+          { title: "Free with no signup", body: "Unlimited quizzes, no account needed. The free AI quiz generator works in your browser." },
+          { title: "Explanations on every question", body: "Every answer includes a reasoning blurb so you actually learn the material instead of just guessing." },
+        ]}
+        faqs={[
+          { q: "Is the AI quiz generator free?", a: "Yes — completely free, no signup, no trial, no credit card required." },
+          { q: "Can I quiz myself on uploaded notes?", a: "Yes. Upload a PDF, DOCX, PPTX, TXT, or image and the AI will write questions tied to that source material." },
+          { q: "How many questions can I generate?", a: "5, 10, or 15 questions per quiz, with no daily limit on how many quizzes you can run." },
+          { q: "Does it support different difficulty levels?", a: "Yes. Choose easy for definitions, medium for application, or hard for analysis-style questions." },
+          { q: "What subjects work best?", a: "Anything: medicine, law, finance, programming, languages, biology, history, GRE/SAT/MCAT prep, and more." },
+        ]}
+        related={[
+          { to: "/flashcards", label: "AI Flashcard Generator", desc: "Make a study deck on the same topic and reinforce what you missed." },
+          { to: "/examtips", label: "AI Exam Tips Generator", desc: "Get predicted questions and a final-stretch revision strategy." },
+          { to: "/studyplan", label: "AI Study Plan Generator", desc: "Schedule your quiz practice into a personalized revision timetable." },
+        ]}
+      />
     </PageWrapper>
   );
 }

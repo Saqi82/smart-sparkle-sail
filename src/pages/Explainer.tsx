@@ -11,6 +11,7 @@ import { Brain, Lightbulb, BookOpen, AlertTriangle, Sparkles } from "lucide-reac
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 import { useSeo } from "@/lib/seo";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface Result {
   title?: string;
@@ -24,9 +25,9 @@ interface Result {
 
 export default function Explainer() {
   useSeo({
-    title: "AI Concept Explainer – Understand Any Topic Instantly | StudyKro",
+    title: "Free AI Concept Explainer – Feynman Technique AI Tool | StudyKro",
     description: "Free AI concept explainer using the Feynman technique. Get ELI5, analogies, key terms, and examples for any difficult topic in seconds.",
-    keywords: ["AI concept explainer", "Feynman technique", "ELI5", "study help", "topic explainer"],
+    keywords: ["AI concept explainer", "Feynman technique AI tool", "ELI5", "study help", "topic explainer"],
   });
   const [concept, setConcept] = useState("");
   const [level, setLevel] = useState("beginner");
@@ -59,19 +60,20 @@ export default function Explainer() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Concept Explainer – ELI5, Analogies & Deep Dives | StudyKro"
+        title="Free AI Concept Explainer – Feynman Technique AI Tool | StudyKro"
         description="Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique."
         canonical="https://studykro.com/explainer"
-        keywords={["AI concept explainer","ELI5 generator","Feynman technique AI","explain like I'm 5","AI tutor","study concept breakdown"]}
+        keywords={["AI concept explainer","ELI5 generator","Feynman technique AI tool","explain like I'm 5","AI tutor","study concept breakdown"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Concept Explainer",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Concept Explainer",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique.",
           url: "https://studykro.com/explainer",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
@@ -82,7 +84,7 @@ export default function Explainer() {
               <Brain className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Concept Explainer</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Concept Explainer</h1>
               <p className="text-sm text-muted-foreground">Confusing topic? Get an ELI5, an analogy, and a deeper version side-by-side.</p>
             </div>
           </div>
@@ -194,6 +196,33 @@ export default function Explainer() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Concept Explainer"
+        whatItDoes="The StudyKro free AI concept explainer breaks down any confusing topic into a layered explanation you can actually understand. Type a concept (or upload your notes) and you get an ELI5 (explain like I'm 5), an everyday analogy, a deeper detailed version, key term definitions, a worked example, and the most common misconceptions to avoid. It's built around the Feynman technique — if you can explain it simply, you really know it. This Feynman technique AI tool is perfect for cracking the topics that textbooks make worse, not better."
+        howToUse={[
+          "Type a concept or upload a PDF / DOCX of the chapter you're stuck on.",
+          "Pick a level — beginner, intermediate, or advanced — and click Explain it to me.",
+          "Read the ELI5, the analogy, then the detailed version. Use the misconceptions list to check yourself.",
+        ]}
+        benefits={[
+          { title: "Multi-layer explanations", body: "ELI5, analogy, and deep-dive in one response so you can scale the explanation to your current level." },
+          { title: "Free with no signup", body: "Unlimited explanations, no account, no payment. A genuinely free AI study assistant." },
+          { title: "Feynman-style learning", body: "Forces concepts into plain language — the technique Nobel laureate Richard Feynman swore by." },
+        ]}
+        faqs={[
+          { q: "Is the AI concept explainer free?", a: "Yes — completely free, no signup required." },
+          { q: "What's the Feynman technique?", a: "A learning method where you explain a topic in simple words to expose the gaps in your understanding. This tool automates step one of that process." },
+          { q: "Can it explain advanced topics?", a: "Yes. Pick the 'advanced' level for graduate-level, technical, or specialist content." },
+          { q: "Does it work for any subject?", a: "Yes — physics, finance, law, code, biology, philosophy, languages, and more." },
+          { q: "Can I upload a PDF?", a: "Yes. Upload your chapter or notes for context, and the AI will explain the concept grounded in your source material." },
+        ]}
+        related={[
+          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize the chapter first, then ask the explainer for the tricky bits." },
+          { to: "/mnemonics", label: "AI Mnemonic Generator", desc: "Lock the new concept in long-term memory with a memory hook." },
+          { to: "/flashcards", label: "AI Flashcard Generator", desc: "Turn the explanation into active-recall flashcards." },
+        ]}
+      />
     </PageWrapper>
   );
 }

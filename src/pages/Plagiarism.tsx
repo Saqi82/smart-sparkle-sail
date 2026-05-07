@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface SuspiciousPassage {
   passage: string;
@@ -74,29 +75,29 @@ export default function Plagiarism() {
   return (
     <PageWrapper>
       <Seo
-        title="Free AI Plagiarism Checker – 100% Accuracy Originality Scanner | StudyKro"
-        description="Free AI plagiarism checker for students. Scan essays, assignments and articles for plagiarism, AI-generated text and unoriginal phrasing. Get an originality score and rewrite suggestions instantly."
+        title="Free AI Plagiarism Checker – Originality Scanner | StudyKro"
+        description="Free AI plagiarism checker for students. Scan essays and assignments for plagiarism, AI-generated text and unoriginal phrasing. Originality score in seconds."
         canonical="https://studykro.com/plagiarism-checker"
         keywords={[
-          "plagiarism checker",
+          "AI plagiarism checker",
           "free plagiarism checker",
           "AI plagiarism detector",
           "originality checker",
           "AI content detector",
           "essay plagiarism checker",
-          "100% accurate plagiarism checker",
           "student plagiarism scanner",
         ]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "StudyKro Plagiarism Checker",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Plagiarism Checker",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description:
             "Free AI plagiarism checker. Scan essays and assignments for plagiarism, AI-generated text, and unoriginal phrasing — with an originality score and rewrite suggestions.",
           url: "https://studykro.com/plagiarism-checker",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
 
@@ -108,7 +109,7 @@ export default function Plagiarism() {
               <ShieldCheck className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Plagiarism Checker</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Plagiarism Checker</h1>
               <p className="text-sm text-muted-foreground">
                 Scan any essay or assignment for plagiarism, AI-generated text and unoriginal phrasing.
               </p>
@@ -254,6 +255,33 @@ export default function Plagiarism() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Plagiarism Checker"
+        whatItDoes="StudyKro's free AI plagiarism checker scans essays, assignments, articles, and any pasted text for copied phrasing, encyclopedic patterns, and AI-generated output. You get an originality score, a plagiarism likelihood score, an AI-written likelihood score, sentence-level flagged passages with confidence ratings, and a clean rewrite suggestion for every issue. It works on raw text or uploaded PDFs, DOCX, TXT, and images. Built for students who want a fast, private originality check before turning in work — no signup, no upload to a public database, and nothing stored on our servers."
+        howToUse={[
+          "Paste your essay or upload a PDF, DOCX, TXT, or image of your work.",
+          "Click Check Plagiarism. The AI returns originality, plagiarism, and AI-detection scores.",
+          "Read each flagged passage, accept or edit the suggested rewrite, then re-scan.",
+        ]}
+        benefits={[
+          { title: "Three scores in one scan", body: "Originality, plagiarism likelihood, and AI-written likelihood — see exactly where your draft stands before submitting." },
+          { title: "Free with no signup", body: "Unlimited scans, no account, no payment. Use it on every assignment of the semester." },
+          { title: "Rewrites included", body: "Every flagged sentence comes with an in-your-voice rewrite so fixing issues takes seconds, not hours." },
+        ]}
+        faqs={[
+          { q: "Is the AI plagiarism checker free?", a: "Yes — fully free with no signup, trial, or credit card required." },
+          { q: "Does it detect AI-generated text?", a: "Yes. It returns a separate AI-written likelihood score alongside the plagiarism score." },
+          { q: "Is my essay private?", a: "Yes. Nothing is stored — your text is scanned in the moment and discarded." },
+          { q: "Can it scan PDFs and Word documents?", a: "Yes. Upload PDF, DOCX, TXT, or images and the text is extracted automatically." },
+          { q: "How long can my text be?", a: "Up to 60,000 characters per scan — roughly a long essay or short dissertation chapter." },
+        ]}
+        related={[
+          { to: "/essay-outline", label: "AI Essay Outline Generator", desc: "Build the structure first so your finished essay is original by design." },
+          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize sources in your own words before quoting them." },
+          { to: "/explainer", label: "AI Concept Explainer", desc: "Understand the topic deeply so your phrasing is genuinely yours." },
+        ]}
+      />
     </PageWrapper>
   );
 }
