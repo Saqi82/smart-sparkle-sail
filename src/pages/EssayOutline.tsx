@@ -86,7 +86,7 @@ export default function EssayOutline() {
               <PenLine className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Essay Outline Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Essay Outline Generator</h1>
               <p className="text-sm text-muted-foreground">Skip the blank-page panic. Start with a real structure.</p>
             </div>
           </div>
