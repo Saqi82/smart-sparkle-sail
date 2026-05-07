@@ -25,9 +25,9 @@ interface Result {
 
 export default function Explainer() {
   useSeo({
-    title: "AI Concept Explainer – Understand Any Topic Instantly | StudyKro",
+    title: "Free AI Concept Explainer – Feynman Technique AI Tool | StudyKro",
     description: "Free AI concept explainer using the Feynman technique. Get ELI5, analogies, key terms, and examples for any difficult topic in seconds.",
-    keywords: ["AI concept explainer", "Feynman technique", "ELI5", "study help", "topic explainer"],
+    keywords: ["AI concept explainer", "Feynman technique AI tool", "ELI5", "study help", "topic explainer"],
   });
   const [concept, setConcept] = useState("");
   const [level, setLevel] = useState("beginner");
