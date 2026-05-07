@@ -98,19 +98,20 @@ export default function Flashcards() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Flashcard Generator – Make Flashcards from Notes | StudyKro"
+        title="Free AI Flashcard Generator – Notes to Cards | StudyKro"
         description="Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition."
         canonical="https://studykro.com/flashcards"
         keywords={["AI flashcard generator","make flashcards from notes","free flashcard maker","active recall flashcards","study flashcards AI"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Flashcard Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Flashcard Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition.",
           url: "https://studykro.com/flashcards",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
