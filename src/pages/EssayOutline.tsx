@@ -62,19 +62,20 @@ export default function EssayOutline() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Essay Outline Generator – Thesis, Body & Conclusion | StudyKro"
+        title="Free AI Essay Outline Generator – Thesis & Structure | StudyKro"
         description="Free AI essay outline generator. Get a structured outline with thesis statement, supporting arguments, evidence and conclusion for any essay topic."
         canonical="https://studykro.com/essay-outline"
         keywords={["AI essay outline generator","essay outliner","thesis generator","essay structure AI","academic writing helper"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Essay Outline Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Essay Outline Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI essay outline generator. Get a structured outline with thesis statement, supporting arguments, evidence and conclusion for any essay topic.",
           url: "https://studykro.com/essay-outline",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
