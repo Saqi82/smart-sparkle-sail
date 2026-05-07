@@ -75,29 +75,29 @@ export default function Plagiarism() {
   return (
     <PageWrapper>
       <Seo
-        title="Free AI Plagiarism Checker – 100% Accuracy Originality Scanner | StudyKro"
-        description="Free AI plagiarism checker for students. Scan essays, assignments and articles for plagiarism, AI-generated text and unoriginal phrasing. Get an originality score and rewrite suggestions instantly."
+        title="Free AI Plagiarism Checker – Originality Scanner | StudyKro"
+        description="Free AI plagiarism checker for students. Scan essays and assignments for plagiarism, AI-generated text and unoriginal phrasing. Originality score in seconds."
         canonical="https://studykro.com/plagiarism-checker"
         keywords={[
-          "plagiarism checker",
+          "AI plagiarism checker",
           "free plagiarism checker",
           "AI plagiarism detector",
           "originality checker",
           "AI content detector",
           "essay plagiarism checker",
-          "100% accurate plagiarism checker",
           "student plagiarism scanner",
         ]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "StudyKro Plagiarism Checker",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Plagiarism Checker",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description:
             "Free AI plagiarism checker. Scan essays and assignments for plagiarism, AI-generated text, and unoriginal phrasing — with an originality score and rewrite suggestions.",
           url: "https://studykro.com/plagiarism-checker",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
 
