@@ -122,7 +122,7 @@ export default function Flashcards() {
               <Layers className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Flashcard Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Flashcard Generator</h1>
               <p className="text-sm text-muted-foreground">Turn large topics into small prompts you can revisit anywhere.</p>
             </div>
           </div>
