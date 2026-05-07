@@ -255,6 +255,33 @@ export default function Plagiarism() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Plagiarism Checker"
+        whatItDoes="StudyKro's free AI plagiarism checker scans essays, assignments, articles, and any pasted text for copied phrasing, encyclopedic patterns, and AI-generated output. You get an originality score, a plagiarism likelihood score, an AI-written likelihood score, sentence-level flagged passages with confidence ratings, and a clean rewrite suggestion for every issue. It works on raw text or uploaded PDFs, DOCX, TXT, and images. Built for students who want a fast, private originality check before turning in work — no signup, no upload to a public database, and nothing stored on our servers."
+        howToUse={[
+          "Paste your essay or upload a PDF, DOCX, TXT, or image of your work.",
+          "Click Check Plagiarism. The AI returns originality, plagiarism, and AI-detection scores.",
+          "Read each flagged passage, accept or edit the suggested rewrite, then re-scan.",
+        ]}
+        benefits={[
+          { title: "Three scores in one scan", body: "Originality, plagiarism likelihood, and AI-written likelihood — see exactly where your draft stands before submitting." },
+          { title: "Free with no signup", body: "Unlimited scans, no account, no payment. Use it on every assignment of the semester." },
+          { title: "Rewrites included", body: "Every flagged sentence comes with an in-your-voice rewrite so fixing issues takes seconds, not hours." },
+        ]}
+        faqs={[
+          { q: "Is the AI plagiarism checker free?", a: "Yes — fully free with no signup, trial, or credit card required." },
+          { q: "Does it detect AI-generated text?", a: "Yes. It returns a separate AI-written likelihood score alongside the plagiarism score." },
+          { q: "Is my essay private?", a: "Yes. Nothing is stored — your text is scanned in the moment and discarded." },
+          { q: "Can it scan PDFs and Word documents?", a: "Yes. Upload PDF, DOCX, TXT, or images and the text is extracted automatically." },
+          { q: "How long can my text be?", a: "Up to 60,000 characters per scan — roughly a long essay or short dissertation chapter." },
+        ]}
+        related={[
+          { to: "/essay-outline", label: "AI Essay Outline Generator", desc: "Build the structure first so your finished essay is original by design." },
+          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize sources in your own words before quoting them." },
+          { to: "/explainer", label: "AI Concept Explainer", desc: "Understand the topic deeply so your phrasing is genuinely yours." },
+        ]}
+      />
     </PageWrapper>
   );
 }
