@@ -84,7 +84,7 @@ export default function Explainer() {
               <Brain className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Concept Explainer</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Concept Explainer</h1>
               <p className="text-sm text-muted-foreground">Confusing topic? Get an ELI5, an analogy, and a deeper version side-by-side.</p>
             </div>
           </div>
