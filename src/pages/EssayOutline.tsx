@@ -209,6 +209,33 @@ export default function EssayOutline() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Essay Outline Generator"
+        whatItDoes="StudyKro's free AI essay outline generator turns any essay topic into a complete, structured outline in seconds. You get a working title, a clear thesis statement, hook ideas for the introduction, body paragraphs with topic sentences and evidence prompts, a counterargument with rebuttal, a conclusion, and suggested source types to research. It supports argumentative, expository, narrative, compare-and-contrast, and analytical essays at any target word count from 300 to 5,000 words. It's the fastest way to skip the blank-page panic and start writing with a structure that actually holds together."
+        howToUse={[
+          "Type your essay topic, pick the essay type, and set the target word count.",
+          "Click Generate Outline. The AI returns a thesis, hooks, body paragraphs, counterargument, and conclusion.",
+          "Edit and expand each section into your own essay — the structure is yours to keep.",
+        ]}
+        benefits={[
+          { title: "Skip the blank page", body: "Start every assignment with a thesis and a paragraph-by-paragraph plan instead of staring at an empty doc." },
+          { title: "Free with no signup", body: "Unlimited essay outlines, no account, no payment. Use it for every assignment in your semester." },
+          { title: "Built-in counterargument", body: "Strong essays address the opposing view. The AI surfaces it for you so your argument lands harder." },
+        ]}
+        faqs={[
+          { q: "Is the AI essay outline generator free?", a: "Yes. The full essay outline generator is free with no signup, trial, or credit card required." },
+          { q: "Does it write the full essay?", a: "No — it gives you the outline (thesis, body paragraphs, evidence prompts, conclusion) so you can write the essay yourself, ethically." },
+          { q: "What essay types does it support?", a: "Argumentative, expository, narrative, compare-and-contrast, and analytical essays at 300–5,000 words." },
+          { q: "Will my essay be flagged as AI-written?", a: "Since you write the essay yourself using the outline as scaffolding, the final draft is in your voice. Run it through the plagiarism checker to be sure." },
+          { q: "Can I cite the suggested sources?", a: "The AI suggests source types (peer-reviewed studies, government data, etc.) — find the actual sources yourself in your library or Google Scholar." },
+        ]}
+        related={[
+          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize research articles before pulling evidence into your outline." },
+          { to: "/plagiarism-checker", label: "AI Plagiarism Checker", desc: "Scan your finished essay for plagiarism and AI-generated phrasing." },
+          { to: "/explainer", label: "AI Concept Explainer", desc: "Stuck on a concept your essay relies on? Get a clear explanation first." },
+        ]}
+      />
     </PageWrapper>
   );
 }
