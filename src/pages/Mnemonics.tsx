@@ -168,6 +168,33 @@ export default function Mnemonics() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Mnemonic Generator"
+        whatItDoes="StudyKro's free AI mnemonic generator turns any list of items, terms, or facts into memorable hooks in seconds. You get six different memory aids in one shot: an acronym, an acrostic sentence, a short story, vivid visual imagery, a rhyme or song, and a step-by-step memory palace walkthrough. Cognitive science shows mnemonics dramatically improve recall by tying new information to vivid, multi-sensory cues. Whether you're memorizing the cranial nerves, the planets, periodic table groups, vocabulary, or historical dates, the AI mnemonic generator gives you several angles so at least one will stick."
+        howToUse={[
+          "Optionally enter a subject (e.g. Biology, History) to give the AI context.",
+          "List the items you want to remember, one per line, then click Generate Memory Aids.",
+          "Pick the mnemonic that resonates most and rehearse it with spaced repetition.",
+        ]}
+        benefits={[
+          { title: "Six aids in one click", body: "Acronym, acrostic, story, visual imagery, rhyme, and a memory palace — pick whichever sticks fastest for your brain." },
+          { title: "Free with no signup", body: "Unlimited mnemonics, no account, no payment. Use it for every memorization-heavy subject." },
+          { title: "Backed by memory science", body: "Built around dual-coding, the method of loci, and elaborative encoding — the techniques memory champions actually use." },
+        ]}
+        faqs={[
+          { q: "Is the AI mnemonic generator free?", a: "Yes. The full mnemonic generator is free with no signup or credit card required." },
+          { q: "Can it create a memory palace for me?", a: "Yes — it generates a step-by-step memory palace walkthrough, placing each item in a vivid imagined location." },
+          { q: "What subjects does it work for?", a: "Anything list-based: medical school (cranial nerves, drug names), languages, history dates, biology taxonomies, law cases, geography, and more." },
+          { q: "How many items can I memorize at once?", a: "Up to about 20 items per request works best — longer lists are easier to remember when split into smaller chunks." },
+          { q: "Are mnemonics actually effective?", a: "Yes — peer-reviewed studies on the method of loci and dual-coding show large recall improvements vs. plain rote memorization." },
+        ]}
+        related={[
+          { to: "/flashcards", label: "AI Flashcard Generator", desc: "Pair each mnemonic with a flashcard and review with spaced repetition." },
+          { to: "/explainer", label: "AI Concept Explainer", desc: "Understand the concept first, then build a mnemonic to lock it in." },
+          { to: "/examtips", label: "AI Exam Tips Generator", desc: "Get the must-memorize lists for your exam and feed them straight in here." },
+        ]}
+      />
     </PageWrapper>
   );
 }
