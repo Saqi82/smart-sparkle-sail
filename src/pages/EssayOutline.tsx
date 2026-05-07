@@ -11,6 +11,7 @@ import { PenLine, ListTree, Quote } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 import { useSeo } from "@/lib/seo";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface Outline {
   title?: string;
