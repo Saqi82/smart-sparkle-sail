@@ -12,6 +12,7 @@ import { Layers, ChevronLeft, ChevronRight, Shuffle, Check, BookMarked, Sparkles
 import { cn } from "@/lib/utils";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface Flashcard {
   question: string;
