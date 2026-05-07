@@ -91,7 +91,7 @@ export default function ExamTips() {
               <Target className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Exam Predictor</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Exam Tips Generator</h1>
               <p className="text-sm text-muted-foreground">Use likely themes and practical tips to focus the time you have left.</p>
             </div>
           </div>
