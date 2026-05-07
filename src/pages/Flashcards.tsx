@@ -257,6 +257,34 @@ export default function Flashcards() {
           </div>
         )}
       </section>
+
+      <ToolSeoContent
+        toolName="Free AI Flashcard Generator"
+        whatItDoes="The StudyKro free AI flashcard generator turns any notes, textbook chapter, lecture transcript, or topic name into a ready-to-study deck of question-and-answer cards in seconds. Each card is written for active recall, the technique cognitive scientists consistently rank as one of the most effective ways to remember information long-term. You can paste raw notes, upload a PDF or DOCX, or just type a topic, and the AI flashcard generator extracts the most testable facts, definitions, and processes — then sorts them by difficulty so you study the right things first."
+        howToUse={[
+          "Paste your notes, type a topic, or upload a PDF / DOCX of a chapter you want to learn.",
+          "Click Generate Flashcards. The AI flashcard generator builds a tagged deck with easy, medium, and hard cards.",
+          "Flip each card, mark what you know, shuffle the stack, and come back daily for spaced repetition.",
+        ]}
+        benefits={[
+          { title: "Built for active recall", body: "Every card prompts you to retrieve the answer before flipping — the proven path to durable memory and higher exam scores." },
+          { title: "Free with no signup", body: "No account, no paywall, no credit card. Generate unlimited flashcards from any subject as a free AI study assistant." },
+          { title: "Works with PDFs & notes", body: "Upload PDFs, Word docs, slides, or images — or paste plain text. The flashcard maker handles all of them." },
+        ]}
+        faqs={[
+          { q: "Is the AI flashcard generator really free?", a: "Yes. StudyKro's flashcard generator is 100% free, with no signup, no trial, and no card required." },
+          { q: "Can it create flashcards from a PDF?", a: "Yes — upload any PDF, DOCX, PPTX, TXT, or image, and the AI extracts the key concepts and turns them into flashcards." },
+          { q: "How many flashcards can I make?", a: "There is no daily cap on free flashcard creation. Each deck typically returns 10–20 cards depending on how much source content you give it." },
+          { q: "Does it support spaced repetition?", a: "Yes. Mark cards as 'learned' to remove them from your active stack, then reset later to review again — the same loop spaced repetition apps use." },
+          { q: "What subjects work best?", a: "Anything fact-, term-, or process-heavy: biology, history, languages, law, medicine, computer science, exam prep, and more." },
+        ]}
+        related={[
+          { to: "/quiz", label: "AI Quiz Generator", desc: "Test the cards you just learned with multiple-choice practice questions." },
+          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Condense long notes first, then turn the summary into flashcards." },
+          { to: "/mnemonics", label: "AI Mnemonic Generator", desc: "Stuck on a hard card? Generate a memory hook for it instantly." },
+          { to: "/ai-flashcard-generator", label: "PDF Flashcard Maker", desc: "Dedicated landing page for PDF-to-flashcard workflows." },
+        ]}
+      />
     </PageWrapper>
   );
 }
