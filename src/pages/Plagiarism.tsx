@@ -109,7 +109,7 @@ export default function Plagiarism() {
               <ShieldCheck className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Plagiarism Checker</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Plagiarism Checker</h1>
               <p className="text-sm text-muted-foreground">
                 Scan any essay or assignment for plagiarism, AI-generated text and unoriginal phrasing.
               </p>
