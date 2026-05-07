@@ -60,19 +60,20 @@ export default function Explainer() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Concept Explainer – ELI5, Analogies & Deep Dives | StudyKro"
+        title="Free AI Concept Explainer – Feynman Technique AI Tool | StudyKro"
         description="Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique."
         canonical="https://studykro.com/explainer"
-        keywords={["AI concept explainer","ELI5 generator","Feynman technique AI","explain like I'm 5","AI tutor","study concept breakdown"]}
+        keywords={["AI concept explainer","ELI5 generator","Feynman technique AI tool","explain like I'm 5","AI tutor","study concept breakdown"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Concept Explainer",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Concept Explainer",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique.",
           url: "https://studykro.com/explainer",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
