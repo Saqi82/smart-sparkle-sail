@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { FileText, Lightbulb, BookOpen, AlertTriangle, PencilRuler, Sparkles } from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface SummaryResult {
   title?: string;
