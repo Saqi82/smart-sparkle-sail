@@ -26,9 +26,9 @@ interface Outline {
 
 export default function EssayOutline() {
   useSeo({
-    title: "AI Essay Outline Generator – Build a Strong Structure | StudyKro",
+    title: "Free AI Essay Outline Generator – Thesis & Structure | StudyKro",
     description: "Free AI essay outline generator. Get a thesis, hooks, body paragraphs with evidence, counterargument, and conclusion in seconds.",
-    keywords: ["essay outline generator", "AI essay helper", "thesis statement", "academic writing"],
+    keywords: ["AI essay outline generator", "AI essay helper", "thesis statement", "academic writing"],
   });
   const [topic, setTopic] = useState("");
   const [essayType, setEssayType] = useState("argumentative");
