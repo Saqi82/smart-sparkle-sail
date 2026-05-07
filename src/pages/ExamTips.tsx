@@ -204,6 +204,33 @@ export default function ExamTips() {
           </div>
         )}
       </section>
+
+      <ToolSeoContent
+        toolName="Free AI Exam Tips Generator"
+        whatItDoes="StudyKro's free AI exam tips generator predicts the most likely questions for any subject and gives you a focused last-mile prep plan. Tell it the subject, an optional specific topic, and your exam type (midterm, final, or semester), and the AI returns likely exam questions, must-study topics, common student mistakes to avoid, last-minute tips, time management advice, and a scoring strategy. It's the smart way to spend the final 24–72 hours before exam day — instead of rereading everything, you focus on what's most likely to be tested."
+        howToUse={[
+          "Enter the subject, an optional specific topic, and choose your exam type.",
+          "Click Predict Exam Content. The AI returns likely questions and a focused study list.",
+          "Use the must-study topics and common mistakes as your final-day revision checklist.",
+        ]}
+        benefits={[
+          { title: "Predicted exam questions", body: "See the highest-probability questions so you can practice answering them before the real thing." },
+          { title: "Free with no signup", body: "Unlimited predictions, no account, no payment. Use it for every exam in your semester." },
+          { title: "Time + scoring strategy", body: "Built-in tips on pacing the paper and which sections to attack first to maximize marks." },
+        ]}
+        faqs={[
+          { q: "Are the AI exam tips really free?", a: "Yes. The exam tips generator is 100% free, with no signup, no trial, and no credit card." },
+          { q: "How accurate are the predicted questions?", a: "They are based on common exam patterns for the subject and topic — treat them as high-probability practice prompts, not guarantees." },
+          { q: "Does it work for any subject?", a: "Yes — biology, law, finance, programming, languages, medicine, GRE, SAT, MCAT, bar exam prep, and more." },
+          { q: "Can I use it the night before an exam?", a: "Yes — it's specifically designed for last-mile prep, with last-minute tips and time-management advice baked in." },
+          { q: "What's the difference vs. the study plan?", a: "The study plan paces multiple weeks; exam tips focus the final stretch on the highest-probability topics and mistakes." },
+        ]}
+        related={[
+          { to: "/studyplan", label: "AI Study Plan Generator", desc: "Build a multi-week revision schedule before you switch to last-mile mode." },
+          { to: "/quiz", label: "AI Quiz Generator", desc: "Practice the predicted questions with instant feedback." },
+          { to: "/mnemonics", label: "AI Mnemonic Generator", desc: "Lock in must-remember lists with memory hooks." },
+        ]}
+      />
     </PageWrapper>
   );
 }
