@@ -93,7 +93,7 @@ export default function Summarizer() {
               <FileText className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Notes Summarizer</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Notes Summarizer</h1>
               <p className="text-sm text-muted-foreground">Turn raw notes into something easier to revise and explain back to yourself.</p>
             </div>
           </div>
