@@ -83,7 +83,7 @@ export default function Mnemonics() {
               <Sparkles className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Mnemonic Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Mnemonic Generator</h1>
               <p className="text-sm text-muted-foreground">Turn dry lists into acronyms, vivid stories, and memory palaces.</p>
             </div>
           </div>
