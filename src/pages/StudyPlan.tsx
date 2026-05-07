@@ -115,7 +115,7 @@ export default function StudyPlan() {
               <Calendar className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Study Plan Generator</h1>
+              <h1 className="text-3xl font-display font-bold">Free AI Study Plan Generator</h1>
               <p className="text-sm text-muted-foreground">Turn pressure into a schedule that feels possible to follow.</p>
             </div>
           </div>
