@@ -24,9 +24,9 @@ interface Result {
 
 export default function Mnemonics() {
   useSeo({
-    title: "AI Mnemonic Generator – Memory Aids for Any List | StudyKro",
+    title: "Free AI Mnemonic Generator – Memory Aids for Any List | StudyKro",
     description: "Free AI mnemonic generator. Get acronyms, acrostics, stories, rhymes, and memory palace steps to remember anything fast.",
-    keywords: ["mnemonic generator", "memory aids", "acronym generator", "memory palace", "study tricks"],
+    keywords: ["AI mnemonic generator", "memory aids", "acronym generator", "memory palace", "study tricks"],
   });
   const [items, setItems] = useState("");
   const [subject, setSubject] = useState("");
