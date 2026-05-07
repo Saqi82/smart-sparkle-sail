@@ -12,6 +12,7 @@ import { ClipboardList, RotateCcw, BrainCircuit, BookOpenCheck } from "lucide-re
 import { cn } from "@/lib/utils";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 interface Question {
   question: string;
