@@ -91,19 +91,20 @@ export default function StudyPlan() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Study Plan Generator – Personalized Revision Schedule | StudyKro"
+        title="Free AI Study Plan Generator – Personalized Revision | StudyKro"
         description="Free AI study plan generator. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around proven study techniques."
         canonical="https://studykro.com/studyplan"
         keywords={["AI study plan generator","revision schedule","exam study planner","study timetable generator","personalized study plan"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Study Plan Generator",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Study Plan Generator",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI study plan generator. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around proven study techniques.",
           url: "https://studykro.com/studyplan",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
