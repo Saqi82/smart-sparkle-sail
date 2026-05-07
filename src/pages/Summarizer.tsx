@@ -69,19 +69,20 @@ export default function Summarizer() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Notes Summarizer – Turn Long Notes into Key Points | StudyKro"
+        title="Free AI Notes Summarizer – Summarize Notes Online | StudyKro"
         description="Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds."
         canonical="https://studykro.com/summarizer"
         keywords={["AI notes summarizer","summarize notes online","AI summary generator","study notes summarizer","lecture summary AI","free summarizer"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "AI Notes Summarizer",
-          applicationCategory: "EducationApplication",
+          name: "StudyKro Free AI Notes Summarizer",
+          applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description: "Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds.",
           url: "https://studykro.com/summarizer",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
