@@ -224,6 +224,33 @@ export default function Summarizer() {
           )}
         </section>
       )}
+
+      <ToolSeoContent
+        toolName="Free AI Notes Summarizer"
+        whatItDoes="The StudyKro free AI notes summarizer takes long lecture notes, textbook chapters, research papers, or messy brainstorms and turns them into a clean study guide in seconds. You get a short overview, the key points worth memorizing, definitions for tricky terms, and any important formulas — all pulled directly from your source. It is built for students who want a faster way to revise without losing detail. Paste plain text or upload a PDF, DOCX, PPTX, TXT, or image, and the notes summarizer AI does the structuring for you."
+        howToUse={[
+          "Paste your notes into the editor or upload a PDF, DOCX, PPTX, image, or TXT file.",
+          "Click Summarize Notes. The AI extracts a title, summary, key points, definitions, and formulas.",
+          "Use the structured output as your revision sheet — or feed it into the flashcard or quiz tools.",
+        ]}
+        benefits={[
+          { title: "Saves hours per chapter", body: "Compress 50 pages of reading into a one-page revision sheet without losing the points that actually appear on exams." },
+          { title: "Free with no signup", body: "Unlimited summaries, no account, no credit card. Use it as your free AI study assistant any time." },
+          { title: "Handles any format", body: "Upload PDF, DOCX, PPTX, TXT, or even photos of handwritten notes. The summarizer extracts text and structures it." },
+        ]}
+        faqs={[
+          { q: "Is the AI notes summarizer free?", a: "Yes. StudyKro's notes summarizer is completely free, with no signup, trial, or hidden caps." },
+          { q: "Can it summarize a PDF or Word document?", a: "Yes. Upload PDFs, DOCX, PPTX, TXT, or images and the AI will extract the text and summarize it." },
+          { q: "How long can my notes be?", a: "Up to 60,000 characters per request — roughly a long textbook chapter or a full lecture transcript." },
+          { q: "Will the summary keep formulas and definitions?", a: "Yes. The AI separates definitions and important formulas into their own sections so they are easy to revise." },
+          { q: "Can I turn the summary into flashcards?", a: "Yes — copy the summary into the AI Flashcard Generator and you'll get a study deck instantly." },
+        ]}
+        related={[
+          { to: "/flashcards", label: "AI Flashcard Generator", desc: "Turn your fresh summary into an active-recall flashcard deck." },
+          { to: "/explainer", label: "AI Concept Explainer", desc: "Don't understand a key point? Get an ELI5 plus a deep-dive instantly." },
+          { to: "/essay-outline", label: "AI Essay Outline Generator", desc: "Use your summary as research and build a structured essay outline." },
+        ]}
+      />
     </PageWrapper>
   );
 }
