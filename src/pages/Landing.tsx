@@ -43,13 +43,20 @@ export default function Landing() {
   return (
     <PageWrapper>
       <Seo
-        title="Free AI Study Assistant – Flashcards, Quizzes & Summaries"
-        description="Free AI study assistant with an AI flashcard generator, AI quiz generator, notes summarizer AI, and study plan generator. Start studying free, no signup."
+        title="StudyKro — Free AI Study Assistant for Students"
+        description="AI student study assistant 2026. Free AI study tools no account: flashcards, quizzes, summaries, study plans & mnemonics. No login required."
+        ogImage="/icon-512.png"
         keywords={[
-          "AI study tools", "AI flashcard generator", "AI quiz generator",
-          "notes summarizer", "study plan generator", "essay outline generator",
-          "concept explainer", "mnemonic generator", "exam preparation",
-          "active recall", "spaced repetition", "Feynman technique", "StudyKro",
+          "free AI study tools no account",
+          "all in one AI study helper free",
+          "AI student study assistant 2026",
+          "free study tools for students online",
+          "study helper AI no login required",
+          "best free AI study website 2026",
+          "AI tools to study smarter free",
+          "AI powered study site free students",
+          "AI flashcard generator", "AI quiz generator", "notes summarizer",
+          "study plan generator", "mnemonic generator", "StudyKro",
         ]}
         canonical="https://studykro.com/"
         jsonLd={[
@@ -168,7 +175,7 @@ export default function Landing() {
             transition={{ delay: 0.05 }}
             className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Your <span className="gradient-text">free AI study assistant</span> for flashcards, quizzes & smarter notes
+            <span className="gradient-text">Free AI study tools</span> — no account, no login required
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -176,7 +183,7 @@ export default function Landing() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg md:text-xl"
           >
-            StudyKro is the free AI study assistant that helps you learn faster and stress less. Use the AI flashcard generator to turn any topic into ready-to-review cards, the AI quiz generator to test yourself in seconds, the notes summarizer AI to shrink long lectures into clear key points, and the study plan generator to map out your week. No signup, no fees — just open a tool, paste your notes, and start studying.
+            StudyKro is the all in one AI study helper free for students in 2026. Use the AI flashcard generator to turn any topic into ready-to-review cards, the AI quiz generator to test yourself in seconds, the notes summarizer to shrink long lectures into clear key points, and the study plan generator to map out your week. No signup, no fees — just open a tool, paste your notes, and start studying.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -185,7 +192,7 @@ export default function Landing() {
             className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <Button asChild size="lg" className="w-full px-8 sm:w-auto">
-              <Link to="/summarizer">Start studying free — no signup needed <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/summarizer">Use study helper AI — no login required <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full px-8 sm:w-auto">
               <Link to="/blog">Read Study Guides</Link>
