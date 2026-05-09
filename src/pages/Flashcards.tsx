@@ -98,17 +98,17 @@ export default function Flashcards() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Flashcard Generator – Notes to Cards | StudyKro"
-        description="Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition."
+        title="Free AI Flashcard Generator No Signup – Notes to Cards | StudyKro"
+        description="AI flashcard generator no signup. Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition."
         canonical="https://studykro.com/flashcards"
-        keywords={["AI flashcard generator","make flashcards from notes","free flashcard maker","active recall flashcards","study flashcards AI"]}
+        keywords={["AI flashcard generator no signup","AI flashcard generator","make flashcards from notes","free flashcard maker","active recall flashcards","study flashcards AI","free AI study tools"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: "StudyKro Free AI Flashcard Generator",
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
-          description: "Free AI flashcard generator. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition.",
+          description: "Free AI flashcard generator no signup. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition. No login required.",
           url: "https://studykro.com/flashcards",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },

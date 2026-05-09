@@ -43,8 +43,8 @@ export default function Landing() {
   return (
     <PageWrapper>
       <Seo
-        title="StudyKro — Free AI Study Assistant for Students"
-        description="AI student study assistant 2026. Free AI study tools no account: flashcards, quizzes, summaries, study plans & mnemonics. No login required."
+        title="StudyKro — Free AI Study Assistant 2026 | AI Powered Study Tools No Login"
+        description="AI student study assistant 2026. Free study tools for students online: AI powered study site with flashcards, quizzes, summaries, essay outlines & mnemonics. Study helper AI no login required."
         ogImage="/icon-512.png"
         keywords={[
           "free AI study tools no account",
@@ -55,8 +55,28 @@ export default function Landing() {
           "best free AI study website 2026",
           "AI tools to study smarter free",
           "AI powered study site free students",
-          "AI flashcard generator", "AI quiz generator", "notes summarizer",
-          "study plan generator", "mnemonic generator", "StudyKro",
+          "free AI study assistant online",
+          "no login AI study tools",
+          "AI tools for exam preparation",
+          "free educational AI helper",
+          "study smarter with AI",
+          "AI powered education platform",
+          "instant study solutions AI",
+          "best AI tools for learners",
+          "comprehensive study helper AI",
+          "free online learning AI tools",
+          "AI study generator no credit card",
+          "AI flashcard generator",
+          "AI quiz generator",
+          "free AI notes summarizer",
+          "AI flashcard generator no signup",
+          "quiz generator AI free",
+          "study plan maker free AI",
+          "essay outline generator AI free",
+          "mnemonic generator AI",
+          "plagiarism checker AI free",
+          "exam tips AI powered",
+          "StudyKro"
         ]}
         canonical="https://studykro.com/"
         jsonLd={[
@@ -114,10 +134,10 @@ export default function Landing() {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "What is the best free AI study assistant in 2026?",
+                name: "What is the best free AI study website 2026?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "StudyKro is a top free AI study assistant in 2026. It bundles a flashcard generator, quiz maker, notes summarizer, study plan builder, and concept explainer — all free and with no signup required.",
+                  text: "StudyKro is the best free AI study website 2026 — a comprehensive study helper AI platform offering an all-in-one AI study helper free. It bundles a flashcard generator, AI quiz generator, free AI notes summarizer, study plan builder, essay outline generator, mnemonic generator, concept explainer, and plagiarism checker — all free online learning tools with zero signup required. Best AI tools for learners seeking instant study solutions.",
                 },
               },
               {
@@ -175,7 +195,7 @@ export default function Landing() {
             transition={{ delay: 0.05 }}
             className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            <span className="gradient-text">Free AI study tools</span> — no account, no login required
+            <span className="gradient-text">Free AI study tools</span> — study helper AI no login required
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -183,7 +203,7 @@ export default function Landing() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg md:text-xl"
           >
-            StudyKro is the all in one AI study helper free for students in 2026. Use the AI flashcard generator to turn any topic into ready-to-review cards, the AI quiz generator to test yourself in seconds, the notes summarizer to shrink long lectures into clear key points, and the study plan generator to map out your week. No signup, no fees — just open a tool, paste your notes, and start studying.
+            StudyKro is the all in one AI study helper free for students online. AI tools to study smarter free. Use the free AI notes summarizer to shrink long lectures, the AI flashcard generator to turn any topic into ready-to-review cards, the AI quiz generator to test yourself in seconds, and the study plan generator to map out your week. AI powered education platform with zero login required. Free study tools for students online — just open a tool, paste your notes, and start studying.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -192,7 +212,7 @@ export default function Landing() {
             className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <Button asChild size="lg" className="w-full px-8 sm:w-auto">
-              <Link to="/summarizer">Use study helper AI — no login required <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/summarizer">Start with Free AI Study Tools <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full px-8 sm:w-auto">
               <Link to="/blog">Read Study Guides</Link>
@@ -215,9 +235,9 @@ export default function Landing() {
       <section className="py-16">
         <div className="mb-10 text-center">
           <span className="note-label">All tools</span>
-          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">Every study tool you need, in one place</h2>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">Best AI tools for learners — instant study solutions AI powered</h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            9 free AI-powered tools that turn your notes into summaries, flashcards, quizzes, plans, and more — including a plagiarism checker.
+            9 comprehensive study helper AI tools. Free online learning AI tools that turn your notes into summaries, flashcards, quizzes, plans, essay outlines, mnemonics and plagiarism checks. AI tools for exam preparation — all free, no credit card.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -253,11 +273,10 @@ export default function Landing() {
           <div>
             <span className="note-label">Why StudyKro</span>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
-              Built on the science of how students actually learn
+              AI tools to study smarter free — built on proven learning science
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Re-reading notes feels productive but barely works. StudyKro is built around techniques
-              cognitive scientists have validated for decades.
+              Re-reading notes feels productive but barely works. StudyKro AI powered education platform uses study helper AI techniques cognitive scientists have validated for decades. Active recall, spaced repetition, and the Feynman technique — free online learning at its best.
             </p>
             <Button asChild className="mt-6">
               <Link to="/blog">Explore the research <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -330,10 +349,10 @@ export default function Landing() {
           <div className="relative mx-auto max-w-2xl">
             <BookOpen className="mx-auto h-10 w-10" />
             <h2 className="mt-5 font-display text-3xl font-bold sm:text-4xl">
-              Ready to study smarter?
+              Ready for instant study solutions? AI study generator with instant results.
             </h2>
             <p className="mt-3 text-lg text-white/85">
-              Pick a tool, paste your notes, and get exam-ready output in seconds. 100% free, no sign-up.
+              Best free AI study assistant online — pick a tool, paste your notes, and get exam-ready output in seconds. AI powered study site, completely free with zero signup required.
             </p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="secondary" className="w-full px-8 sm:w-auto">

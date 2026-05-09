@@ -69,17 +69,17 @@ export default function Summarizer() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Notes Summarizer – Summarize Notes Online | StudyKro"
-        description="Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds."
+        title="Free AI Notes Summarizer – Summarize Notes Online No Login | StudyKro"
+        description="Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds. Study helper AI, no signup."
         canonical="https://studykro.com/summarizer"
-        keywords={["AI notes summarizer","summarize notes online","AI summary generator","study notes summarizer","lecture summary AI","free summarizer"]}
+        keywords={["free AI notes summarizer","AI notes summarizer","summarize notes online","AI summary generator","study notes summarizer","lecture summary AI","free summarizer","study helper AI","AI powered notes tool"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: "StudyKro Free AI Notes Summarizer",
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
-          description: "Free AI notes summarizer. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds.",
+          description: "Free AI notes summarizer tool. AI powered study site feature. Paste lecture notes, textbook chapters or articles and get concise summaries, key points, definitions and formulas in seconds. No login required.",
           url: "https://studykro.com/summarizer",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },

@@ -67,17 +67,17 @@ export default function ExamTips() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Exam Tips Generator – Predicted Questions | StudyKro"
-        description="Free AI exam tips generator. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject — in seconds."
+        title="Free AI Exam Tips Generator – Strategy & Predicted Questions | StudyKro"
+        description="Exam tips AI powered. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject. AI tools for exam preparation."
         canonical="https://studykro.com/examtips"
-        keywords={["AI exam tips","predicted exam questions","exam preparation guide","last-minute exam prep","exam strategy AI"]}
+        keywords={["exam tips AI powered","AI exam tips","predicted exam questions","exam preparation guide","last-minute exam prep","exam strategy AI","AI tools for exam preparation"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: "StudyKro Free AI Exam Tips Generator",
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
-          description: "Free AI exam tips generator. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject — in seconds.",
+          description: "Exam tips AI powered. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject. AI tools for exam preparation, no login required.",
           url: "https://studykro.com/examtips",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },

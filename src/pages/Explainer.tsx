@@ -60,17 +60,17 @@ export default function Explainer() {
     <PageWrapper>
 
       <Seo
-        title="Free AI Concept Explainer – Feynman Technique AI Tool | StudyKro"
-        description="Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique."
+        title="Free AI Concept Explainer for Students – Feynman Technique | StudyKro"
+        description="AI concept explainer for students. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — study helper AI built on the Feynman technique."
         canonical="https://studykro.com/explainer"
-        keywords={["AI concept explainer","ELI5 generator","Feynman technique AI tool","explain like I'm 5","AI tutor","study concept breakdown"]}
+        keywords={["AI concept explainer for students","AI concept explainer","ELI5 generator","Feynman technique AI tool","explain like I'm 5","AI tutor","study concept breakdown","study helper AI"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: "StudyKro Free AI Concept Explainer",
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
-          description: "Free AI concept explainer. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — built around the Feynman technique.",
+          description: "AI concept explainer for students. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — study helper AI built on the Feynman technique. No login required.",
           url: "https://studykro.com/explainer",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
