@@ -1,3 +1,4 @@
+//src/lib/seo.ts
 import { useEffect } from "react";
 
 type SeoOptions = {

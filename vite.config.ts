@@ -54,11 +54,11 @@ export default defineConfig(({ mode }) => ({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp,woff2}"],
-        navigateFallback: "/offline.html",
+        navigateFallback: null,                   // ← FIXED (was "/offline.html")
         navigateFallbackDenylist: [/^\/~oauth/, /^\/api/, /\/functions\//],
         runtimeCaching: [
           {
-            urlPattern: ({ request }) => request.destination === "image",
+            urlPattern: ({ request }: { request: Request }) => request.destination === "image",
             handler: "CacheFirst",
             options: {
               cacheName: "studykro-images",
@@ -66,7 +66,9 @@ export default defineConfig(({ mode }) => ({
             },
           },
           {
-            urlPattern: ({ url }) => url.origin === "https://fonts.googleapis.com" || url.origin === "https://fonts.gstatic.com",
+            urlPattern: ({ url }: { url: URL }) =>
+              url.origin === "https://fonts.googleapis.com" ||
+              url.origin === "https://fonts.gstatic.com",
             handler: "StaleWhileRevalidate",
             options: { cacheName: "studykro-fonts" },
           },

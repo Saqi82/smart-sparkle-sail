@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";  // ← ADDED
 import App from "./App.tsx";
 import "./index.css";
 
@@ -16,4 +17,8 @@ if ((isPreviewHost || isInIframe) && "serviceWorker" in navigator) {
   navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => r.unregister()));
 }
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <HelmetProvider>   {/* ← ADDED */}
+    <App />
+  </HelmetProvider>  {/* ← ADDED */}
+);
