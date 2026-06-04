@@ -95,6 +95,8 @@ export default function Footer() {
               <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary">About</Link></li>
               <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
               <li><Link to="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
+              <li><Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link></li>
             </ul>
             <h3 className="mb-3 mt-6 font-display text-sm font-semibold uppercase tracking-wider text-foreground">
               Connect
