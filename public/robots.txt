@@ -1,11 +1,44 @@
 # https://studykro.com — robots.txt
+# Allow all major search engines to crawl tool, blog, and legal pages
+
+User-agent: Googlebot
+Allow: /
+Disallow: /~oauth
+Disallow: /api/
+Disallow: /upload-test
+Disallow: /lovable/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /~oauth
+Disallow: /api/
+Disallow: /upload-test
+Disallow: /lovable/
+
 User-agent: *
 Allow: /
+Allow: /summarizer
+Allow: /flashcards
+Allow: /ai-flashcard-generator
+Allow: /quiz
+Allow: /studyplan
+Allow: /examtips
+Allow: /explainer
+Allow: /essay-outline
+Allow: /mnemonics
+Allow: /plagiarism-checker
+Allow: /blog
+Allow: /blog/
+Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /terms
 
 # Block internal/utility paths
 Disallow: /~oauth
 Disallow: /api/
 Disallow: /upload-test
+Disallow: /lovable/
 
-# Sitemap
+# Sitemap reference
 Sitemap: https://studykro.com/sitemap.xml
