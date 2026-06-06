@@ -373,6 +373,98 @@ export default function Tutor() {
           </p>
         </div>
       </section>
+
+      <ToolSeoContent
+        toolName="Free AI Tutor"
+        whatItDoes="The StudyKro Free AI Tutor is an intelligent academic assistant that helps students learn faster using the Socratic method. Unlike generic chatbots, it adapts to your course material—upload a PDF, DOCX, PPTX, TXT, or even an image of your notes and every explanation is anchored to your own textbook with page-level citations. It asks guiding questions instead of spoon-feeding answers, corrects misconceptions gently, and can generate custom quizzes on demand to test your understanding."
+        howToUse={[
+          "Upload your course material (PDF, lecture slides, notes) or skip this step to ask general questions.",
+          "Type any question about the topic. The tutor will respond with Socratic questions, analogies, or step-by-step explanations.",
+          "Request a quiz by typing 'quiz me' and the AI will generate 3 multiple-choice questions based strictly on your uploaded material.",
+          "Review cited answers that reference specific pages or sections so you can verify every fact in your textbook.",
+          "Clear the conversation anytime and start a new study session with different material.",
+        ]}
+        benefits={[
+          {
+            title: "Socratic teaching method",
+            body: "The tutor guides you to the answer through targeted questions, building critical thinking and long-term retention instead of short-term memorization.",
+          },
+          {
+            title: "Document-aware citations",
+            body: "Every fact pulled from your uploaded notes includes a citation like (Page 42) so you can instantly verify accuracy against your own material.",
+          },
+          {
+            title: "Adaptive difficulty",
+            body: "Say 'I don't get it' and the tutor automatically dials down to ELI5-level analogies. Say 'advanced' and it dives into nuance and edge cases.",
+          },
+          {
+            title: "Built-in quiz generator",
+            body: "Switch to quiz mode anytime to generate 3 multiple-choice questions drawn strictly from your uploaded context. Get instant feedback and detailed explanations.",
+          },
+          {
+            title: "No login required",
+            body: "Start tutoring immediately without creating an account. Your session is private and no personal data is stored.",
+          },
+          {
+            title: "Works on any device",
+            body: "Responsive design means you can study on your phone during a commute or on a laptop at your desk with the same seamless experience.",
+          },
+        ]}
+        faqs={[
+          {
+            q: "Is the StudyKro AI tutor really free?",
+            a: "Yes. The AI tutor is completely free to use with no credit card or signup required. We fund the service through premium features and partnerships so students everywhere can access high-quality academic help.",
+          },
+          {
+            q: "What file types can I upload for the tutor to reference?",
+            a: "You can upload PDF, DOCX, PPTX, TXT, and even images (JPG, PNG). The tutor extracts the text and uses it as grounded context, citing page numbers or sections whenever it references your material.",
+          },
+          {
+            q: "How does the Socratic method work in practice?",
+            a: "Instead of giving you the answer immediately, the tutor asks 1-2 guiding questions that nudge you toward the correct reasoning. This builds deeper understanding and better exam recall than passive reading.",
+          },
+          {
+            q: "Can I use the tutor without uploading any documents?",
+            a: "Absolutely. You can ask general academic questions on any subject. Uploading documents simply makes the answers more personalized and citation-backed.",
+          },
+          {
+            q: "Is my uploaded material kept private?",
+            a: "Yes. Your documents are processed in real time and are not stored permanently on our servers. Each session is independent and no personal data is retained after you close the page.",
+          },
+        ]}
+        related={[
+          {
+            to: "/ai-flashcard-generator",
+            label: "AI Flashcard Generator",
+            desc: "Turn your notes into smart flashcards with spaced-repetition scheduling.",
+          },
+          {
+            to: "/quiz",
+            label: "AI Quiz Maker",
+            desc: "Generate full quizzes with explanations from any topic or uploaded text.",
+          },
+          {
+            to: "/studyplan",
+            label: "Study Plan Generator",
+            desc: "Build a personalized day-by-day study schedule for your next exam.",
+          },
+          {
+            to: "/explainer",
+            label: "AI Explainer",
+            desc: "Get complex topics broken down into simple, visual explanations.",
+          },
+          {
+            to: "/flashcards",
+            label: "Flashcards",
+            desc: "Browse and study pre-made flashcard decks on popular subjects.",
+          },
+          {
+            to: "/mnemonics",
+            label: "Mnemonic Generator",
+            desc: "Create memory aids and acronyms to memorize facts faster.",
+          },
+        ]}
+      />
     </PageWrapper>
   );
 }
