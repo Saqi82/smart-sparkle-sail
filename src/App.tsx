@@ -12,6 +12,7 @@ import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 
 const Landing = lazy(() => import("./pages/Landing"));
+const Tutor = lazy(() => import("./pages/Summarizer"));
 const Summarizer = lazy(() => import("./pages/Summarizer"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
 const Quiz = lazy(() => import("./pages/Quiz"));
@@ -41,6 +42,7 @@ function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
           <Route path="/summarizer" element={<Summarizer />} />
+          <Route path="/tutor" element={<Tutor />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/studyplan" element={<StudyPlan />} />
