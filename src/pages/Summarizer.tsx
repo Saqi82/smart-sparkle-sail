@@ -145,8 +145,8 @@ export default function Tutor() {
     <PageWrapper>
       <Seo
         title="Free AI Tutor – Personal Academic Tutor Online No Login | StudyKro"
-        description="Free AI tutor that teaches with the Socratic method, cites your uploaded notes, and quizzes you on demand. Upload a PDF or paste notes and learn faster. No signup."
-        canonical="https://studykro.com/summarizer"
+        description="StudyKro's free AI tutor uses the Socratic method to help you master any subject. Upload PDFs or paste notes for cited, personalized explanations. Quiz mode included. No signup required."
+        canonical="https://studykro.com/tutor"
         keywords={[
           "free AI tutor",
           "AI tutor online",
@@ -156,6 +156,8 @@ export default function Tutor() {
           "study tutor AI",
           "AI tutor no login",
           "AI tutor with my notes",
+          "free AI tutor for students",
+          "AI tutor that quizzes me",
         ]}
         jsonLd={{
           "@context": "https://schema.org",
@@ -165,7 +167,7 @@ export default function Tutor() {
           operatingSystem: "Web",
           description:
             "Free AI academic tutor. Upload course material and chat with a Socratic, citation-backed AI tutor that adapts explanations and quizzes you.",
-          url: "https://studykro.com/summarizer",
+          url: "https://studykro.com/tutor",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
           aggregateRating: {
             "@type": "AggregateRating",
