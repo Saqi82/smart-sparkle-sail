@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
 import Seo from "@/components/Seo";
+import ToolSeoContent from "@/components/ToolSeoContent";
 import DocumentUploader from "@/components/DocumentUploader";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import { toast } from "sonner";
