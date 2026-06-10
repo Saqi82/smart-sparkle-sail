@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
@@ -7,7 +9,23 @@ import ToolSeoContent from "@/components/ToolSeoContent";
 import DocumentUploader from "@/components/DocumentUploader";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import { toast } from "sonner";
-import { GraduationCap, Send, Sparkles, BookOpen, Trash2, User } from "lucide-react";
+import {
+  GraduationCap,
+  Send,
+  Sparkles,
+  BookOpen,
+  Trash2,
+  User,
+  ArrowRight,
+  Star,
+  MessageSquare,
+  FileUp,
+  Zap,
+  Target,
+  ShieldCheck,
+  BrainCircuit,
+  ChevronDown,
+} from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 
@@ -141,6 +159,12 @@ export default function Tutor() {
     toast.success("Conversation cleared.");
   };
 
+  const chatSectionRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToChat = () => {
+    chatSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <PageWrapper>
       <Seo
@@ -177,7 +201,96 @@ export default function Tutor() {
         }}
       />
 
-      <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+      {/* HERO */}
+      <section className="relative -mt-6 overflow-hidden pb-10 pt-10 sm:pb-14 sm:pt-16">
+        <div className="absolute inset-0 -z-10 bg-grid opacity-60" aria-hidden />
+        <div className="mx-auto max-w-4xl text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold text-foreground card-shadow"
+          >
+            <Sparkles className="h-3.5 w-3.5 text-primary" />
+            Free forever · No signup · Socratic method
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            <span className="gradient-text">Free AI Tutor</span> — learn smarter with a personal academic tutor online
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg md:text-xl"
+          >
+            Upload your course material and chat with a Socratic AI tutor that cites your textbook, adapts to your level, and quizzes you when you are ready. No login required.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          >
+            <Button size="lg" className="w-full px-8 sm:w-auto" onClick={scrollToChat}>
+              Start Tutoring Now <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full px-8 sm:w-auto">
+              <Link to="/ai-flashcard-generator">Make Flashcards Instead</Link>
+            </Button>
+          </motion.div>
+
+          {/* Trust bar */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground"
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <span className="ml-1 font-semibold text-foreground">4.9</span> from 860+ students
+            </span>
+            <span className="hidden sm:inline">·</span>
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldCheck className="h-4 w-4 text-primary" />
+              No personal data stored
+            </span>
+            <span className="hidden sm:inline">·</span>
+            <span className="inline-flex items-center gap-1.5">
+              <Zap className="h-4 w-4 text-accent" />
+              Instant answers
+            </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="mt-8"
+          >
+            <button
+              onClick={scrollToChat}
+              className="inline-flex flex-col items-center gap-1 text-xs font-medium text-muted-foreground transition hover:text-primary"
+            >
+              <span>Scroll to tutor</span>
+              <ChevronDown className="h-4 w-4 animate-bounce" />
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section ref={chatSectionRef} className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Tutor</p>
           <div className="mt-4 flex items-center gap-3">
@@ -370,6 +483,118 @@ export default function Tutor() {
           <p className="mt-2 text-xs text-muted-foreground">
             Press Enter to send · Shift+Enter for a new line · The tutor uses the Socratic method,
             so expect guiding questions before direct answers.
+          </p>
+        </div>
+      </section>
+
+      {/* FEATURE HIGHLIGHTS */}
+      <section className="py-16">
+        <div className="mb-10 text-center">
+          <span className="note-label">Features</span>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+            Why students choose the StudyKro AI tutor
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+            A personal AI tutor that reads your notes, asks guiding questions, and never judges. Built for real exam prep.
+          </p>
+        </div>
+
+        {/* Screenshot mockup */}
+        <div className="mx-auto mb-12 max-w-3xl">
+          <div className="overflow-hidden rounded-2xl border border-border/70 bg-card shadow-[var(--shadow-elevated)]">
+            <div className="flex items-center gap-2 border-b border-border/60 bg-muted/40 px-4 py-2.5">
+              <div className="flex gap-1.5">
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-amber-400" />
+                <span className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+              <span className="ml-2 text-[11px] font-medium text-muted-foreground">studykro.com/tutor</span>
+            </div>
+            <div className="space-y-4 p-5">
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foreground">
+                  <User className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-muted/55 px-4 py-3 text-sm text-foreground">
+                  Explain the main concept in chapter 1 using an analogy.
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-bg text-primary-foreground">
+                  <GraduationCap className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-background px-4 py-3 text-sm leading-7 ring-1 ring-border/60">
+                  <p className="font-medium text-foreground">Great question! Before I give you the full analogy, what do you already know about how supply and demand curves interact?</p>
+                  <p className="mt-2 text-muted-foreground">Think of it like a seesaw at a playground — when one side goes up, the other goes down. (Page 12)</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foreground">
+                  <User className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-muted/55 px-4 py-3 text-sm text-foreground">
+                  I don't get it — can you ELI5?
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-bg text-primary-foreground">
+                  <GraduationCap className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-background px-4 py-3 text-sm leading-7 ring-1 ring-border/60">
+                  <p className="text-muted-foreground">Sure! Imagine you are selling lemonade. If lots of kids want it (high demand) but you only made 5 cups (low supply), you can charge more. If nobody wants it, you lower the price. That is the seesaw. (Page 12)</p>
+                </div>
+              </div>
+              <div className="mt-2 flex items-center gap-2 rounded-[12px] border border-border/60 bg-background/60 px-3 py-2.5 text-sm text-muted-foreground">
+                <MessageSquare className="h-4 w-4 text-primary" />
+                <span className="truncate">Ask a question, or upload notes above for cited answers...</span>
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-center text-xs text-muted-foreground">
+            The tutor adapts its explanation style based on your feedback — from ELI5 to advanced depth.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: BrainCircuit,
+              title: "Socratic method",
+              body: "Guiding questions that build critical thinking and long-term retention instead of short-term memorization.",
+            },
+            {
+              icon: FileUp,
+              title: "Upload any material",
+              body: "PDF, DOCX, PPTX, TXT, or images. The tutor cites page numbers and sections from your own notes.",
+            },
+            {
+              icon: Target,
+              title: "Adaptive difficulty",
+              body: "Say 'I don't get it' for ELI5 analogies. Say 'advanced' for nuance, edge cases, and deep dives.",
+            },
+            {
+              icon: MessageSquare,
+              title: "Quiz on demand",
+              body: "Type 'quiz me' anytime to generate 3 multiple-choice questions drawn strictly from your uploaded context.",
+            },
+          ].map((f) => (
+            <div key={f.title} className="paper-panel p-5 hover-lift">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <f.icon className="h-5 w-5" />
+              </div>
+              <h3 className="font-display font-semibold">{f.title}</h3>
+              <p className="mt-1.5 text-sm leading-6 text-muted-foreground">{f.body}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA bar */}
+        <div className="mt-10 text-center">
+          <Button size="lg" className="px-8" onClick={scrollToChat}>
+            Try the AI Tutor Now <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+          <p className="mt-3 text-sm text-muted-foreground">
+            No signup. No credit card. Start learning in seconds.
           </p>
         </div>
       </section>
