@@ -290,7 +290,7 @@ export default function Tutor() {
         </div>
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+      <section ref={chatSectionRef} className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
           <p className="note-label">Tutor</p>
           <div className="mt-4 flex items-center gap-3">
