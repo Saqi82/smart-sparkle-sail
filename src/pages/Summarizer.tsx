@@ -159,6 +159,12 @@ export default function Tutor() {
     toast.success("Conversation cleared.");
   };
 
+  const chatSectionRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToChat = () => {
+    chatSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <PageWrapper>
       <Seo
@@ -194,6 +200,95 @@ export default function Tutor() {
           },
         }}
       />
+
+      {/* HERO */}
+      <section className="relative -mt-6 overflow-hidden pb-10 pt-10 sm:pb-14 sm:pt-16">
+        <div className="absolute inset-0 -z-10 bg-grid opacity-60" aria-hidden />
+        <div className="mx-auto max-w-4xl text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold text-foreground card-shadow"
+          >
+            <Sparkles className="h-3.5 w-3.5 text-primary" />
+            Free forever · No signup · Socratic method
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            <span className="gradient-text">Free AI Tutor</span> — learn smarter with a personal academic tutor online
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg md:text-xl"
+          >
+            Upload your course material and chat with a Socratic AI tutor that cites your textbook, adapts to your level, and quizzes you when you are ready. No login required.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          >
+            <Button size="lg" className="w-full px-8 sm:w-auto" onClick={scrollToChat}>
+              Start Tutoring Now <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full px-8 sm:w-auto">
+              <Link to="/ai-flashcard-generator">Make Flashcards Instead</Link>
+            </Button>
+          </motion.div>
+
+          {/* Trust bar */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground"
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <span className="ml-1 font-semibold text-foreground">4.9</span> from 860+ students
+            </span>
+            <span className="hidden sm:inline">·</span>
+            <span className="inline-flex items-center gap-1.5">
+              <ShieldCheck className="h-4 w-4 text-primary" />
+              No personal data stored
+            </span>
+            <span className="hidden sm:inline">·</span>
+            <span className="inline-flex items-center gap-1.5">
+              <Zap className="h-4 w-4 text-accent" />
+              Instant answers
+            </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="mt-8"
+          >
+            <button
+              onClick={scrollToChat}
+              className="inline-flex flex-col items-center gap-1 text-xs font-medium text-muted-foreground transition hover:text-primary"
+            >
+              <span>Scroll to tutor</span>
+              <ChevronDown className="h-4 w-4 animate-bounce" />
+            </button>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
