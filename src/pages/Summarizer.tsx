@@ -487,6 +487,118 @@ export default function Tutor() {
         </div>
       </section>
 
+      {/* FEATURE HIGHLIGHTS */}
+      <section className="py-16">
+        <div className="mb-10 text-center">
+          <span className="note-label">Features</span>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+            Why students choose the StudyKro AI tutor
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+            A personal AI tutor that reads your notes, asks guiding questions, and never judges. Built for real exam prep.
+          </p>
+        </div>
+
+        {/* Screenshot mockup */}
+        <div className="mx-auto mb-12 max-w-3xl">
+          <div className="overflow-hidden rounded-2xl border border-border/70 bg-card shadow-[var(--shadow-elevated)]">
+            <div className="flex items-center gap-2 border-b border-border/60 bg-muted/40 px-4 py-2.5">
+              <div className="flex gap-1.5">
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-amber-400" />
+                <span className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+              <span className="ml-2 text-[11px] font-medium text-muted-foreground">studykro.com/tutor</span>
+            </div>
+            <div className="space-y-4 p-5">
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foreground">
+                  <User className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-muted/55 px-4 py-3 text-sm text-foreground">
+                  Explain the main concept in chapter 1 using an analogy.
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-bg text-primary-foreground">
+                  <GraduationCap className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-background px-4 py-3 text-sm leading-7 ring-1 ring-border/60">
+                  <p className="font-medium text-foreground">Great question! Before I give you the full analogy, what do you already know about how supply and demand curves interact?</p>
+                  <p className="mt-2 text-muted-foreground">Think of it like a seesaw at a playground — when one side goes up, the other goes down. (Page 12)</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-foreground">
+                  <User className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-muted/55 px-4 py-3 text-sm text-foreground">
+                  I don't get it — can you ELI5?
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full gradient-bg text-primary-foreground">
+                  <GraduationCap className="h-4 w-4" />
+                </div>
+                <div className="min-w-0 flex-1 rounded-[14px] bg-background px-4 py-3 text-sm leading-7 ring-1 ring-border/60">
+                  <p className="text-muted-foreground">Sure! Imagine you are selling lemonade. If lots of kids want it (high demand) but you only made 5 cups (low supply), you can charge more. If nobody wants it, you lower the price. That is the seesaw. (Page 12)</p>
+                </div>
+              </div>
+              <div className="mt-2 flex items-center gap-2 rounded-[12px] border border-border/60 bg-background/60 px-3 py-2.5 text-sm text-muted-foreground">
+                <MessageSquare className="h-4 w-4 text-primary" />
+                <span className="truncate">Ask a question, or upload notes above for cited answers...</span>
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-center text-xs text-muted-foreground">
+            The tutor adapts its explanation style based on your feedback — from ELI5 to advanced depth.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: BrainCircuit,
+              title: "Socratic method",
+              body: "Guiding questions that build critical thinking and long-term retention instead of short-term memorization.",
+            },
+            {
+              icon: FileUp,
+              title: "Upload any material",
+              body: "PDF, DOCX, PPTX, TXT, or images. The tutor cites page numbers and sections from your own notes.",
+            },
+            {
+              icon: Target,
+              title: "Adaptive difficulty",
+              body: "Say 'I don't get it' for ELI5 analogies. Say 'advanced' for nuance, edge cases, and deep dives.",
+            },
+            {
+              icon: MessageSquare,
+              title: "Quiz on demand",
+              body: "Type 'quiz me' anytime to generate 3 multiple-choice questions drawn strictly from your uploaded context.",
+            },
+          ].map((f) => (
+            <div key={f.title} className="paper-panel p-5 hover-lift">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <f.icon className="h-5 w-5" />
+              </div>
+              <h3 className="font-display font-semibold">{f.title}</h3>
+              <p className="mt-1.5 text-sm leading-6 text-muted-foreground">{f.body}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA bar */}
+        <div className="mt-10 text-center">
+          <Button size="lg" className="px-8" onClick={scrollToChat}>
+            Try the AI Tutor Now <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+          <p className="mt-3 text-sm text-muted-foreground">
+            No signup. No credit card. Start learning in seconds.
+          </p>
+        </div>
+      </section>
+
       <ToolSeoContent
         toolName="Free AI Tutor"
         whatItDoes="The StudyKro Free AI Tutor is an intelligent academic assistant that helps students learn faster using the Socratic method. Unlike generic chatbots, it adapts to your course material—upload a PDF, DOCX, PPTX, TXT, or even an image of your notes and every explanation is anchored to your own textbook with page-level citations. It asks guiding questions instead of spoon-feeding answers, corrects misconceptions gently, and can generate custom quizzes on demand to test your understanding."
