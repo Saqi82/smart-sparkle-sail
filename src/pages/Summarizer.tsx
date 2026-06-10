@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import PageWrapper from "@/components/PageWrapper";
@@ -7,7 +9,23 @@ import ToolSeoContent from "@/components/ToolSeoContent";
 import DocumentUploader from "@/components/DocumentUploader";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import { toast } from "sonner";
-import { GraduationCap, Send, Sparkles, BookOpen, Trash2, User } from "lucide-react";
+import {
+  GraduationCap,
+  Send,
+  Sparkles,
+  BookOpen,
+  Trash2,
+  User,
+  ArrowRight,
+  Star,
+  MessageSquare,
+  FileUp,
+  Zap,
+  Target,
+  ShieldCheck,
+  BrainCircuit,
+  ChevronDown,
+} from "lucide-react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 
