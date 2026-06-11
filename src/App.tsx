@@ -3,16 +3,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 
 const Landing = lazy(() => import("./pages/Landing"));
-const Tutor = lazy(() => import("./pages/Summarizer"));
+
 const Summarizer = lazy(() => import("./pages/Summarizer"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
 const Quiz = lazy(() => import("./pages/Quiz"));
@@ -27,7 +28,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const UploadTest = lazy(() => import("./pages/UploadTest"));
+
 const AiFlashcardGenerator = lazy(() => import("./pages/AiFlashcardGenerator"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -42,7 +43,7 @@ function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
           <Route path="/summarizer" element={<Summarizer />} />
-          <Route path="/tutor" element={<Tutor />} />
+          <Route path="/tutor" element={<Navigate to="/summarizer" replace />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/studyplan" element={<StudyPlan />} />
@@ -55,10 +56,10 @@ function AnimatedRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/upload-test" element={<UploadTest />} />
           <Route path="/ai-flashcard-generator" element={<AiFlashcardGenerator />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

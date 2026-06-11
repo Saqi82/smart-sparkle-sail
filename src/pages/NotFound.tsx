@@ -9,6 +9,18 @@ const NotFound = () => {
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    document.title = "404 – Page not found | StudyKro";
+    let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      document.head.appendChild(robots);
+    }
+    const prev = robots.getAttribute("content");
+    robots.setAttribute("content", "noindex, nofollow");
+    return () => {
+      if (prev) robots!.setAttribute("content", prev);
+    };
   }, [location.pathname]);
 
   return (

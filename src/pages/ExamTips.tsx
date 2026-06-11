@@ -80,7 +80,6 @@ export default function ExamTips() {
           description: "Exam tips AI powered. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject. AI tools for exam preparation, no login required.",
           url: "https://studykro.com/examtips",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
