@@ -43,7 +43,7 @@ function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
           <Route path="/summarizer" element={<Summarizer />} />
-          <Route path="/tutor" element={<Tutor />} />
+          <Route path="/tutor" element={<Navigate to="/summarizer" replace />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/studyplan" element={<StudyPlan />} />
@@ -56,10 +56,10 @@ function AnimatedRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/upload-test" element={<UploadTest />} />
           <Route path="/ai-flashcard-generator" element={<AiFlashcardGenerator />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
