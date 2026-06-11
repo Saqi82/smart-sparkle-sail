@@ -75,28 +75,24 @@ export default function Plagiarism() {
   return (
     <PageWrapper>
       <Seo
-        title="Free AI Plagiarism Checker & AI Text Detector | StudyKro"
-        description="Plagiarism checker AI free. Scan essays for plagiarism, AI-generated text and unoriginal phrasing. Study helper AI with originality score and rewrite suggestions."
+        title="Free Originality Checker for Your Own Writing | StudyKro"
+        description="Free originality checker for students. Review your own essays and notes for unoriginal phrasing and get suggestions to rewrite them in your own voice. Educational use only."
         canonical="https://studykro.com/plagiarism-checker"
         keywords={[
-          "plagiarism checker AI free",
-          "AI plagiarism checker",
-          "free plagiarism checker",
-          "AI plagiarism detector",
           "originality checker",
-          "AI content detector",
-          "essay plagiarism checker",
-          "student plagiarism scanner",
+          "self plagiarism checker",
+          "improve your writing",
+          "academic integrity tool",
           "study helper AI",
         ]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "StudyKro Free AI Plagiarism Checker",
+          name: "StudyKro Originality Checker",
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
           description:
-            "Plagiarism checker AI free. Scan essays and assignments for plagiarism, AI-generated text, and unoriginal phrasing — with an originality score and rewrite suggestions. Study helper AI, no login required.",
+            "Educational originality checker that helps students review their own writing for unoriginal phrasing and learn how to paraphrase ethically. Not for bypassing academic integrity policies.",
           url: "https://studykro.com/plagiarism-checker",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }}
@@ -104,35 +100,37 @@ export default function Plagiarism() {
 
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="paper-panel px-6 py-7">
-          <p className="note-label">Verify</p>
+          <p className="note-label">Learn</p>
           <div className="mt-4 flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-[14px] gradient-bg">
               <ShieldCheck className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-3xl font-display font-bold">Free AI Plagiarism Checker</h1>
+              <h1 className="text-3xl font-display font-bold">Originality Checker for Your Own Writing</h1>
               <p className="text-sm text-muted-foreground">
-                Scan any essay or assignment for plagiarism, AI-generated text and unoriginal phrasing.
+                Review your own essays for unoriginal phrasing and learn how to paraphrase in your own academic voice.
               </p>
             </div>
           </div>
           <p className="mt-5 helper-copy">
-            Powered by an academic-grade language model trained to spot copied phrasing, encyclopedic patterns, and
-            generic AI output. Get an originality score, flagged passages, and a clean rewrite for every issue.
+            This tool is designed to help students <strong>improve their own writing</strong> and understand
+            paraphrasing — not to bypass plagiarism detectors or academic-integrity policies. Always follow your
+            school's rules on AI use and submit work that genuinely reflects your own learning.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="rounded-[16px] bg-muted/55 p-4">
               <FileSearch className="h-5 w-5 text-primary" />
-              <p className="mt-3 font-display font-semibold">Deep scan</p>
-              <p className="micro-note mt-1">Sentence-level analysis with confidence ratings on every flagged passage.</p>
+              <p className="mt-3 font-display font-semibold">Self-review</p>
+              <p className="micro-note mt-1">Sentence-level feedback on phrasing that may need attribution or rewording.</p>
             </div>
             <div className="rounded-[16px] bg-muted/55 p-4">
               <Sparkles className="h-5 w-5 text-accent" />
-              <p className="mt-3 font-display font-semibold">Rewrite ready</p>
-              <p className="micro-note mt-1">Each flagged sentence comes with an original, in-your-voice replacement.</p>
+              <p className="mt-3 font-display font-semibold">Learn to paraphrase</p>
+              <p className="micro-note mt-1">Suggested rewordings show you how to express ideas in your own academic voice.</p>
             </div>
           </div>
         </div>
+
 
         <div className="field-shell">
           <label className="text-sm font-semibold text-foreground">Paste your text or upload a document</label>
