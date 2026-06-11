@@ -1,16 +1,26 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import { Compass } from "lucide-react";
 import PageWrapper from "@/components/PageWrapper";
 import { Button } from "@/components/ui/button";
-
 
 const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    document.title = "404 – Page not found | StudyKro";
+    let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      document.head.appendChild(robots);
+    }
+    const prev = robots.getAttribute("content");
+    robots.setAttribute("content", "noindex, nofollow");
+    return () => {
+      if (prev) robots!.setAttribute("content", prev);
+    };
   }, [location.pathname]);
 
   return (
