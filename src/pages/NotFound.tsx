@@ -1,8 +1,10 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Compass } from "lucide-react";
 import PageWrapper from "@/components/PageWrapper";
 import { Button } from "@/components/ui/button";
+
 
 const NotFound = () => {
   const location = useLocation();
