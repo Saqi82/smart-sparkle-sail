@@ -89,7 +89,6 @@ export default function Landing() {
             applicationCategory: "EducationApplication",
             operatingSystem: "Web, Android",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "120" },
           },
           {
             "@context": "https://schema.org",
@@ -120,13 +119,6 @@ export default function Landing() {
             operatingSystem: "Web",
             url: "https://studykro.com/ai-flashcard-generator",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.8",
-              reviewCount: "1240",
-              bestRating: "5",
-              worstRating: "1",
-            },
           },
           {
             "@context": "https://schema.org",

@@ -99,7 +99,6 @@ export default function Plagiarism() {
             "Plagiarism checker AI free. Scan essays and assignments for plagiarism, AI-generated text, and unoriginal phrasing — with an originality score and rewrite suggestions. Study helper AI, no login required.",
           url: "https://studykro.com/plagiarism-checker",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
 

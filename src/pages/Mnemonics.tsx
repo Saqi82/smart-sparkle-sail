@@ -72,7 +72,6 @@ export default function Mnemonics() {
           description: "Mnemonic generator AI. Turn lists, terms or facts into memorable acronyms, stories and memory palaces. Study helper AI for faster memorization. No login required.",
           url: "https://studykro.com/mnemonics",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">

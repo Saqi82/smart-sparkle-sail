@@ -104,7 +104,6 @@ export default function StudyPlan() {
           description: "Study plan maker free AI. Tell us your exam date and topics — get a personalized day-by-day revision schedule built around spaced repetition. No login required.",
           url: "https://studykro.com/studyplan",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">

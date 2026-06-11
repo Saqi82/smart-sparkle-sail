@@ -111,7 +111,6 @@ export default function Flashcards() {
           description: "Free AI flashcard generator no signup. Turn your notes or any topic into ready-to-study flashcards instantly. Built for active recall and spaced repetition. No login required.",
           url: "https://studykro.com/flashcards",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">

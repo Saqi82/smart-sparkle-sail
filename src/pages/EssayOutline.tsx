@@ -75,7 +75,6 @@ export default function EssayOutline() {
           description: "Essay outline generator AI free. Get a structured outline with thesis statement, supporting arguments, evidence and conclusion for any essay topic. Study helper AI, no login required.",
           url: "https://studykro.com/essay-outline",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">

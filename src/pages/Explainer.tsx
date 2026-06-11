@@ -73,7 +73,6 @@ export default function Explainer() {
           description: "AI concept explainer for students. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — study helper AI built on the Feynman technique. No login required.",
           url: "https://studykro.com/explainer",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "1240" },
         }}
       />
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">

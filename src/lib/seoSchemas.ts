@@ -12,7 +12,6 @@ export const makeAppSchema = (name: string, url: string, desc: string, features:
   "operatingSystem": "Web",
   "description": desc,
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1240" },
   "featureList": features,
   "publisher": { "@type": "Organization", "name": "SialTech", "url": BASE }
 })

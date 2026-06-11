@@ -193,11 +193,6 @@ export default function Tutor() {
             "Free AI academic tutor. Upload course material and chat with a Socratic, citation-backed AI tutor that adapts explanations and quizzes you.",
           url: "https://studykro.com/tutor",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "860",
-          },
         }}
       />
 
