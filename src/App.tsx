@@ -13,7 +13,7 @@ import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 
 const Landing = lazy(() => import("./pages/Landing"));
-const Tutor = lazy(() => import("./pages/Summarizer"));
+
 const Summarizer = lazy(() => import("./pages/Summarizer"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
 const Quiz = lazy(() => import("./pages/Quiz"));
