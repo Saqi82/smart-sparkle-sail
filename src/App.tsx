@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 
-const GA_ID = "G-GBGQQ1DP0Z";
+const GA_ID = "G-DLMH5QNZD2";
 
 function PageTracker() {
   const location = useLocation();
