@@ -86,6 +86,7 @@ function AnimatedRoutes() {
 function AppShell() {
   return (
     <BrowserRouter>
+      <PageTracker />
       <ScrollToTop />
       <Navbar />
       <AnimatedRoutes />
