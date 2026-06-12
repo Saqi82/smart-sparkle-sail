@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +11,22 @@ import Footer from "./components/Footer";
 
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
+
+const GA_ID = "G-GBGQQ1DP0Z";
+
+function PageTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    if (typeof window !== "undefined" && "gtag" in window) {
+      // @ts-expect-error gtag is loaded globally from index.html
+      window.gtag("config", GA_ID, {
+        page_path: location.pathname + location.search,
+        page_location: window.location.href,
+      });
+    }
+  }, [location]);
+  return null;
+}
 
 const Landing = lazy(() => import("./pages/Landing"));
 
