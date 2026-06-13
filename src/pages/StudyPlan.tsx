@@ -271,7 +271,7 @@ export default function StudyPlan() {
         related={[
           { to: "/examtips", label: "AI Exam Tips Generator", desc: "Predicted questions and last-minute strategy for each subject in your plan." },
           { to: "/quiz", label: "AI Quiz Generator", desc: "Self-test on the topics scheduled for today." },
-          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Compress each day's reading into a quick revision sheet." },
+          { to: "/tutor", label: "AI Tutor", desc: "Chat with a Socratic AI tutor that cites your notes and adapts to you." },
         ]}
       />
     </PageWrapper>

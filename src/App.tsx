@@ -30,7 +30,7 @@ function PageTracker() {
 
 const Landing = lazy(() => import("./pages/Landing"));
 
-const Summarizer = lazy(() => import("./pages/Summarizer"));
+const Tutor = lazy(() => import("./pages/Tutor"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const StudyPlan = lazy(() => import("./pages/StudyPlan"));
@@ -58,8 +58,8 @@ function AnimatedRoutes() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
-          <Route path="/summarizer" element={<Summarizer />} />
-          <Route path="/tutor" element={<Navigate to="/summarizer" replace />} />
+          <Route path="/tutor" element={<Tutor />} />
+          <Route path="/summarizer" element={<Navigate to="/tutor" replace />} />
           <Route path="/flashcards" element={<Flashcards />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/studyplan" element={<StudyPlan />} />

@@ -135,7 +135,7 @@ export default function BlogPost() {
         <div className="mt-10 paper-panel p-6">
           <p className="font-display font-semibold text-foreground">Written by the StudyKro Team</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            We build free AI tools for students. Try our <Link to="/summarizer" className="font-semibold text-primary hover:underline">Notes Summarizer</Link>,{" "}
+            We build free AI tools for students. Try our <Link to="/tutor" className="font-semibold text-primary hover:underline">Notes Summarizer</Link>,{" "}
             <Link to="/flashcards" className="font-semibold text-primary hover:underline">Flashcard Generator</Link>, and{" "}
             <Link to="/quiz" className="font-semibold text-primary hover:underline">Quiz Generator</Link> to put these techniques into practice.
           </p>

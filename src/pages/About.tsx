@@ -112,7 +112,7 @@ export default function About() {
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild size="lg">
-            <Link to="/summarizer">Try a tool free <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            <Link to="/tutor">Try a tool free <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link to="/blog">Read study guides</Link>
