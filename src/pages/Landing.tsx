@@ -12,7 +12,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { getBlogImage } from "@/data/blogImages";
 
 const tools = [
-  { icon: FileText, title: "Notes Summarizer", desc: "Turn long notes into concise key points and revision-ready summaries.", to: "/summarizer", tag: "Most popular" },
+  { icon: FileText, title: "AI Tutor", desc: "Chat with a Socratic AI tutor that cites your uploaded notes and adapts to your level.", to: "/tutor", tag: "Most popular" },
   { icon: Layers, title: "Flashcard Generator", desc: "Create AI flashcards for active recall and spaced repetition.", to: "/flashcards", tag: "Active recall" },
   { icon: ClipboardList, title: "Quiz Generator", desc: "Generate practice quizzes from any topic or notes in seconds.", to: "/quiz", tag: "Self-test" },
   { icon: Calendar, title: "Study Plan", desc: "Build a realistic, day-by-day revision schedule for your exam.", to: "/studyplan" },

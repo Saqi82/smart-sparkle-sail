@@ -11,7 +11,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 
 const tools = [
-  { to: "/summarizer", label: "Notes Summarizer", desc: "Turn raw notes into a clean outline", icon: FileText },
+  { to: "/tutor", label: "AI Tutor", desc: "Socratic tutor that cites your notes", icon: FileText },
   { to: "/flashcards", label: "Flashcards", desc: "AI flashcards for active recall", icon: Layers },
   { to: "/quiz", label: "Quiz Generator", desc: "Self-test on any topic", icon: ClipboardList },
   { to: "/studyplan", label: "Study Plan", desc: "Personalized revision schedule", icon: Calendar },

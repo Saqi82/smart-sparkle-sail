@@ -9,7 +9,7 @@ export default function Footer() {
   const recentPosts = blogPosts.slice(0, 5);
 
   const tools = [
-    { to: "/summarizer", label: "Notes Summarizer" },
+    { to: "/tutor", label: "AI Tutor" },
     { to: "/flashcards", label: "Flashcard Generator" },
     { to: "/quiz", label: "Quiz Generator" },
     { to: "/studyplan", label: "Study Plan Generator" },
