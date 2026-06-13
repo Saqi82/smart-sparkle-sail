@@ -217,7 +217,7 @@ export default function Explainer() {
           { q: "Can I upload a PDF?", a: "Yes. Upload your chapter or notes for context, and the AI will explain the concept grounded in your source material." },
         ]}
         related={[
-          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize the chapter first, then ask the explainer for the tricky bits." },
+          { to: "/tutor", label: "AI Tutor", desc: "Chat with a Socratic AI tutor that cites your notes and adapts to you." },
           { to: "/mnemonics", label: "AI Mnemonic Generator", desc: "Lock the new concept in long-term memory with a memory hook." },
           { to: "/flashcards", label: "AI Flashcard Generator", desc: "Turn the explanation into active-recall flashcards." },
         ]}

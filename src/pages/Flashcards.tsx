@@ -279,7 +279,7 @@ export default function Flashcards() {
         ]}
         related={[
           { to: "/quiz", label: "AI Quiz Generator", desc: "Test the cards you just learned with multiple-choice practice questions." },
-          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Condense long notes first, then turn the summary into flashcards." },
+          { to: "/tutor", label: "AI Tutor", desc: "Chat with a Socratic AI tutor that cites your notes and adapts to you." },
           { to: "/mnemonics", label: "AI Mnemonic Generator", desc: "Stuck on a hard card? Generate a memory hook for it instantly." },
           { to: "/ai-flashcard-generator", label: "PDF Flashcard Maker", desc: "Dedicated landing page for PDF-to-flashcard workflows." },
         ]}

@@ -230,7 +230,7 @@ export default function EssayOutline() {
           { q: "Can I cite the suggested sources?", a: "The AI suggests source types (peer-reviewed studies, government data, etc.) — find the actual sources yourself in your library or Google Scholar." },
         ]}
         related={[
-          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize research articles before pulling evidence into your outline." },
+          { to: "/tutor", label: "AI Tutor", desc: "Chat with a Socratic AI tutor that cites your notes and adapts to you." },
           { to: "/plagiarism-checker", label: "AI Plagiarism Checker", desc: "Scan your finished essay for plagiarism and AI-generated phrasing." },
           { to: "/explainer", label: "AI Concept Explainer", desc: "Stuck on a concept your essay relies on? Get a clear explanation first." },
         ]}

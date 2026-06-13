@@ -277,7 +277,7 @@ export default function Plagiarism() {
         ]}
         related={[
           { to: "/essay-outline", label: "AI Essay Outline Generator", desc: "Build the structure first so your finished essay is original by design." },
-          { to: "/summarizer", label: "AI Notes Summarizer", desc: "Summarize sources in your own words before quoting them." },
+          { to: "/tutor", label: "AI Tutor", desc: "Chat with a Socratic AI tutor that cites your notes and adapts to you." },
           { to: "/explainer", label: "AI Concept Explainer", desc: "Understand the topic deeply so your phrasing is genuinely yours." },
         ]}
       />
