@@ -14,7 +14,7 @@ export default function Loader({ message = "AI is thinking..." }: { message?: st
   const tip = useMemo(() => tips[Math.floor(Math.random() * tips.length)], []);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 py-16">
+    <div className="flex min-h-[80vh] flex-col items-center justify-center gap-4 py-16">
       <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }}>
         <div className="rounded-[14px] border border-border/20 bg-card/90 p-4 soft-shadow">
           <Brain className="h-10 w-10 text-primary" />
