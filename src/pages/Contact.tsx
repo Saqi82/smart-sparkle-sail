@@ -81,8 +81,18 @@ export default function Contact() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
           <p className="note-label">Contact</p>
           <h1 className="mb-4 mt-4 text-4xl font-display font-bold md:text-5xl">Contact Us</h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
-            Use this form for support questions, bug reports, or feedback. Communication stays clear, respectful, and focused on helping you use the platform effectively.
+          <p className="mx-auto mb-4 max-w-2xl text-lg text-muted-foreground">
+            Use this form for support questions, bug reports, or feedback. We read every message and reply within 2–3 business days.
+          </p>
+          <p className="mx-auto max-w-2xl text-base text-muted-foreground">
+            You can also email us directly at{" "}
+            <a href="mailto:support@studykro.com" className="font-semibold text-primary hover:underline">
+              support@studykro.com
+            </a>
+            .
+          </p>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">
+            StudyKro is maintained by Saqib Nawaz and the CIT team at TEVTA, Pakistan.
           </p>
         </motion.div>
       </section>
