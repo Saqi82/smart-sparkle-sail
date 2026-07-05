@@ -112,37 +112,75 @@ Start tomorrow. Read one section, close the book, write what you remember, and c
     readTime: "7 min read",
     date: "2025-01-12",
     content: `
-## The forgetting curve
+## The forgetting curve, and why your brain isn't broken
 
-In 1885, Hermann Ebbinghaus discovered that we forget about **70% of new information within 24 hours**. The fix? Review the material right before you'd forget it. That's spaced repetition.
+In 1885, a German psychologist named Hermann Ebbinghaus locked himself in a room and memorized thousands of nonsense syllables so he could measure exactly how fast he forgot them. The result — the **forgetting curve** — is one of the most reliable findings in the entire history of psychology. Within roughly 20 minutes he had lost about 40% of what he had just learned. Within 24 hours he had lost around 70%. After a week, more than 80% was gone.
 
-## How the intervals work
+More than a century of replication has confirmed the shape of that curve. It applies to vocabulary, formulas, historical dates, anatomy, code snippets, chord shapes, and everything else humans try to learn. Forgetting is not a personal failing or a sign that you are "bad at studying." It is the default behavior of a healthy brain that is trying not to waste storage on things it does not think you need.
 
-A simple schedule:
+Spaced repetition is the fix. It is a study schedule that shows you the material *right before* you would have forgotten it, which forces your brain to re-encode the memory as important. Each successful retrieval flattens the curve a little more, so the next review can safely happen further in the future. Do this consistently and information you would normally have forgotten within a week can stay accessible for months or years.
 
-- Day 1 — learn it
-- Day 2 — review
-- Day 4 — review
-- Day 8 — review
-- Day 16 — review
-- Day 30+ — long-term memory
+## The intervals, in plain English
 
-Each successful recall pushes the next review further out.
+There is no single magic schedule, but the classic starting point looks like this:
 
-## Why it pairs perfectly with AI flashcards
+- **Day 1** — Learn the material for the first time.
+- **Day 2** — Quick review. Struggle is expected.
+- **Day 4** — Review again. Easier this time.
+- **Day 8** — Review. Should feel routine.
+- **Day 16** — Review. Almost automatic.
+- **Day 30** — Review. Now it is on the way to long-term memory.
+- **Every 2–3 months after that** — Occasional touch-up review.
 
-Building 200 flashcards per subject by hand is a non-starter. With an **AI flashcard generator** you can convert a 40-page PDF into a deck in under a minute, then run them through any spaced repetition app.
+The general rule: **when a review feels easy, double the gap. When it feels hard, cut the gap in half.** Modern spaced repetition apps (Anki, Mochi, RemNote, and many others) automate this using an algorithm derived from the SM-2 method, but the manual version works fine if you prefer paper.
 
-## A realistic weekly plan
+## Why spaced repetition beats cramming
 
-- **Mon/Wed/Fri:** new material → generate flashcards.
-- **Tue/Thu:** review old decks.
-- **Sat:** mixed quiz with the **AI quiz generator** to simulate a test.
-- **Sun:** rest. Sleep consolidates memory.
+Cramming works — for about 48 hours. Cognitive scientists call this the **cramming ceiling**: you can push a lot of information into short-term memory in one long session, and it will hold long enough to get you through a Friday morning exam, but by the following week the retention curve is nearly identical to someone who never studied at all. That is why students who ace midterms sometimes bomb cumulative finals covering the exact same material. The information never had a chance to move into durable long-term storage.
 
-## The bottom line
+Spaced repetition inverts this. Each retrieval is a small workout. Because you are recalling under mild difficulty, the memory gets tagged as important and gets stored more deeply. Over a term, the total study time is often *less* than a crammer's, but the retention at the end can be five to ten times higher.
 
-Spaced repetition isn't a hack — it's how your brain wants to learn. Combine it with AI tools and you'll cut study time while remembering more.
+## Why it pairs perfectly with active recall (and AI flashcards)
+
+Spaced repetition is not a study technique on its own — it is a *schedule*. What you do inside each session still matters. Reviewing your notes on the correct day is much less effective than testing yourself on the correct day. That is why spaced repetition and **active recall** are always taught together: the interval decides *when* to study, and active recall decides *how*.
+
+Flashcards are the natural format because each card is a self-contained retrieval prompt. The problem, as any student who has tried Anki knows, is the setup cost. Building a serious deck for a single chapter can eat an entire evening. This is where AI flashcard generation earns its keep. Feed **StudyKro's AI flashcard generator** a chapter, a lecture transcript, or a PDF and you get a full deck in under a minute. Import that deck into any spaced repetition app and you are ready to start the schedule tomorrow morning.
+
+A few practical rules for AI-generated decks:
+
+- **Prune ruthlessly.** Delete any card that tests trivia rather than understanding. A 100-card deck of concepts you actually need will beat a 400-card deck full of noise.
+- **Rephrase in your own words.** The 15 seconds it takes to reword a card is itself a mini learning rep.
+- **Add your own gap cards.** After each recall session, write a card for anything you missed. Your weakest ideas should have the densest coverage.
+
+## A realistic weekly schedule
+
+Here is what spaced repetition looks like for a normal student who is not living in the library:
+
+- **Monday/Wednesday/Friday:** learn new material. Read once, do a blank-page recall, then generate flashcards from the notes.
+- **Tuesday/Thursday:** 15–25 minutes of flashcard reviews. Let the app decide which cards are due.
+- **Saturday:** mixed quiz using an AI quiz generator across your weakest topic of the week.
+- **Sunday:** rest. Sleep is where the day's reviews actually get consolidated into long-term memory. Skipping sleep is the fastest way to erase the work you did all week.
+
+Total: around 5–7 hours of focused study, distributed across the week. Compare that to a typical pre-exam cram of 12–15 hours in one weekend, and the trade is obvious.
+
+## What to do when you fall behind
+
+You will. Everyone falls behind at some point in the term. The mistake is to declare the system broken and give up. The correct move is much smaller: instead of trying to catch up on every missed review at once, spend one focused session on the oldest overdue cards, mark the rest as "reviewed" and let the algorithm redistribute them naturally.
+
+If you fall behind by more than a week or two, consider **rebuilding the deck** rather than resurrecting it. It sounds harsh, but rebuilding forces you to re-engage with the material, and the new deck will be shorter and better tuned to what you actually need.
+
+## Common mistakes that ruin the payoff
+
+- **Making cards that are too long.** If a card takes more than 10–15 seconds to answer, split it into two cards. Long cards get skipped, and skipped cards do not stick.
+- **Studying only the "hard" cards.** The easy ones need reinforcement too. That is the whole point of the algorithm.
+- **Reviewing right before bed and then scrolling for an hour.** Sleep does the consolidation work — protect it.
+- **Trying to memorize entire textbooks.** Spaced repetition is for the ideas that matter. If everything is important, nothing is.
+
+## Where it fits in the bigger picture
+
+Spaced repetition is not a magic trick. It will not make an unstudied subject click. What it *will* do is take material you have already made a genuine effort to understand and keep it accessible for as long as you need it. Combine it with active recall for the *how*, a solid summarizer for the *inputs*, and honest sleep for the *consolidation*, and you have the closest thing to a research-backed study system that exists.
+
+The bottom line: forgetting is normal, but forgetting is not inevitable. Space your reviews, test yourself instead of re-reading, and let the AI take care of the typing so you can focus on the remembering.
 `,
   },
   {
