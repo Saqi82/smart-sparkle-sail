@@ -17,36 +17,89 @@ export const blogPosts: BlogPost[] = [
       "Active recall beats re-reading every time. Learn how to use AI flashcards and self-testing to remember more in half the study time.",
     keywords: ["active recall", "study techniques", "AI flashcards", "memory retention"],
     category: "Study Techniques",
-    readTime: "6 min read",
+    readTime: "9 min read",
     date: "2025-01-08",
     content: `
 ## Why re-reading feels productive but isn't
 
-You highlight a textbook, re-read your notes, and feel like you "studied." But cognitive research is brutally clear: passive review is one of the **least effective** ways to learn. Every meta-analysis on study habits ranks **active recall** at the top.
+Almost every student learns the same study ritual: open the textbook, highlight the important lines, re-read the chapter the night before the exam, and hope the material sticks. It *feels* like studying. Your eyes move, your hand moves, and by the end of an hour you can honestly say you spent 60 minutes with the book. The problem is what cognitive scientists call the **illusion of fluency**. The more times you look at a paragraph, the more familiar it feels — and your brain confuses familiarity with knowing. Familiarity is recognition. Knowing is retrieval. They are not the same thing, and exams only test the second one.
 
-## What is active recall?
+A landmark 2013 review by Dunlosky and colleagues (published in *Psychological Science in the Public Interest*) evaluated ten common study techniques against decades of experimental evidence. Re-reading and highlighting were rated **low utility**. Retrieval practice — better known as active recall — was rated **high utility**, right alongside distributed practice. In other words, the two things most students *don't* do are the two things that consistently produce better exam scores across ages, subjects, and difficulty levels.
 
-Active recall means **retrieving** information from memory instead of staring at it. Closing the book, asking yourself a question, and answering it — that single act strengthens neural pathways more than reading the same page five times.
+## What active recall actually is
 
-## How to do active recall in 4 steps
+Active recall means pulling information *out* of your head instead of pushing information *in*. It is the mental equivalent of a bench press: the effort of retrieval is what builds the muscle. When you close the book and try to write down what you just read, three useful things happen inside your brain at once.
 
-1. **Read** a chapter once.
-2. **Close the book.**
-3. **Write down** everything you remember.
-4. **Compare** and fix the gaps.
+1. You strengthen the neural pathway to that memory, making it easier to reach next time.
+2. You discover exactly where the gaps are — the sentences you cannot reproduce are the ones you did not understand.
+3. You build **retrieval cues**, the little mental handles your brain will use later to yank the memory back under exam pressure.
 
-That's it. The struggle to retrieve is the workout.
+None of that happens while you are highlighting. Highlighting is passive tagging. Active recall is production. Production is what the exam demands.
 
-## Where AI study tools fit in
+## A simple 4-step active recall routine
 
-Manually building flashcards for every chapter takes hours. With **StudyKro's AI flashcard generator**, you upload your notes and get ready-to-test cards in seconds — so you can spend your time *recalling*, not *formatting*.
+You do not need an app or a course to start. All you need is a blank sheet of paper and a rule: do not look until you have tried.
 
-Pair active recall with **spaced repetition** (covered in another post) and you'll outperform classmates who study twice as long.
+1. **Read a section once.** Not five times. Once, with reasonable attention.
+2. **Close the book.** Physically shut it or flip the tab. The temptation to peek is the whole point.
+3. **Write down everything you remember** — in your own words, in whatever order it comes out. Diagrams, arrows, half-sentences all count.
+4. **Open the book and compare.** Circle the ideas you missed. Those are your real study targets for tomorrow.
 
-## TL;DR
-- Re-reading = comfortable, ineffective.
-- Active recall = harder, dramatically more effective.
-- Use AI to skip the prep work and start testing yourself today.
+That is one cycle. Ten minutes of reading, ten minutes of recall, five minutes of comparison. Do it once per chapter and you have already outperformed the average re-reader.
+
+## Why the struggle matters
+
+Students often quit active recall on the first try because it feels awful. Staring at a blank page trying to remember the four stages of mitosis is *much* harder than re-reading a page that names them for you. This is not a bug. Robert Bjork, a memory researcher at UCLA, coined the term **desirable difficulty** to describe exactly this feeling — a study technique that feels harder in the moment but produces dramatically stronger long-term memory. Passive reading feels easy because your brain is doing almost nothing. Active recall feels hard because your brain is finally doing the work exams reward.
+
+The practical rule: if a study session feels *comfortable*, you are probably wasting the session.
+
+## Variations that keep active recall from getting stale
+
+Blank-page recall is the purest version, but there are lighter formats you can slot into a busy week:
+
+- **The blurt method.** Set a 5-minute timer and write down everything you know about a topic. Great warm-up before a longer study block.
+- **Teach it out loud.** Explain the concept to an empty room, a pet, or a patient friend. If you stumble, you have found a gap. (This overlaps with the Feynman technique, which we cover in a separate post.)
+- **Question stacks.** After each chapter, write 5 short questions on index cards or in a notes app. Shuffle them tomorrow, next week, next month.
+- **Free-response flashcards.** Instead of a two-line "term → definition" card, write a card that says "Explain X in your own words." Force yourself to speak or write a full answer before flipping.
+
+Mix at least two of these into every week and boredom stops being an excuse.
+
+## Where AI flashcards fit in
+
+The single biggest reason students avoid active recall is the setup cost. Nobody wants to spend 90 minutes typing flashcards after already reading a chapter. This is exactly the friction an AI flashcard generator removes. You paste your notes, upload the lecture slide deck, or drop in a PDF, and you get a full deck of testable questions in under a minute. Your job stops being *card creation* and becomes *card recall* — which is the part that actually moves the needle.
+
+A few practical tips when you use **StudyKro's AI flashcard generator** (or any similar tool):
+
+- **Skim the generated cards and delete the trivial ones.** A card that asks "In what year was the paper published?" is rarely worth your time. Cards that ask *why* or *how* are.
+- **Edit at least a few by hand.** The 30 seconds you spend rephrasing a card in your own words is itself a mini active recall rep.
+- **Add your own gap cards.** After a recall session, add cards for the ideas you missed. Your weakest topics deserve the densest deck.
+
+Used this way, the AI does the typing and you keep the thinking. That is the split that produces results.
+
+## A realistic weekly schedule
+
+Here is how a student might combine active recall with the rest of a normal life:
+
+- **Monday–Thursday:** 25-minute study block per class. First 10 minutes: read new material. Next 10: blank-page recall. Last 5: generate or update your flashcard deck.
+- **Friday:** review only. Run every deck once. No new material.
+- **Saturday:** simulate a small quiz with an AI quiz generator on your weakest topic of the week.
+- **Sunday:** rest. Sleep is where memories consolidate, and skipping it is the fastest way to erase the work you did all week.
+
+Notice how little total time this is. Active recall is not about studying *longer*. It is about studying in a way where each minute leaves a mark.
+
+## Common objections, briefly answered
+
+**"I don't have time to test myself, I still need to finish reading."** Testing *is* reading, done twice as effectively. Cut the second re-read and use that time for recall.
+
+**"I forget everything the moment I close the book."** That is the point. Forgetting followed by successful retrieval is what builds durable memory. The first attempt is supposed to be ugly.
+
+**"My subject is too visual / too mathematical for flashcards."** Then draw the diagrams from memory. Solve one worked problem, close the solution, and re-solve it. Recall works for anything you can produce.
+
+## The bottom line
+
+Re-reading is comfortable and mostly useless. Highlighting is worse — it tricks you into believing you have already studied. Active recall is uncomfortable, harder to start, and produces measurably better exam results across every subject researchers have tested. Add spaced repetition on top and you are using the two most evidence-backed study techniques in the entire literature.
+
+Start tomorrow. Read one section, close the book, write what you remember, and compare. That single cycle — repeated over a term — is the difference between students who cram and students who *know*.
 `,
   },
   {
@@ -56,40 +109,78 @@ Pair active recall with **spaced repetition** (covered in another post) and you'
       "Spaced repetition is the secret behind med students, polyglots, and elite test-takers. Here's how to use it with AI-generated flashcards.",
     keywords: ["spaced repetition", "memory", "flashcards", "study method"],
     category: "Study Techniques",
-    readTime: "7 min read",
+    readTime: "9 min read",
     date: "2025-01-12",
     content: `
-## The forgetting curve
+## The forgetting curve, and why your brain isn't broken
 
-In 1885, Hermann Ebbinghaus discovered that we forget about **70% of new information within 24 hours**. The fix? Review the material right before you'd forget it. That's spaced repetition.
+In 1885, a German psychologist named Hermann Ebbinghaus locked himself in a room and memorized thousands of nonsense syllables so he could measure exactly how fast he forgot them. The result — the **forgetting curve** — is one of the most reliable findings in the entire history of psychology. Within roughly 20 minutes he had lost about 40% of what he had just learned. Within 24 hours he had lost around 70%. After a week, more than 80% was gone.
 
-## How the intervals work
+More than a century of replication has confirmed the shape of that curve. It applies to vocabulary, formulas, historical dates, anatomy, code snippets, chord shapes, and everything else humans try to learn. Forgetting is not a personal failing or a sign that you are "bad at studying." It is the default behavior of a healthy brain that is trying not to waste storage on things it does not think you need.
 
-A simple schedule:
+Spaced repetition is the fix. It is a study schedule that shows you the material *right before* you would have forgotten it, which forces your brain to re-encode the memory as important. Each successful retrieval flattens the curve a little more, so the next review can safely happen further in the future. Do this consistently and information you would normally have forgotten within a week can stay accessible for months or years.
 
-- Day 1 — learn it
-- Day 2 — review
-- Day 4 — review
-- Day 8 — review
-- Day 16 — review
-- Day 30+ — long-term memory
+## The intervals, in plain English
 
-Each successful recall pushes the next review further out.
+There is no single magic schedule, but the classic starting point looks like this:
 
-## Why it pairs perfectly with AI flashcards
+- **Day 1** — Learn the material for the first time.
+- **Day 2** — Quick review. Struggle is expected.
+- **Day 4** — Review again. Easier this time.
+- **Day 8** — Review. Should feel routine.
+- **Day 16** — Review. Almost automatic.
+- **Day 30** — Review. Now it is on the way to long-term memory.
+- **Every 2–3 months after that** — Occasional touch-up review.
 
-Building 200 flashcards per subject by hand is a non-starter. With an **AI flashcard generator** you can convert a 40-page PDF into a deck in under a minute, then run them through any spaced repetition app.
+The general rule: **when a review feels easy, double the gap. When it feels hard, cut the gap in half.** Modern spaced repetition apps (Anki, Mochi, RemNote, and many others) automate this using an algorithm derived from the SM-2 method, but the manual version works fine if you prefer paper.
 
-## A realistic weekly plan
+## Why spaced repetition beats cramming
 
-- **Mon/Wed/Fri:** new material → generate flashcards.
-- **Tue/Thu:** review old decks.
-- **Sat:** mixed quiz with the **AI quiz generator** to simulate a test.
-- **Sun:** rest. Sleep consolidates memory.
+Cramming works — for about 48 hours. Cognitive scientists call this the **cramming ceiling**: you can push a lot of information into short-term memory in one long session, and it will hold long enough to get you through a Friday morning exam, but by the following week the retention curve is nearly identical to someone who never studied at all. That is why students who ace midterms sometimes bomb cumulative finals covering the exact same material. The information never had a chance to move into durable long-term storage.
 
-## The bottom line
+Spaced repetition inverts this. Each retrieval is a small workout. Because you are recalling under mild difficulty, the memory gets tagged as important and gets stored more deeply. Over a term, the total study time is often *less* than a crammer's, but the retention at the end can be five to ten times higher.
 
-Spaced repetition isn't a hack — it's how your brain wants to learn. Combine it with AI tools and you'll cut study time while remembering more.
+## Why it pairs perfectly with active recall (and AI flashcards)
+
+Spaced repetition is not a study technique on its own — it is a *schedule*. What you do inside each session still matters. Reviewing your notes on the correct day is much less effective than testing yourself on the correct day. That is why spaced repetition and **active recall** are always taught together: the interval decides *when* to study, and active recall decides *how*.
+
+Flashcards are the natural format because each card is a self-contained retrieval prompt. The problem, as any student who has tried Anki knows, is the setup cost. Building a serious deck for a single chapter can eat an entire evening. This is where AI flashcard generation earns its keep. Feed **StudyKro's AI flashcard generator** a chapter, a lecture transcript, or a PDF and you get a full deck in under a minute. Import that deck into any spaced repetition app and you are ready to start the schedule tomorrow morning.
+
+A few practical rules for AI-generated decks:
+
+- **Prune ruthlessly.** Delete any card that tests trivia rather than understanding. A 100-card deck of concepts you actually need will beat a 400-card deck full of noise.
+- **Rephrase in your own words.** The 15 seconds it takes to reword a card is itself a mini learning rep.
+- **Add your own gap cards.** After each recall session, write a card for anything you missed. Your weakest ideas should have the densest coverage.
+
+## A realistic weekly schedule
+
+Here is what spaced repetition looks like for a normal student who is not living in the library:
+
+- **Monday/Wednesday/Friday:** learn new material. Read once, do a blank-page recall, then generate flashcards from the notes.
+- **Tuesday/Thursday:** 15–25 minutes of flashcard reviews. Let the app decide which cards are due.
+- **Saturday:** mixed quiz using an AI quiz generator across your weakest topic of the week.
+- **Sunday:** rest. Sleep is where the day's reviews actually get consolidated into long-term memory. Skipping sleep is the fastest way to erase the work you did all week.
+
+Total: around 5–7 hours of focused study, distributed across the week. Compare that to a typical pre-exam cram of 12–15 hours in one weekend, and the trade is obvious.
+
+## What to do when you fall behind
+
+You will. Everyone falls behind at some point in the term. The mistake is to declare the system broken and give up. The correct move is much smaller: instead of trying to catch up on every missed review at once, spend one focused session on the oldest overdue cards, mark the rest as "reviewed" and let the algorithm redistribute them naturally.
+
+If you fall behind by more than a week or two, consider **rebuilding the deck** rather than resurrecting it. It sounds harsh, but rebuilding forces you to re-engage with the material, and the new deck will be shorter and better tuned to what you actually need.
+
+## Common mistakes that ruin the payoff
+
+- **Making cards that are too long.** If a card takes more than 10–15 seconds to answer, split it into two cards. Long cards get skipped, and skipped cards do not stick.
+- **Studying only the "hard" cards.** The easy ones need reinforcement too. That is the whole point of the algorithm.
+- **Reviewing right before bed and then scrolling for an hour.** Sleep does the consolidation work — protect it.
+- **Trying to memorize entire textbooks.** Spaced repetition is for the ideas that matter. If everything is important, nothing is.
+
+## Where it fits in the bigger picture
+
+Spaced repetition is not a magic trick. It will not make an unstudied subject click. What it *will* do is take material you have already made a genuine effort to understand and keep it accessible for as long as you need it. Combine it with active recall for the *how*, a solid summarizer for the *inputs*, and honest sleep for the *consolidation*, and you have the closest thing to a research-backed study system that exists.
+
+The bottom line: forgetting is normal, but forgetting is not inevitable. Space your reviews, test yourself instead of re-reading, and let the AI take care of the typing so you can focus on the remembering.
 `,
   },
   {
@@ -99,34 +190,90 @@ Spaced repetition isn't a hack — it's how your brain wants to learn. Combine i
       "A step-by-step guide to using an AI notes summarizer for textbooks, lectures, and PDFs — with prompts that keep key concepts intact.",
     keywords: ["AI notes summarizer", "summarize notes", "study guide generator", "PDF summary"],
     category: "AI Study Tools",
-    readTime: "5 min read",
+    readTime: "9 min read",
     date: "2025-01-15",
     content: `
 ## Why most AI summaries are shallow
 
-Generic chatbots compress text by deleting things. For studying, you need a summary that **preserves definitions, formulas, and named concepts** — not one that turns chemistry into a TED talk.
+Ask a general-purpose chatbot to "summarize this chapter" and you will usually get something that reads well, sounds confident, and is almost useless for studying. The reason is simple: most large language models compress text by removing what they consider redundant — which for a novel is fine, and for a biology chapter is a disaster. The very things you need on an exam (precise definitions, named exceptions, formula variables, key dates, the *wording* your professor uses) are exactly the things a generic summarizer treats as noise.
+
+A summary that helps you study has a different goal from a summary that helps you skim. A study summary is not a shortened version of the chapter. It is a **scaffold you can hang recall practice on**. The point is not to save reading time; the point is to end up with something you can quiz yourself against next week and next month.
+
+## The three qualities of a summary that actually helps
+
+Before we talk about tools, it helps to know what you are aiming for. A useful study summary has three properties:
+
+1. **Faithful.** Definitions, formulas, and technical terms appear verbatim. If your textbook says "the mitochondrion is the site of oxidative phosphorylation," your summary should say the same thing, not "cells make energy in their power plants."
+2. **Structured.** Ideas are grouped the way an exam will group them. Compare/contrast pairs stay together. Cause/effect chains stay in order. Definitions stay next to their examples.
+3. **Testable.** Every key point can be turned into a question with almost no rewriting. If a bullet point cannot become a flashcard, it is prose, not study material.
+
+Most bad summaries fail on the third criterion. They sound smart but leave you nothing to test yourself on later.
 
 ## The 3-layer summary method
 
-When you use **StudyKro's AI notes summarizer**, you get three layers:
+The approach that works best for exam prep produces three summaries in one pass, each one at a different depth. You can do this by hand, or you can let an AI notes summarizer do the first draft. Either way, the shape should be:
 
-1. **Short summary** — the chapter in 3 sentences.
-2. **Key points** — 5–7 bullet points you'd write on an exam cheat sheet.
-3. **Definitions & formulas** — preserved verbatim.
+1. **The 3-sentence summary.** What is this chapter fundamentally about? Written so that if a friend asked "what did you study today?" you could answer without opening the book.
+2. **The 5–10 key points.** The bullet points you would write on an exam cheat sheet if you were allowed one. Each bullet should be a full idea, not a keyword.
+3. **The definitions, formulas, and named concepts.** Verbatim. Do not paraphrase these. This is the reference layer.
 
-That structure mirrors how examiners actually test you.
+**StudyKro's AI notes summarizer** produces all three layers automatically from a single upload. But even if you use another tool, ask for these three layers explicitly. Most generic summarizers only give you layer 1 by default, and layer 1 alone is nearly useless for exam prep.
 
-## Step-by-step
+## Step-by-step: a summarizing workflow that sticks
 
-1. Paste your notes or upload a PDF.
-2. Pick the depth (short / detailed).
-3. Skim the short summary first.
-4. Drill into key points.
-5. Convert definitions into flashcards (one click).
+Here is the workflow that consistently produces study material students actually use later:
 
-## Pro tip: layer with active recall
+1. **Prepare the source.** Paste your notes, upload the PDF, or drop in the lecture transcript. If you have multiple files for the same topic, combine them first so the summary sees the whole picture.
+2. **Choose the depth.** For a first pass, choose the shortest version. For revision one week before the exam, choose the detailed version. Layered depth beats a single "medium" summary every time.
+3. **Skim the short summary first.** Two minutes. This is orientation, not learning.
+4. **Read the key points slowly.** Say each one out loud in your own words. If you cannot rephrase a bullet without looking back at the source, that bullet is your next study target.
+5. **Turn the definitions layer into flashcards.** In StudyKro this is a single click; in other tools you can copy the section into a flashcard generator. Either way, the verbatim layer is what belongs on the cards.
+6. **Save the summary somewhere you will actually re-open it.** A folder called *Summaries* that you never open again is a waste of ink. Link the summary from your calendar so it shows up on review days.
 
-Don't *read* the summary. **Cover it** and explain each key point out loud. The summary is a checklist, not a substitute for thinking.
+## Prompts that keep an AI summarizer honest
+
+If you are using a general chatbot rather than a purpose-built study tool, the difference between a useless summary and a great one is almost entirely in the prompt. A few phrases that reliably improve results:
+
+- "Preserve all defined terms in the original wording. Do not paraphrase definitions."
+- "Return three sections: a 3-sentence overview, 5–10 key points as full-sentence bullets, and a definitions/formulas list."
+- "For each key point, include a short parenthetical example from the source."
+- "Do not invent examples that are not in the source. If the source has no example, say so."
+
+That last one matters. AI summarizers occasionally invent examples that sound plausible but are wrong. Telling the model to admit when the source is silent dramatically reduces this. StudyKro's summarizer is tuned to avoid this failure mode by default, but if you are using a general chatbot the instruction is worth adding.
+
+## The mistake that ruins every summary
+
+The single biggest mistake students make is treating the summary as the *end* of studying. It is not. A summary you passively re-read is only slightly better than the original passive re-read. What you want is:
+
+- Read the summary once.
+- Close it.
+- Try to reproduce the key points on a blank page from memory.
+- Compare and fix the gaps.
+
+This is the same **active recall** loop we cover elsewhere, and it is what turns a summary from a warm-blanket read into an actual learning tool. If you are not testing yourself against the summary, you are not really studying — you are just organizing.
+
+## When (and when not) to trust an AI summary
+
+AI summarizers, StudyKro's included, are extremely good at:
+
+- Condensing long lectures and PDFs into scannable structure.
+- Pulling out defined terms and formulas.
+- Producing consistent, testable bullet points.
+- Suggesting what to turn into flashcards.
+
+They are less good at:
+
+- Highly numerical or code-heavy material where the details matter more than the structure.
+- Material with lots of diagrams or figures the model cannot see. (In those cases, screenshot the figures separately and study them in parallel.)
+- Anything where your instructor uses unusual definitions that contradict the textbook. Always cross-check against your lecture notes for the wording *your* exam will use.
+
+Used as a first draft that you edit lightly, an AI summary can save an hour per chapter and produce something more testable than most students would write on their own. Used as a finished product that you never touch, it is only marginally better than a highlighter.
+
+## The bottom line
+
+A good study summary preserves what matters, groups it the way an exam groups it, and leaves you something to test yourself against. Generic AI chatbots rarely do this without a very specific prompt. A dedicated tool like **StudyKro's AI notes summarizer** does it by default, and then hands you a one-click path to flashcards and quizzes so the summary actually turns into learning instead of sitting in a folder.
+
+Summarize once, test yourself many times. That is the whole game.
 `,
   },
   {
@@ -416,37 +563,88 @@ If anxiety stops you from showing up or sleeping, talk to a counselor. That's st
       "The Feynman technique turns confusion into clarity in 4 steps. Learn how to use it with an AI concept explainer to master tough topics fast.",
     keywords: ["Feynman technique", "learning method", "concept explainer", "study smarter"],
     category: "Study Techniques",
-    readTime: "6 min read",
+    readTime: "10 min read",
     date: "2025-02-04",
     content: `
-## Why the Feynman technique works
+## Where the Feynman technique comes from
 
-Nobel-winning physicist Richard Feynman had a simple rule: **if you can't explain it simply, you don't understand it.** That single idea is one of the most powerful learning tools ever created.
+Richard Feynman was a Nobel-winning physicist who worked on quantum electrodynamics, played the bongos in his spare time, and had a reputation among his colleagues for being able to explain any idea in physics using nothing more complicated than a pen and a napkin. He never wrote a book called *The Feynman Technique*; the name was attached later by writers trying to summarize his approach to learning. But the underlying rule is genuinely his, repeated across interviews, lectures, and his own notes:
 
-## The 4 steps
+> If you can't explain it simply, you don't understand it.
 
-1. **Pick a concept.** Write its name at the top of a blank page.
-2. **Explain it like you're teaching a 12-year-old.** No jargon allowed.
-3. **Find the gaps.** The places where you stumble are the parts you don't actually know.
-4. **Go back to the source**, fix the gap, and try again.
+That single sentence — deceptively obvious, endlessly ignored — is one of the most powerful study tools ever formulated. It turns learning from a passive activity (reading, listening, watching) into an active one (producing, explaining, teaching). And unlike most study tips, it costs nothing, requires no app, and works on almost any subject a student will ever face.
 
-## Why it beats highlighting
+## Why explaining is such a strong test of understanding
 
-Highlighting is recognition. Teaching is **production**. Production forces your brain to organize, connect, and translate — three things passive review never does.
+To explain a concept in your own words, your brain has to do four things in sequence: retrieve the idea from memory, translate it out of the source's jargon, reorganize it into a sensible order, and choose examples that fit the level of your imagined audience. Each of those steps is a mini test of understanding. If any of them fails, you feel it immediately as a stumble, a filler word, or a sudden urge to peek at the book.
 
-## Use AI to speed up step 3
+Compare that to highlighting or re-reading. Both feel productive. Neither forces any of those four steps to happen. That is why students who highlight for hours can still bomb a short-answer question the next morning — recognition passed, but production never got tested.
 
-The hard part is spotting your own gaps. Drop the concept into **StudyKro's Concept Explainer** and compare its ELI5, analogy, and detailed version against your own. The mismatches are your study targets.
+## The 4 steps, in practical detail
 
-## Common mistakes
+The classic version of the Feynman technique is four steps. Written out plainly:
 
-- **Copy-pasting the textbook definition.** That's recognition, not understanding.
-- **Skipping the "explain to a kid" step.** The simplification is the whole point.
-- **Stopping at one pass.** Real mastery shows up on the second or third loop.
+1. **Pick one concept and write its name at the top of a blank page.** Not a whole chapter. One concept. "Photosynthesis," or "the doctrine of consideration in contract law," or "why bubble sort is O(n²)." Narrow beats broad.
+2. **Explain it in plain language, as if you were teaching a curious 12-year-old.** Full sentences. No jargon. If you have to use a technical term, define it immediately in words the 12-year-old would accept. Aim for a page, not a paragraph.
+3. **Find the gaps.** Read what you wrote. Circle every place you hedged, waved your hands, skipped a step, or used a word without defining it. Those circles are your real study targets — the parts you thought you knew and didn't.
+4. **Go back to the source.** Read only the specific passages that fix the circled gaps. Rewrite your explanation. Repeat until the page reads cleanly from top to bottom with no hand-waving.
 
-## TL;DR
+That is the whole method. Ten minutes per concept. Done properly, one Feynman pass produces more durable understanding than an hour of re-reading.
 
-Teach it. Find the holes. Patch them. Repeat. That's the entire method — and it works on anything from calculus to constitutional law.
+## Two examples to make it concrete
+
+**Example 1 — a physics concept.**
+"Voltage." A student's first draft might say: "Voltage is like pressure in a wire that pushes electrons." That is fine as a starting analogy, but the moment they try to add "and it is measured in volts, and one volt equals one joule per coulomb," they will probably stumble on *why*. That stumble is the whole point. Back to the textbook, fix the joule-per-coulomb part, and the second draft is genuinely stronger than the original.
+
+**Example 2 — a legal concept.**
+"Consideration" in contract law. First draft: "Consideration is something you give in exchange for the other person's promise." True but incomplete. The 12-year-old asks: does it have to be money? Does it have to be equal in value? What if it is just a promise not to sue? Each unanswered follow-up is a gap. The second draft, after re-reading the chapter, will handle all three — and that is understanding, not memorization.
+
+Notice the pattern in both examples: the first draft is what recognition feels like. The final draft is what knowing feels like. The gap between them is the entire value of the technique.
+
+## Where AI fits in
+
+The hardest part of the Feynman technique is honestly spotting your own gaps. Students overrate their own explanations because the ideas *feel* clear in their heads, even when the writing on the page is full of hedges. Two AI-assisted moves solve this cleanly.
+
+**Move 1: compare your explanation to an AI-generated one.**
+Drop the same concept into **StudyKro's Concept Explainer** and ask for an ELI5, an analogy, and a detailed version. Read all three. Every idea the AI mentions that yours skipped is a gap. Every simplification the AI made cleanly that yours made sloppily is a target for revision.
+
+**Move 2: ask the AI to interrogate your explanation.**
+Paste your draft and ask "what is missing from this explanation, and what would a skeptical examiner ask?" A good model will produce a list of follow-up questions you did not think of. Those questions are your next round of study.
+
+Used this way, the AI is not doing the learning for you. It is playing the role of the patient teacher who keeps asking "but why?" — the exact role that used to require a study partner willing to sit with you for an hour.
+
+## What the Feynman technique is *not* good for
+
+Honesty matters. The Feynman technique is not the best tool for every kind of studying.
+
+- **Pure memorization tasks** — vocabulary, cranial nerves, dates, formulas — are better served by spaced repetition with flashcards. You cannot "explain" the fact that the Battle of Hastings was in 1066; you just have to know it.
+- **Highly procedural skills** — solving integrals, writing proofs, coding algorithms — need worked practice, not explanations. The Feynman pass helps you understand *why* a technique works, but you still have to do 30 problems to get fluent.
+- **Very early first exposure** — trying to teach a topic you have never read is frustrating and unproductive. Read once, then run the Feynman pass on what you just read.
+
+The sweet spot is any concept where understanding matters more than memorization, and where a professor might ask "explain why" or "compare and contrast" rather than "define."
+
+## Common mistakes that quietly ruin the method
+
+- **Copy-pasting the textbook definition.** This produces a page that looks like an explanation but tested nothing. Rewrite from memory only.
+- **Skipping the "teach a 12-year-old" step.** Using jargon is how you hide gaps from yourself. Plain language exposes them.
+- **Stopping at one pass.** The first draft always feels finished. The second and third are where the real learning happens.
+- **Explaining out loud without writing.** Speech forgives hand-waving. Writing does not. Use paper or a keyboard.
+- **Picking a topic that is too big.** "Explain World War II" is a book, not a Feynman pass. Pick a single question: "Explain why the Treaty of Versailles is often blamed for causing WWII."
+
+## A weekly rhythm that works
+
+You do not have to Feynman every concept in every chapter. A realistic rhythm for a normal student:
+
+- **Two or three Feynman passes per week**, on the concepts most likely to appear as short-answer or essay questions.
+- **Flashcards and spaced repetition** for everything memorization-heavy.
+- **Practice problems** for everything procedural.
+- **AI Concept Explainer** as a check on your Feynman drafts, not a replacement for them.
+
+Do this for a term and you will notice something interesting: the topics you Feynman-ed once are the ones you can still explain confidently in a job interview a year later. The topics you only highlighted are gone.
+
+## The bottom line
+
+The Feynman technique is not a hack. It is a rule about what learning actually is: **the ability to produce a clear explanation without notes**. Everything else — highlighting, re-reading, watching one more YouTube video — is preparation for that moment. Pick a concept, write the name at the top of a blank page, and start explaining. The first attempt will be worse than you expect. That is not failure. That is the technique working.
 `,
   },
   {
