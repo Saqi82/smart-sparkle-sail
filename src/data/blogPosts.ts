@@ -195,29 +195,85 @@ The bottom line: forgetting is normal, but forgetting is not inevitable. Space y
     content: `
 ## Why most AI summaries are shallow
 
-Generic chatbots compress text by deleting things. For studying, you need a summary that **preserves definitions, formulas, and named concepts** — not one that turns chemistry into a TED talk.
+Ask a general-purpose chatbot to "summarize this chapter" and you will usually get something that reads well, sounds confident, and is almost useless for studying. The reason is simple: most large language models compress text by removing what they consider redundant — which for a novel is fine, and for a biology chapter is a disaster. The very things you need on an exam (precise definitions, named exceptions, formula variables, key dates, the *wording* your professor uses) are exactly the things a generic summarizer treats as noise.
+
+A summary that helps you study has a different goal from a summary that helps you skim. A study summary is not a shortened version of the chapter. It is a **scaffold you can hang recall practice on**. The point is not to save reading time; the point is to end up with something you can quiz yourself against next week and next month.
+
+## The three qualities of a summary that actually helps
+
+Before we talk about tools, it helps to know what you are aiming for. A useful study summary has three properties:
+
+1. **Faithful.** Definitions, formulas, and technical terms appear verbatim. If your textbook says "the mitochondrion is the site of oxidative phosphorylation," your summary should say the same thing, not "cells make energy in their power plants."
+2. **Structured.** Ideas are grouped the way an exam will group them. Compare/contrast pairs stay together. Cause/effect chains stay in order. Definitions stay next to their examples.
+3. **Testable.** Every key point can be turned into a question with almost no rewriting. If a bullet point cannot become a flashcard, it is prose, not study material.
+
+Most bad summaries fail on the third criterion. They sound smart but leave you nothing to test yourself on later.
 
 ## The 3-layer summary method
 
-When you use **StudyKro's AI notes summarizer**, you get three layers:
+The approach that works best for exam prep produces three summaries in one pass, each one at a different depth. You can do this by hand, or you can let an AI notes summarizer do the first draft. Either way, the shape should be:
 
-1. **Short summary** — the chapter in 3 sentences.
-2. **Key points** — 5–7 bullet points you'd write on an exam cheat sheet.
-3. **Definitions & formulas** — preserved verbatim.
+1. **The 3-sentence summary.** What is this chapter fundamentally about? Written so that if a friend asked "what did you study today?" you could answer without opening the book.
+2. **The 5–10 key points.** The bullet points you would write on an exam cheat sheet if you were allowed one. Each bullet should be a full idea, not a keyword.
+3. **The definitions, formulas, and named concepts.** Verbatim. Do not paraphrase these. This is the reference layer.
 
-That structure mirrors how examiners actually test you.
+**StudyKro's AI notes summarizer** produces all three layers automatically from a single upload. But even if you use another tool, ask for these three layers explicitly. Most generic summarizers only give you layer 1 by default, and layer 1 alone is nearly useless for exam prep.
 
-## Step-by-step
+## Step-by-step: a summarizing workflow that sticks
 
-1. Paste your notes or upload a PDF.
-2. Pick the depth (short / detailed).
-3. Skim the short summary first.
-4. Drill into key points.
-5. Convert definitions into flashcards (one click).
+Here is the workflow that consistently produces study material students actually use later:
 
-## Pro tip: layer with active recall
+1. **Prepare the source.** Paste your notes, upload the PDF, or drop in the lecture transcript. If you have multiple files for the same topic, combine them first so the summary sees the whole picture.
+2. **Choose the depth.** For a first pass, choose the shortest version. For revision one week before the exam, choose the detailed version. Layered depth beats a single "medium" summary every time.
+3. **Skim the short summary first.** Two minutes. This is orientation, not learning.
+4. **Read the key points slowly.** Say each one out loud in your own words. If you cannot rephrase a bullet without looking back at the source, that bullet is your next study target.
+5. **Turn the definitions layer into flashcards.** In StudyKro this is a single click; in other tools you can copy the section into a flashcard generator. Either way, the verbatim layer is what belongs on the cards.
+6. **Save the summary somewhere you will actually re-open it.** A folder called *Summaries* that you never open again is a waste of ink. Link the summary from your calendar so it shows up on review days.
 
-Don't *read* the summary. **Cover it** and explain each key point out loud. The summary is a checklist, not a substitute for thinking.
+## Prompts that keep an AI summarizer honest
+
+If you are using a general chatbot rather than a purpose-built study tool, the difference between a useless summary and a great one is almost entirely in the prompt. A few phrases that reliably improve results:
+
+- "Preserve all defined terms in the original wording. Do not paraphrase definitions."
+- "Return three sections: a 3-sentence overview, 5–10 key points as full-sentence bullets, and a definitions/formulas list."
+- "For each key point, include a short parenthetical example from the source."
+- "Do not invent examples that are not in the source. If the source has no example, say so."
+
+That last one matters. AI summarizers occasionally invent examples that sound plausible but are wrong. Telling the model to admit when the source is silent dramatically reduces this. StudyKro's summarizer is tuned to avoid this failure mode by default, but if you are using a general chatbot the instruction is worth adding.
+
+## The mistake that ruins every summary
+
+The single biggest mistake students make is treating the summary as the *end* of studying. It is not. A summary you passively re-read is only slightly better than the original passive re-read. What you want is:
+
+- Read the summary once.
+- Close it.
+- Try to reproduce the key points on a blank page from memory.
+- Compare and fix the gaps.
+
+This is the same **active recall** loop we cover elsewhere, and it is what turns a summary from a warm-blanket read into an actual learning tool. If you are not testing yourself against the summary, you are not really studying — you are just organizing.
+
+## When (and when not) to trust an AI summary
+
+AI summarizers, StudyKro's included, are extremely good at:
+
+- Condensing long lectures and PDFs into scannable structure.
+- Pulling out defined terms and formulas.
+- Producing consistent, testable bullet points.
+- Suggesting what to turn into flashcards.
+
+They are less good at:
+
+- Highly numerical or code-heavy material where the details matter more than the structure.
+- Material with lots of diagrams or figures the model cannot see. (In those cases, screenshot the figures separately and study them in parallel.)
+- Anything where your instructor uses unusual definitions that contradict the textbook. Always cross-check against your lecture notes for the wording *your* exam will use.
+
+Used as a first draft that you edit lightly, an AI summary can save an hour per chapter and produce something more testable than most students would write on their own. Used as a finished product that you never touch, it is only marginally better than a highlighter.
+
+## The bottom line
+
+A good study summary preserves what matters, groups it the way an exam groups it, and leaves you something to test yourself against. Generic AI chatbots rarely do this without a very specific prompt. A dedicated tool like **StudyKro's AI notes summarizer** does it by default, and then hands you a one-click path to flashcards and quizzes so the summary actually turns into learning instead of sitting in a folder.
+
+Summarize once, test yourself many times. That is the whole game.
 `,
   },
   {
