@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
       "Active recall beats re-reading every time. Learn how to use AI flashcards and self-testing to remember more in half the study time.",
     keywords: ["active recall", "study techniques", "AI flashcards", "memory retention"],
     category: "Study Techniques",
-    readTime: "6 min read",
+    readTime: "9 min read",
     date: "2025-01-08",
     content: `
 ## Why re-reading feels productive but isn't
