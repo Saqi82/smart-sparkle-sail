@@ -109,7 +109,7 @@ Start tomorrow. Read one section, close the book, write what you remember, and c
       "Spaced repetition is the secret behind med students, polyglots, and elite test-takers. Here's how to use it with AI-generated flashcards.",
     keywords: ["spaced repetition", "memory", "flashcards", "study method"],
     category: "Study Techniques",
-    readTime: "7 min read",
+    readTime: "9 min read",
     date: "2025-01-12",
     content: `
 ## The forgetting curve, and why your brain isn't broken
