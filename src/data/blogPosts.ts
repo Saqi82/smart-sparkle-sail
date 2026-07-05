@@ -563,7 +563,7 @@ If anxiety stops you from showing up or sleeping, talk to a counselor. That's st
       "The Feynman technique turns confusion into clarity in 4 steps. Learn how to use it with an AI concept explainer to master tough topics fast.",
     keywords: ["Feynman technique", "learning method", "concept explainer", "study smarter"],
     category: "Study Techniques",
-    readTime: "6 min read",
+    readTime: "10 min read",
     date: "2025-02-04",
     content: `
 ## Where the Feynman technique comes from
