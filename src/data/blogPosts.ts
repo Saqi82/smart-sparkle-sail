@@ -190,7 +190,7 @@ The bottom line: forgetting is normal, but forgetting is not inevitable. Space y
       "A step-by-step guide to using an AI notes summarizer for textbooks, lectures, and PDFs — with prompts that keep key concepts intact.",
     keywords: ["AI notes summarizer", "summarize notes", "study guide generator", "PDF summary"],
     category: "AI Study Tools",
-    readTime: "5 min read",
+    readTime: "9 min read",
     date: "2025-01-15",
     content: `
 ## Why most AI summaries are shallow
