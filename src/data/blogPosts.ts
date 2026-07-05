@@ -566,34 +566,85 @@ If anxiety stops you from showing up or sleeping, talk to a counselor. That's st
     readTime: "6 min read",
     date: "2025-02-04",
     content: `
-## Why the Feynman technique works
+## Where the Feynman technique comes from
 
-Nobel-winning physicist Richard Feynman had a simple rule: **if you can't explain it simply, you don't understand it.** That single idea is one of the most powerful learning tools ever created.
+Richard Feynman was a Nobel-winning physicist who worked on quantum electrodynamics, played the bongos in his spare time, and had a reputation among his colleagues for being able to explain any idea in physics using nothing more complicated than a pen and a napkin. He never wrote a book called *The Feynman Technique*; the name was attached later by writers trying to summarize his approach to learning. But the underlying rule is genuinely his, repeated across interviews, lectures, and his own notes:
 
-## The 4 steps
+> If you can't explain it simply, you don't understand it.
 
-1. **Pick a concept.** Write its name at the top of a blank page.
-2. **Explain it like you're teaching a 12-year-old.** No jargon allowed.
-3. **Find the gaps.** The places where you stumble are the parts you don't actually know.
-4. **Go back to the source**, fix the gap, and try again.
+That single sentence — deceptively obvious, endlessly ignored — is one of the most powerful study tools ever formulated. It turns learning from a passive activity (reading, listening, watching) into an active one (producing, explaining, teaching). And unlike most study tips, it costs nothing, requires no app, and works on almost any subject a student will ever face.
 
-## Why it beats highlighting
+## Why explaining is such a strong test of understanding
 
-Highlighting is recognition. Teaching is **production**. Production forces your brain to organize, connect, and translate — three things passive review never does.
+To explain a concept in your own words, your brain has to do four things in sequence: retrieve the idea from memory, translate it out of the source's jargon, reorganize it into a sensible order, and choose examples that fit the level of your imagined audience. Each of those steps is a mini test of understanding. If any of them fails, you feel it immediately as a stumble, a filler word, or a sudden urge to peek at the book.
 
-## Use AI to speed up step 3
+Compare that to highlighting or re-reading. Both feel productive. Neither forces any of those four steps to happen. That is why students who highlight for hours can still bomb a short-answer question the next morning — recognition passed, but production never got tested.
 
-The hard part is spotting your own gaps. Drop the concept into **StudyKro's Concept Explainer** and compare its ELI5, analogy, and detailed version against your own. The mismatches are your study targets.
+## The 4 steps, in practical detail
 
-## Common mistakes
+The classic version of the Feynman technique is four steps. Written out plainly:
 
-- **Copy-pasting the textbook definition.** That's recognition, not understanding.
-- **Skipping the "explain to a kid" step.** The simplification is the whole point.
-- **Stopping at one pass.** Real mastery shows up on the second or third loop.
+1. **Pick one concept and write its name at the top of a blank page.** Not a whole chapter. One concept. "Photosynthesis," or "the doctrine of consideration in contract law," or "why bubble sort is O(n²)." Narrow beats broad.
+2. **Explain it in plain language, as if you were teaching a curious 12-year-old.** Full sentences. No jargon. If you have to use a technical term, define it immediately in words the 12-year-old would accept. Aim for a page, not a paragraph.
+3. **Find the gaps.** Read what you wrote. Circle every place you hedged, waved your hands, skipped a step, or used a word without defining it. Those circles are your real study targets — the parts you thought you knew and didn't.
+4. **Go back to the source.** Read only the specific passages that fix the circled gaps. Rewrite your explanation. Repeat until the page reads cleanly from top to bottom with no hand-waving.
 
-## TL;DR
+That is the whole method. Ten minutes per concept. Done properly, one Feynman pass produces more durable understanding than an hour of re-reading.
 
-Teach it. Find the holes. Patch them. Repeat. That's the entire method — and it works on anything from calculus to constitutional law.
+## Two examples to make it concrete
+
+**Example 1 — a physics concept.**
+"Voltage." A student's first draft might say: "Voltage is like pressure in a wire that pushes electrons." That is fine as a starting analogy, but the moment they try to add "and it is measured in volts, and one volt equals one joule per coulomb," they will probably stumble on *why*. That stumble is the whole point. Back to the textbook, fix the joule-per-coulomb part, and the second draft is genuinely stronger than the original.
+
+**Example 2 — a legal concept.**
+"Consideration" in contract law. First draft: "Consideration is something you give in exchange for the other person's promise." True but incomplete. The 12-year-old asks: does it have to be money? Does it have to be equal in value? What if it is just a promise not to sue? Each unanswered follow-up is a gap. The second draft, after re-reading the chapter, will handle all three — and that is understanding, not memorization.
+
+Notice the pattern in both examples: the first draft is what recognition feels like. The final draft is what knowing feels like. The gap between them is the entire value of the technique.
+
+## Where AI fits in
+
+The hardest part of the Feynman technique is honestly spotting your own gaps. Students overrate their own explanations because the ideas *feel* clear in their heads, even when the writing on the page is full of hedges. Two AI-assisted moves solve this cleanly.
+
+**Move 1: compare your explanation to an AI-generated one.**
+Drop the same concept into **StudyKro's Concept Explainer** and ask for an ELI5, an analogy, and a detailed version. Read all three. Every idea the AI mentions that yours skipped is a gap. Every simplification the AI made cleanly that yours made sloppily is a target for revision.
+
+**Move 2: ask the AI to interrogate your explanation.**
+Paste your draft and ask "what is missing from this explanation, and what would a skeptical examiner ask?" A good model will produce a list of follow-up questions you did not think of. Those questions are your next round of study.
+
+Used this way, the AI is not doing the learning for you. It is playing the role of the patient teacher who keeps asking "but why?" — the exact role that used to require a study partner willing to sit with you for an hour.
+
+## What the Feynman technique is *not* good for
+
+Honesty matters. The Feynman technique is not the best tool for every kind of studying.
+
+- **Pure memorization tasks** — vocabulary, cranial nerves, dates, formulas — are better served by spaced repetition with flashcards. You cannot "explain" the fact that the Battle of Hastings was in 1066; you just have to know it.
+- **Highly procedural skills** — solving integrals, writing proofs, coding algorithms — need worked practice, not explanations. The Feynman pass helps you understand *why* a technique works, but you still have to do 30 problems to get fluent.
+- **Very early first exposure** — trying to teach a topic you have never read is frustrating and unproductive. Read once, then run the Feynman pass on what you just read.
+
+The sweet spot is any concept where understanding matters more than memorization, and where a professor might ask "explain why" or "compare and contrast" rather than "define."
+
+## Common mistakes that quietly ruin the method
+
+- **Copy-pasting the textbook definition.** This produces a page that looks like an explanation but tested nothing. Rewrite from memory only.
+- **Skipping the "teach a 12-year-old" step.** Using jargon is how you hide gaps from yourself. Plain language exposes them.
+- **Stopping at one pass.** The first draft always feels finished. The second and third are where the real learning happens.
+- **Explaining out loud without writing.** Speech forgives hand-waving. Writing does not. Use paper or a keyboard.
+- **Picking a topic that is too big.** "Explain World War II" is a book, not a Feynman pass. Pick a single question: "Explain why the Treaty of Versailles is often blamed for causing WWII."
+
+## A weekly rhythm that works
+
+You do not have to Feynman every concept in every chapter. A realistic rhythm for a normal student:
+
+- **Two or three Feynman passes per week**, on the concepts most likely to appear as short-answer or essay questions.
+- **Flashcards and spaced repetition** for everything memorization-heavy.
+- **Practice problems** for everything procedural.
+- **AI Concept Explainer** as a check on your Feynman drafts, not a replacement for them.
+
+Do this for a term and you will notice something interesting: the topics you Feynman-ed once are the ones you can still explain confidently in a job interview a year later. The topics you only highlighted are gone.
+
+## The bottom line
+
+The Feynman technique is not a hack. It is a rule about what learning actually is: **the ability to produce a clear explanation without notes**. Everything else — highlighting, re-reading, watching one more YouTube video — is preparation for that moment. Pick a concept, write the name at the top of a blank page, and start explaining. The first attempt will be worse than you expect. That is not failure. That is the technique working.
 `,
   },
   {
