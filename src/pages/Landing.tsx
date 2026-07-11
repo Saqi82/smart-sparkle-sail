@@ -367,6 +367,137 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* KEYWORD-CLUSTER LONG-FORM CONTENT */}
+      <section className="py-16">
+        <div className="mb-10 text-center">
+          <span className="note-label">Explore by use case</span>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+            Free AI study tools, organised by how students actually use them
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-muted-foreground">
+            StudyKro is a free AI learning platform built for school, college and self-study. Below is a plain-English
+            guide to what each cluster of tools does, when to reach for it, and how to combine them into a study
+            routine that actually moves material into long-term memory.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <article className="paper-panel p-6">
+            <h3 className="font-display text-xl font-bold">AI note taking &amp; summarization — free</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Lectures move fast and textbook chapters are dense. The free AI note taker and AI text summarizer inside
+              StudyKro exist so you can capture a two-hour lecture or a 40-page PDF and walk away with a clean,
+              structured set of notes in minutes. Paste transcripts, drop a PDF, or upload lecture handouts — the free
+              AI tool for lecture notes pulls out definitions, key claims, worked examples and sub-topics, then
+              rewrites them in shorter, revisable form. If you need to <em>summarize a PDF free</em>, the same tool
+              handles it without a signup or a page limit that punishes long readings.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              This is the entry point most students use: AI powered note taking free of charge, feeding into the
+              flashcard and quiz tools below. Use it whenever you want a free AI for condensing notes into something
+              you can realistically revise in a week.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              <Link to="/summarizer" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Open summarizer →</Link>
+              <Link to="/tutor" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Ask AI tutor →</Link>
+            </div>
+          </article>
+
+          <article className="paper-panel p-6">
+            <h3 className="font-display text-xl font-bold">AI flashcards &amp; memorization — free</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Memorisation isn't about how many times you read something — it's about how many times you retrieve it.
+              StudyKro's free AI flashcard generator and automatic flashcard maker turn any topic, paragraph or PDF
+              into question-and-answer cards ready for active recall. It's a free AI for spaced repetition: you decide
+              when a card is easy or hard, and the app resurfaces weaker cards more often.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              The mnemonic generator sits alongside it for lists that resist normal memorisation — cranial nerves,
+              historical dates, chemistry groups, legal cases. Together these AI active recall tools free up hours
+              you'd otherwise lose to passive re-reading. If you already have handwritten notes, use
+              <em> convert notes to flashcards AI free</em> and skip the manual card-writing entirely.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              <Link to="/flashcards" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Generate flashcards →</Link>
+              <Link to="/mnemonics" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Build mnemonics →</Link>
+            </div>
+          </article>
+
+          <article className="paper-panel p-6">
+            <h3 className="font-display text-xl font-bold">AI essay, research &amp; writing help — free</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              StudyKro's writing tools are designed to make you a better writer, not to hand in an essay for you. The
+              free AI essay helper drafts a thesis, supporting arguments, counterpoints and a conclusion structure
+              you can then write in your own voice. The AI research tool free of charge helps you organise sources
+              and outline what each one actually contributes, so citations aren't an afterthought.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Before you submit, run the essay through the free AI plagiarism checker and AI academic writing tool free
+              of charge — it flags unoriginal phrasing and AI-sounding passages so you can rewrite them. It doubles as
+              an AI writing assistant for students free from the pressure of a paid subscription, and works as a
+              free AI for citations reminder when your bibliography is thin.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              <Link to="/essay-outline" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Outline an essay →</Link>
+              <Link to="/plagiarism-checker" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Check for plagiarism →</Link>
+            </div>
+          </article>
+
+          <article className="paper-panel p-6">
+            <h3 className="font-display text-xl font-bold">Subject-specific AI study tools</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Different subjects reward different study moves. Use the concept explainer as a free AI for math homework
+              when a worked step doesn't make sense — it breaks the problem down and gives you an analogous example.
+              As an AI science study tool free of charge, it turns abstract mechanisms (mitosis, redox reactions,
+              circuit analysis) into diagrams-in-words you can redraw from memory.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Language learners can use it as a free AI for language learning: paste a passage, ask for grammar
+              breakdowns, vocabulary lists and comprehension questions. History students use it as an AI history study
+              aid free of charge for cause-and-consequence outlines and timeline drills. And for CS students, it works
+              as a free AI coding tutor — explaining error messages, walking through algorithms, and quizzing you on
+              syntax without ever writing your assignment for you.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              <Link to="/explainer" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Open explainer →</Link>
+              <Link to="/tutor" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Ask the AI tutor →</Link>
+            </div>
+          </article>
+
+          <article className="paper-panel p-6 md:col-span-2">
+            <h3 className="font-display text-xl font-bold">Exam prep &amp; AI tutoring — free</h3>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              Exam season is where the individual tools stop being individual. Start with the AI study plan generator
+              free of charge: enter your exam date, the topics you need to cover, and how many hours a day you can
+              realistically study. It builds a day-by-day plan that front-loads weaker topics and leaves room for
+              spaced review — a proper free AI exam prep schedule, not a generic "revise for two hours a day"
+              suggestion.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              From there, the AI practice test maker free of charge turns your notes into MCQs and short-answer
+              questions that mimic exam conditions. Use it as a free AI for test revision the week before the exam,
+              then again the night before as a quick confidence check. When a question stumps you, hand it to the
+              free AI tutor for students — it explains the concept, points you back to the source in your notes, and
+              gives you a follow-up question to make sure you actually understood it.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              <Link to="/studyplan" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Build a study plan →</Link>
+              <Link to="/quiz" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Generate a quiz →</Link>
+              <Link to="/examtips" className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20">Get exam tips →</Link>
+            </div>
+          </article>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Everything above is part of the same free AI learning platform — one of the top rated free AI study apps
+            for school, college and self-taught learners. No credit card, no trial period, no per-tool paywall. If
+            you're looking for the best free AI study tools in one place, start with the summarizer, then feed the
+            output into flashcards, quizzes and a study plan.
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="my-16">
         <div className="relative overflow-hidden rounded-3xl gradient-hero px-6 py-12 text-center text-white sm:px-12 sm:py-20">
