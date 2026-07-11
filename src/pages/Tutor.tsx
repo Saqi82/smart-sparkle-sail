@@ -182,6 +182,14 @@ export default function Tutor() {
           "AI tutor with my notes",
           "free AI tutor for students",
           "AI tutor that quizzes me",
+          "free ai tutor for students",
+          "ai study helper free",
+          "free ai for math homework",
+          "ai science study tool free",
+          "free ai for language learning",
+          "ai history study aid free",
+          "free ai coding tutor",
+          "free ai exam prep",
         ]}
         jsonLd={{
           "@context": "https://schema.org",
