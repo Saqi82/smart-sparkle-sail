@@ -65,7 +65,7 @@ export default function EssayOutline() {
         title="Free AI Essay Outline Generator – Instant Structure | StudyKro"
         description="Essay outline generator AI free. Get a structured outline with thesis statement, supporting arguments, evidence and conclusion. Study helper AI for academic writing."
         canonical="https://studykro.com/essay-outline"
-        keywords={["essay outline generator AI free","AI essay outline generator","essay outliner","thesis generator","essay structure AI","academic writing helper","study helper AI"]}
+        keywords={["essay outline generator AI free","AI essay outline generator","essay outliner","thesis generator","essay structure AI","academic writing helper","study helper AI","free ai essay helper","ai research tool free","free ai for citations","ai writing assistant for students free","ai academic writing tool free"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
