@@ -63,7 +63,7 @@ export default function Explainer() {
         title="Free AI Concept Explainer for Students – Feynman Technique | StudyKro"
         description="AI concept explainer for students. Get ELI5 explanations, analogies and deep-dive breakdowns of any concept — study helper AI built on the Feynman technique."
         canonical="https://studykro.com/explainer"
-        keywords={["AI concept explainer for students","AI concept explainer","ELI5 generator","Feynman technique AI tool","explain like I'm 5","AI tutor","study concept breakdown","study helper AI"]}
+        keywords={["AI concept explainer for students","AI concept explainer","ELI5 generator","Feynman technique AI tool","explain like I'm 5","AI tutor","study concept breakdown","study helper AI","free ai for math homework","ai science study tool free","free ai for language learning","ai history study aid free","free ai coding tutor","ai study helper free"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
