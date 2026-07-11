@@ -62,7 +62,7 @@ export default function Mnemonics() {
         title="Free AI Mnemonic Generator – Memory Tricks & Acronyms | StudyKro"
         description="Mnemonic generator AI. Turn lists, terms or facts into memorable acronyms, stories and memory palaces. Study helper AI for faster memorization."
         canonical="https://studykro.com/mnemonics"
-        keywords={["mnemonic generator AI","AI mnemonic generator","memory palace generator","acronym maker","mnemonic device creator","memorization AI","study helper AI"]}
+        keywords={["mnemonic generator AI","AI mnemonic generator","memory palace generator","acronym maker","mnemonic device creator","memorization AI","study helper AI","ai active recall tools free","free ai for spaced repetition","ai study helper free","free ai for students"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
