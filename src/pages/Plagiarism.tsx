@@ -84,6 +84,10 @@ export default function Plagiarism() {
           "improve your writing",
           "academic integrity tool",
           "study helper AI",
+          "free ai plagiarism checker",
+          "ai academic writing tool free",
+          "ai writing assistant for students free",
+          "free ai essay helper",
         ]}
         jsonLd={{
           "@context": "https://schema.org",
