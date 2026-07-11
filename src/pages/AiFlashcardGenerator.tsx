@@ -17,6 +17,11 @@ export default function AiFlashcardGenerator() {
           "AI flashcards from PDF",
           "no signup flashcards",
           "spaced repetition flashcards",
+          "free ai flashcard generator",
+          "ai active recall tools free",
+          "automatic flashcard maker ai free",
+          "free ai for spaced repetition",
+          "convert notes to flashcards ai free",
         ]}
         jsonLd={[
           {

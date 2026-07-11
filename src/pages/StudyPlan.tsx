@@ -94,7 +94,7 @@ export default function StudyPlan() {
         title="Free AI Study Plan Generator – Personalized Schedule for Exams | StudyKro"
         description="Study plan maker free AI. Tell us your exam date and topics — get a personalized day-by-day revision schedule. AI tools for exam preparation built around spaced repetition."
         canonical="https://studykro.com/studyplan"
-        keywords={["study plan maker free AI","AI study plan generator","revision schedule","exam study planner","study timetable generator","personalized study plan","AI tools for exam preparation"]}
+        keywords={["study plan maker free AI","AI study plan generator","revision schedule","exam study planner","study timetable generator","personalized study plan","AI tools for exam preparation","ai study plan generator free","free ai exam prep","free ai for test revision","free ai for students"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",

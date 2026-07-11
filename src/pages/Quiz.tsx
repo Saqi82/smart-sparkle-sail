@@ -124,7 +124,7 @@ export default function Quiz() {
         title="Free AI Quiz Generator - AI Powered Quiz Maker No Signup | StudyKro"
         description="Quiz generator AI free. Create multiple-choice practice quizzes from your notes or any topic and self-test instantly. AI tools for exam preparation. Perfect for exam prep."
         canonical="https://studykro.com/quiz"
-        keywords={["quiz generator AI free","AI quiz generator","practice quiz maker","MCQ generator","self-test AI","exam prep quiz","free quiz maker","AI tools for exam preparation"]}
+        keywords={["quiz generator AI free","AI quiz generator","practice quiz maker","MCQ generator","self-test AI","exam prep quiz","free quiz maker","AI tools for exam preparation","free ai exam prep","ai practice test maker free","free ai for test revision","free ai for students"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
