@@ -70,7 +70,7 @@ export default function ExamTips() {
         title="Free AI Exam Tips Generator – Strategy & Predicted Questions | StudyKro"
         description="Exam tips AI powered. Get predicted exam questions, focus areas and last-mile preparation strategy for any subject. AI tools for exam preparation."
         canonical="https://studykro.com/examtips"
-        keywords={["exam tips AI powered","AI exam tips","predicted exam questions","exam preparation guide","last-minute exam prep","exam strategy AI","AI tools for exam preparation"]}
+        keywords={["exam tips AI powered","AI exam tips","predicted exam questions","exam preparation guide","last-minute exam prep","exam strategy AI","AI tools for exam preparation","free ai exam prep","ai practice test maker free","free ai for test revision","free ai tutor for students"]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
