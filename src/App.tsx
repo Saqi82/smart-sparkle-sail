@@ -93,9 +93,11 @@ function AppShell() {
       <Navbar />
       <AnimatedRoutes />
       <Footer />
+      <CookieConsent />
     </BrowserRouter>
   );
 }
+
 
 const App = () => (
   <ErrorBoundary>
