@@ -8,9 +8,11 @@ import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CookieConsent from "./components/CookieConsent";
 
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
+
 
 const GA_ID = "G-DLMH5QNZD2";
 
