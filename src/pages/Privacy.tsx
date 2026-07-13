@@ -56,18 +56,84 @@ export default function Privacy() {
               <li><strong>AI providers</strong> (such as Google Gemini and OpenAI-compatible gateways) — process the text you submit to generate output. Submitted content is sent over HTTPS and is subject to the provider's own privacy terms.</li>
               <li><strong>Hosting & backend</strong> (Supabase / Lovable Cloud) — runs the serverless functions that handle your requests.</li>
               <li><strong>Formspree</strong> — delivers contact-form messages to our inbox.</li>
-              <li><strong>Analytics</strong> — anonymized, aggregate page-view metrics.</li>
-              <li><strong>Advertising partners</strong> (e.g. Google AdSense, if enabled) — may set cookies to show relevant ads. You can opt out via Google's Ads Settings.</li>
+              <li><strong>Google Analytics</strong> — anonymized, aggregate page-view metrics via the Google tag (gtag.js). IP addresses are anonymized where required by law.</li>
+              <li><strong>Google AdSense and advertising partners</strong> — see the dedicated advertising section below.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="font-display text-2xl font-bold text-foreground">5. Cookies</h2>
+            <h2 className="font-display text-2xl font-bold text-foreground">5. Advertising &amp; Google AdSense</h2>
             <p>
-              We use a small number of cookies and similar technologies for essential
-              functionality (theme, session, rate limiting) and aggregate analytics. Most
-              browsers let you block or delete cookies in their settings. Disabling
-              cookies may break some features.
+              StudyKro is a free service, and we may display advertisements to help
+              cover the cost of running it. When ads are enabled, we use{" "}
+              <strong>Google AdSense</strong>, a third-party advertising service provided
+              by Google LLC.
+            </p>
+            <p>
+              Google, as a third-party vendor, uses cookies — including the{" "}
+              <strong>DoubleClick DART cookie</strong> — to serve ads to you based on
+              your prior visits to StudyKro and other websites on the internet. Google
+              and its partners may use information (not including your name, address,
+              email address, or phone number) about your visits to this and other sites
+              in order to provide advertisements about goods and services of interest to
+              you.
+            </p>
+            <p>You can control personalized advertising in several ways:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>
+                Opt out of personalized advertising by visiting{" "}
+                <a className="text-primary hover:underline" href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.
+              </li>
+              <li>
+                Opt out of a third-party vendor's use of cookies for personalized
+                advertising by visiting{" "}
+                <a className="text-primary hover:underline" href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.
+              </li>
+              <li>
+                Read Google's advertising and privacy practices in the{" "}
+                <a className="text-primary hover:underline" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Ads &amp; Privacy policy</a>{" "}
+                and the{" "}
+                <a className="text-primary hover:underline" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites that use our services</a>{" "}
+                page.
+              </li>
+            </ul>
+            <p>
+              Third-party ad servers or ad networks used through the site use
+              technologies such as cookies, JavaScript, or Web Beacons in their
+              respective advertisements and links that appear on StudyKro. They
+              automatically receive your IP address when this occurs. These
+              technologies are used to measure the effectiveness of their advertising
+              campaigns and to personalize the advertising content that you see. Note
+              that StudyKro has no access to or control over these cookies used by
+              third-party advertisers.
+            </p>
+            <p>
+              <strong>Users in the EEA, UK, and Switzerland:</strong> under the GDPR
+              and the ePrivacy Directive, non-essential cookies (including
+              advertising cookies) are only set after you provide consent through our
+              cookie banner. You can withdraw consent at any time by clearing your
+              browser cookies for this site.
+            </p>
+            <p>
+              <strong>Users in California (CCPA/CPRA):</strong> the use of advertising
+              cookies described above may qualify as a "sale" or "sharing" of personal
+              information under California law. You may opt out at any time using the
+              links above or by emailing{" "}
+              <a className="text-primary hover:underline" href="mailto:info@studykro.com">info@studykro.com</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl font-bold text-foreground">6. Cookies &amp; local storage</h2>
+            <p>We use the following categories of cookies and similar technologies:</p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li><strong>Strictly necessary</strong> — theme preference, session, rate limiting. Always on; the site cannot function without these.</li>
+              <li><strong>Analytics</strong> — Google Analytics (gtag.js) to understand aggregate usage. Anonymized.</li>
+              <li><strong>Advertising</strong> — Google AdSense and its partners, as described in the Advertising section above. Set only after consent where required by law.</li>
+            </ul>
+            <p>
+              Most browsers let you block or delete cookies in their settings.
+              Disabling strictly-necessary cookies may break some features.
             </p>
           </section>
 
