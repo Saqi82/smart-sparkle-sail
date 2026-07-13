@@ -11,14 +11,33 @@
     <meta name="google-adsense-account" content="ca-pub-9554004247461009" />
     <link rel="canonical" href="https://studykro.com/" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) with Consent Mode v2 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLMH5QNZD2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-DLMH5QNZD2');
+
+      // Consent Mode v2 — default everything to denied until the user chooses.
+      // Respects a stored decision so it persists across visits.
+      (function () {
+        var stored = null;
+        try { stored = localStorage.getItem('studykro_consent_v1'); } catch (e) {}
+        var granted = stored === 'granted';
+        gtag('consent', 'default', {
+          ad_storage: granted ? 'granted' : 'denied',
+          ad_user_data: granted ? 'granted' : 'denied',
+          ad_personalization: granted ? 'granted' : 'denied',
+          analytics_storage: granted ? 'granted' : 'denied',
+          functionality_storage: 'granted',
+          security_storage: 'granted',
+          wait_for_update: 500
+        });
+      })();
+
+      gtag('config', 'G-DLMH5QNZD2', { anonymize_ip: true });
     </script>
+
 
     <link rel="icon" type="image/png" href="/favicon.png" sizes="512x512" />
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />

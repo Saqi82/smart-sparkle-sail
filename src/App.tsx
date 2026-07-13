@@ -8,23 +8,25 @@ import { AnimatePresence } from "framer-motion";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CookieConsent from "./components/CookieConsent";
 
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
+
 
 const GA_ID = "G-DLMH5QNZD2";
 
 function PageTracker() {
   const location = useLocation();
   useEffect(() => {
-    if (typeof window !== "undefined" && "gtag" in window) {
-      // @ts-expect-error gtag is loaded globally from index.html
-      window.gtag("config", GA_ID, {
+    if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: unknown }).gtag === "function") {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("config", GA_ID, {
         page_path: location.pathname + location.search,
         page_location: window.location.href,
       });
     }
   }, [location]);
+
   return null;
 }
 
@@ -91,9 +93,11 @@ function AppShell() {
       <Navbar />
       <AnimatedRoutes />
       <Footer />
+      <CookieConsent />
     </BrowserRouter>
   );
 }
+
 
 const App = () => (
   <ErrorBoundary>
