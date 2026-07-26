@@ -211,6 +211,38 @@ export default function EssayOutline() {
 
       <ToolSeoContent
         toolName="Free AI Essay Outline Generator"
+        guideTitle="How to go from outline to a finished essay that earns marks"
+        guide={[
+          {
+            heading: "An outline is an argument, not a list of topics",
+            body: [
+              "Weak outlines list subjects: 'causes', 'effects', 'conclusion'. Strong outlines list claims: each section states something arguable that the paragraph will defend. If you can read your outline top to bottom and hear a coherent case being made, the essay is already most of the way written.",
+              "Test it by reading only your section headings aloud. If they sound like a table of contents rather than a position, rewrite them as full sentences that take a stance.",
+            ],
+          },
+          {
+            heading: "Build the thesis before anything else",
+            body: [
+              "A thesis has to be contestable. If nobody could reasonably disagree with your sentence, it's a summary, not a thesis. It should also be specific enough that the reader can predict the shape of the essay — what you'll argue, on what grounds, and within what limits.",
+              "Once the thesis is fixed, every paragraph has a job: it either advances the thesis, supplies evidence for it, or defuses an objection to it. Anything that does none of those three things is padding, however well written.",
+            ],
+          },
+          {
+            heading: "Evidence, counterargument, and the marks they carry",
+            body: [
+              "Most rubrics award credit for engaging with opposing views, and most students skip it. Dedicating one substantial paragraph to the strongest objection — and answering it — signals genuine command of the topic rather than one-sided advocacy.",
+              "For evidence, prefer specific over abundant. Three well-chosen sources you can actually analyse beat ten you merely cite. Every quotation should be followed by your own sentence explaining what it proves; unexplained evidence earns nothing.",
+            ],
+          },
+          {
+            heading: "Drafting, and using AI honestly",
+            body: [
+              "Use the outline as a skeleton and write the body paragraphs first — introductions are far easier once you know what you're introducing. Draft quickly and roughly; editing is a separate task from generating.",
+              "On integrity: an outline generator is a planning aid, like a librarian pointing you at the right shelf. The argument, the analysis, and the prose must be yours. Submitting machine-written paragraphs as your own work is academic misconduct at essentially every institution, and it also robs you of the thinking the assignment was designed to produce.",
+              "Before submitting, reread against the actual marking criteria, check every citation against your referencing style, and read the essay aloud once. Your ear will catch clumsy sentences your eye has stopped seeing.",
+            ],
+          },
+        ]}
         whatItDoes="StudyKro's free AI essay outline generator turns any essay topic into a complete, structured outline in seconds. You get a working title, a clear thesis statement, hook ideas for the introduction, body paragraphs with topic sentences and evidence prompts, a counterargument with rebuttal, a conclusion, and suggested source types to research. It supports argumentative, expository, narrative, compare-and-contrast, and analytical essays at any target word count from 300 to 5,000 words. It's the fastest way to skip the blank-page panic and start writing with a structure that actually holds together."
         howToUse={[
           "Type your essay topic, pick the essay type, and set the target word count.",
