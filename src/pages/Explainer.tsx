@@ -198,6 +198,38 @@ export default function Explainer() {
 
       <ToolSeoContent
         toolName="Free AI Concept Explainer"
+        guideTitle="How to turn an explanation into real understanding"
+        guide={[
+          {
+            heading: "Start by naming exactly where you got lost",
+            body: [
+              "Most students ask for an explanation of a whole topic when what actually broke was one specific step. 'Explain integration by parts' produces a generic lecture; 'why does the formula have a minus sign in front of the second integral' produces the sentence you actually needed. Before asking, reread your notes until you can point at the first line that stopped making sense, and ask about that line.",
+              "The narrower the question, the more useful the answer — and the faster you can check whether the answer is right.",
+            ],
+          },
+          {
+            heading: "Use the ladder of difficulty deliberately",
+            body: [
+              "Reading a concept at a simple level first is not cheating or dumbing down. A simplified version gives you a rough mental map, and a map makes the technical version far easier to slot into place. The mistake is stopping there.",
+              "Work upward: read the beginner explanation, then the standard one, then the advanced one. If a jump between two levels loses you, that gap is the thing you don't understand yet — go back and close it rather than pushing on.",
+            ],
+          },
+          {
+            heading: "Analogies help, until they don't",
+            body: [
+              "Every analogy breaks somewhere, and knowing where it breaks is often more instructive than the analogy itself. Electricity behaves like water in pipes right up until you need to think about voltage across a capacitor. Atoms look like little solar systems until you meet orbitals.",
+              "So after you accept an analogy, ask the follow-up: where does this comparison stop being true? Students who can answer that question consistently outperform students who only memorised the comparison.",
+            ],
+          },
+          {
+            heading: "Prove to yourself that it landed",
+            body: [
+              "Close the page and explain the concept out loud in your own words, as though teaching someone who has never met it. Any sentence where you stall, hedge, or slip back into textbook phrasing marks a piece you have not understood — only recognised. That is the Feynman technique, and it is the fastest lie detector for false fluency.",
+              "Then apply it. Work one problem, generate a short quiz, or write three flashcards drawn from the explanation. Understanding that has never been used under retrieval conditions tends to evaporate within days.",
+              "Repeat the loop a week later. If you can still reconstruct the explanation from scratch, it is genuinely yours.",
+            ],
+          },
+        ]}
         whatItDoes="The StudyKro free AI concept explainer breaks down any confusing topic into a layered explanation you can actually understand. Type a concept (or upload your notes) and you get an ELI5 (explain like I'm 5), an everyday analogy, a deeper detailed version, key term definitions, a worked example, and the most common misconceptions to avoid. It's built around the Feynman technique — if you can explain it simply, you really know it. This Feynman technique AI tool is perfect for cracking the topics that textbooks make worse, not better."
         howToUse={[
           "Type a concept or upload a PDF / DOCX of the chapter you're stuck on.",
