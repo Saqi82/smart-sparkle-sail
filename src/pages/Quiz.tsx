@@ -289,6 +289,38 @@ export default function Quiz() {
 
       <ToolSeoContent
         toolName="Free AI Quiz Generator"
+        guideTitle="Using practice quizzes as a study method, not just a score check"
+        guide={[
+          {
+            heading: "Testing is studying, not measuring",
+            body: [
+              "Most students treat quizzes as an audit performed after the real work of revision. The research says the opposite: the act of retrieving an answer strengthens the memory more than another pass of reading ever will. This is the testing effect, and it is one of the largest, most reliably replicated findings in learning science.",
+              "Practically, that means you should be quizzing yourself from the first week, on material you only half know, rather than waiting until you feel ready. Feeling ready is usually just familiarity with the page layout.",
+            ],
+          },
+          {
+            heading: "Getting questions wrong is the point",
+            body: [
+              "A quiz where you score full marks taught you almost nothing. A quiz where you score sixty per cent has just handed you a precise list of what to study next, which is far more valuable than a comfortable number.",
+              "Provided you see the correct answer afterwards, errors during practice don't embed themselves — corrected mistakes actually produce better long-term retention than answers you got right easily. So aim for difficulty, and treat a low score as useful data rather than a verdict.",
+            ],
+          },
+          {
+            heading: "Read the explanations, especially for lucky guesses",
+            body: [
+              "When you get a multiple-choice question right by elimination or instinct, you haven't learned it — you've dodged it. Mark those questions and revisit them, because in an exam the distractors will be tuned differently and the guess won't land.",
+              "For every wrong answer, work out why the correct option is correct and why yours was tempting. Distractors are usually built from the exact misconception you just displayed, which makes them a free diagnosis.",
+            ],
+          },
+          {
+            heading: "Building a proper practice cycle",
+            body: [
+              "Generate a quiz from a chapter, sit it closed-book, mark it honestly, and note every topic you missed. Study only those topics, then wait at least a day and generate a fresh quiz on the same chapter. Repeat until two consecutive attempts come out clean.",
+              "Vary the question format as the exam approaches. Multiple choice is good for coverage and speed; short-answer and problem questions are better rehearsal for papers that require written work, because they demand generation rather than selection.",
+              "Interleave subjects rather than blocking them. Mixing topics within a session feels harder and produces noticeably better transfer to exam conditions, where questions never arrive in tidy chapter order.",
+            ],
+          },
+        ]}
         whatItDoes="StudyKro's free AI quiz generator turns any topic, paragraph of notes, or uploaded document into a multiple-choice practice quiz with instant feedback. Each question comes with four answer options, the correct answer, and a clear explanation of why it's right — so every miss becomes a mini lesson. You can pick your difficulty (easy, medium, hard) and how many questions you want (5, 10, or 15). It's the fastest way to self-test before an exam, and unlike static question banks, the AI quiz generator creates fresh questions every time."
         howToUse={[
           "Type a topic, paste your notes, or upload a PDF / DOCX of the chapter you want to be quizzed on.",

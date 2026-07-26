@@ -261,6 +261,39 @@ export default function Plagiarism() {
 
       <ToolSeoContent
         toolName="Free AI Plagiarism Checker"
+        guideTitle="Understanding originality, citation, and what a checker can and can't tell you"
+        guide={[
+          {
+            heading: "Most plagiarism isn't deliberate",
+            body: [
+              "Outright copying is rare. What trips students up is the grey zone: paraphrasing a source so closely that the structure remains the author's, forgetting which sentences in a set of notes were quoted verbatim, or citing a source for one sentence when the whole paragraph came from it.",
+              "The practical defence is bookkeeping. Record the source and page number the moment you take a note, and mark direct quotations clearly at the point of copying. Nearly every accidental plagiarism case starts with notes that lost track of their origin weeks earlier.",
+            ],
+          },
+          {
+            heading: "What proper paraphrasing actually requires",
+            body: [
+              "Swapping words for synonyms while keeping the original sentence structure is still plagiarism, even with a citation attached. A genuine paraphrase means reading the passage, closing it, and writing the idea in your own sentence shapes from memory — then citing the source.",
+              "If the author's exact phrasing matters, quote it and mark it as a quotation. Trying to disguise a memorable phrase is both riskier and weaker than quoting it openly.",
+            ],
+          },
+          {
+            heading: "How to read a similarity report",
+            body: [
+              "A similarity percentage is not a plagiarism score. Reference lists, standard terminology, common phrases, and correctly quoted material all register as matches. A paper at fifteen per cent may be entirely sound, while one at four per cent can contain a single serious unattributed passage.",
+              "Read the flagged passages individually and ask one question of each: does this text belong to someone else, and if so, is that made clear to the reader? That's the only judgement that matters.",
+              "Also remember that any checker only compares against the sources it can reach. A clean report is evidence, not proof, and it is never a substitute for citing honestly as you write.",
+            ],
+          },
+          {
+            heading: "Where AI fits, ethically",
+            body: [
+              "This tool is intended for checking your own writing before submission — the same role a proofreader plays. It exists to help you catch citation slips and over-close paraphrase, not to help anyone disguise work they didn't do.",
+              "Submitting machine-generated text as your own is academic misconduct at essentially every institution, and most now treat it as seriously as classic plagiarism. Beyond the risk, it removes the thinking the assignment was set to develop.",
+              "If you use AI tools while studying, use them for planning, explanation, and feedback, and keep the drafting yours. Check your institution's specific policy too — the rules vary, and ignorance of them is rarely accepted as a defence.",
+            ],
+          },
+        ]}
         whatItDoes="StudyKro's free AI plagiarism checker scans essays, assignments, articles, and any pasted text for copied phrasing, encyclopedic patterns, and AI-generated output. You get an originality score, a plagiarism likelihood score, an AI-written likelihood score, sentence-level flagged passages with confidence ratings, and a clean rewrite suggestion for every issue. It works on raw text or uploaded PDFs, DOCX, TXT, and images. Built for students who want a fast, private originality check before turning in work — no signup, no upload to a public database, and nothing stored on our servers."
         howToUse={[
           "Paste your essay or upload a PDF, DOCX, TXT, or image of your work.",

@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 type Faq = { q: string; a: string };
 type Related = { to: string; label: string; desc: string };
 type Benefit = { title: string; body: string };
+type GuideSection = { heading: string; body: string[] };
 
 type Props = {
   toolName: string;
@@ -13,6 +14,9 @@ type Props = {
   benefits: Benefit[];
   faqs: Faq[]; // 5
   related: Related[]; // >=3
+  /** Optional long-form editorial guide rendered between benefits and the FAQ. */
+  guide?: GuideSection[];
+  guideTitle?: string;
 };
 
 /**
@@ -27,6 +31,8 @@ export default function ToolSeoContent({
   benefits,
   faqs,
   related,
+  guide,
+  guideTitle,
 }: Props) {
   useEffect(() => {
     if (!faqs?.length) return;
@@ -84,6 +90,28 @@ export default function ToolSeoContent({
           ))}
         </div>
       </section>
+
+      {guide && guide.length > 0 && (
+        <section aria-labelledby="guide">
+          <h2 id="guide" className="font-display text-2xl font-bold sm:text-3xl">
+            {guideTitle ?? `A practical guide to using the ${toolName}`}
+          </h2>
+          <div className="mt-6 max-w-3xl space-y-10">
+            {guide.map((g) => (
+              <article key={g.heading}>
+                <h3 className="font-display text-xl font-semibold">{g.heading}</h3>
+                {g.body.map((p, i) => (
+                  <p key={i} className="mt-3 helper-copy leading-7">
+                    {p}
+                  </p>
+                ))}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+
 
       <section aria-labelledby="faq">
         <h2 id="faq" className="font-display text-2xl font-bold sm:text-3xl">

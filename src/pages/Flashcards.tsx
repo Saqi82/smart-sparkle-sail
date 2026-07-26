@@ -259,6 +259,38 @@ export default function Flashcards() {
 
       <ToolSeoContent
         toolName="Free AI Flashcard Generator"
+        guideTitle="How to build and review flashcards that actually stick"
+        guide={[
+          {
+            heading: "One idea per card, always",
+            body: [
+              "The single most common flashcard mistake is cramming a whole paragraph onto one card. When a card holds three facts, you can never tell which of them you actually knew, so the scheduling breaks down and the card becomes a chore you dread rather than a quick win.",
+              "Split anything compound. 'Causes of World War I' becomes five cards, each asking for one cause and its mechanism. Short cards get answered in seconds, which means you'll get through more of them and quit less often.",
+            ],
+          },
+          {
+            heading: "Write prompts that force retrieval, not recognition",
+            body: [
+              "A card that asks 'Mitochondria?' invites you to nod along at the answer. A card that asks 'Which organelle produces most of a cell's ATP, and by what process?' forces you to generate the answer from memory. Only the second one builds durable recall.",
+              "Cloze deletions work well for definitions and formulas; question-and-answer format works better for processes and causal chains. Avoid cards whose answer is simply 'yes' or 'no' — you'll guess right half the time and learn nothing.",
+            ],
+          },
+          {
+            heading: "Understand before you memorise",
+            body: [
+              "Flashcards are for consolidating knowledge you already grasp, not for acquiring it from scratch. Memorising a definition you can't explain produces brittle knowledge that collapses the moment an exam question phrases things differently.",
+              "If a card keeps failing, that's a signal to stop drilling it and go back to the source material or an explanation of the underlying concept. Once it makes sense, the card usually becomes easy within two or three reviews.",
+            ],
+          },
+          {
+            heading: "Review on a schedule, not on impulse",
+            body: [
+              "Spaced repetition beats massed practice by a wide margin in the research literature. Review a new card the same day, then after two days, a week, two weeks, and a month. Each successful recall at a longer interval pushes the forgetting curve further out.",
+              "Short daily sessions beat long weekly ones. Fifteen minutes a day across a term will comfortably outperform three-hour cram sessions the week before the exam, and it costs less total time.",
+              "Prune ruthlessly. Delete cards for things you now know cold, and rewrite cards you keep getting wrong — a persistently failing card is nearly always a badly written card rather than a memory failure.",
+            ],
+          },
+        ]}
         whatItDoes="The StudyKro free AI flashcard generator turns any notes, textbook chapter, lecture transcript, or topic name into a ready-to-study deck of question-and-answer cards in seconds. Each card is written for active recall, the technique cognitive scientists consistently rank as one of the most effective ways to remember information long-term. You can paste raw notes, upload a PDF or DOCX, or just type a topic, and the AI flashcard generator extracts the most testable facts, definitions, and processes — then sorts them by difficulty so you study the right things first."
         howToUse={[
           "Paste your notes, type a topic, or upload a PDF / DOCX of a chapter you want to learn.",

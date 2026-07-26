@@ -250,6 +250,39 @@ export default function StudyPlan() {
 
       <ToolSeoContent
         toolName="Free AI Study Plan Generator"
+        guideTitle="Building a study plan you'll still be following in week three"
+        guide={[
+          {
+            heading: "Plan around the hours you really have",
+            body: [
+              "Almost every abandoned study plan failed for the same reason: it was written for an idealised version of the student. Before allocating anything, write down your fixed commitments — classes, work shifts, travel, sleep, meals — and only then divide what's left. A plan that assumes forty free hours a week when you have eighteen collapses on the first bad day and takes your motivation with it.",
+              "Leave at least one empty buffer block per week. Something will overrun, and a plan with slack absorbs it instead of breaking.",
+            ],
+          },
+          {
+            heading: "Allocate by weight and weakness, not by comfort",
+            body: [
+              "Time should follow two signals: how many marks a topic carries, and how shaky you currently are on it. Most students invert this, spending the most time on the material they already enjoy because it feels productive.",
+              "Rank your topics honestly on both axes at the start, and revisit the ranking every couple of weeks. As weak areas firm up, the allocation should shift rather than staying frozen from day one.",
+            ],
+          },
+          {
+            heading: "Make sessions concrete and testable",
+            body: [
+              "'Study biology, two hours' is not a task — there's no way to know whether you did it. 'Complete twenty retrieval questions on enzyme kinetics, then write a one-page summary from memory' is. Concrete tasks are easier to start, easier to finish, and give you a real signal about progress.",
+              "Build active work into every block. Reading and highlighting feel like studying but produce weak retention; retrieval practice, problem sets, and self-explanation produce strong retention for the same time spent.",
+              "Sessions of forty-five to sixty minutes with a short break work well for most people. Longer blocks tend to degrade into passive reading once attention fades.",
+            ],
+          },
+          {
+            heading: "Review the plan weekly",
+            body: [
+              "Spend ten minutes at the end of each week comparing what you planned against what you did. If you consistently completed only half, the plan is too ambitious — cut it rather than resolving to try harder. Repeated failure against an unrealistic schedule is corrosive.",
+              "Schedule spaced revisits of earlier topics rather than touching each subject once and moving on. A plan that never returns to week one's material guarantees you'll relearn it from scratch in the final fortnight.",
+              "Finally, protect sleep and at least one genuine rest day. Consolidation happens away from the desk, and a rested week of focused work beats an exhausted fortnight of unfocused hours.",
+            ],
+          },
+        ]}
         whatItDoes="StudyKro's free AI study plan generator builds a personalized, day-by-day revision schedule for any exam. Tell it the subject, your exam date, how many hours you can study daily, your current level, and your weak areas — and the AI returns an overall strategy plus a detailed plan for every day, including focus topics, specific tasks, and study cues. It's designed for students juggling multiple subjects who want a clear, realistic timetable instead of vague advice. The plan saves checkboxes so you can track progress across sessions."
         howToUse={[
           "Enter your subject, exam date, hours per day, level, and any weak areas.",
