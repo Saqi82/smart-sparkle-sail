@@ -31,6 +31,8 @@ export default function ToolSeoContent({
   benefits,
   faqs,
   related,
+  guide,
+  guideTitle,
 }: Props) {
   useEffect(() => {
     if (!faqs?.length) return;
