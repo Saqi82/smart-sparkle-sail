@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 type Faq = { q: string; a: string };
 type Related = { to: string; label: string; desc: string };
 type Benefit = { title: string; body: string };
+type GuideSection = { heading: string; body: string[] };
 
 type Props = {
   toolName: string;
@@ -13,6 +14,9 @@ type Props = {
   benefits: Benefit[];
   faqs: Faq[]; // 5
   related: Related[]; // >=3
+  /** Optional long-form editorial guide rendered between benefits and the FAQ. */
+  guide?: GuideSection[];
+  guideTitle?: string;
 };
 
 /**
