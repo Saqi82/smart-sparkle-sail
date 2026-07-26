@@ -206,6 +206,38 @@ export default function ExamTips() {
 
       <ToolSeoContent
         toolName="Free AI Exam Tips Generator"
+        guideTitle="Turning exam advice into an actual revision plan"
+        guide={[
+          {
+            heading: "Work backwards from the paper, not forwards from the syllabus",
+            body: [
+              "The syllabus tells you what could be examined; past papers tell you what usually is. Before you plan a single study session, look at how the marks are distributed, how many questions you must answer, and how much time each mark is worth. A topic worth thirty per cent of the paper deserves roughly thirty per cent of your revision, regardless of how interesting the others are.",
+              "This single reordering — marks first, curiosity second — is the difference between students who feel prepared and students who ran out of time on the topics that mattered.",
+            ],
+          },
+          {
+            heading: "Separate the three kinds of gap",
+            body: [
+              "Underperformance almost always traces back to one of three things: you don't know the material, you know it but can't retrieve it under pressure, or you can retrieve it but mismanage the exam itself. The fixes are completely different.",
+              "Knowledge gaps need explanation and re-encoding. Retrieval gaps need testing under timed, closed-book conditions. Exam-technique gaps need full mock papers with a clock running and strict question-timing discipline. Diagnose honestly before choosing a fix, or you'll spend three weeks rereading notes to solve a problem that was never about the notes.",
+            ],
+          },
+          {
+            heading: "Practise in the format you'll be tested in",
+            body: [
+              "Memory is context-sensitive. If the exam demands handwritten essays in forty minutes, revision that consists only of highlighting will not transfer. Write timed essay plans. Do multiple-choice under time pressure. Solve problems without the worked solution beside you.",
+              "Mark your own work against the official scheme afterwards. Seeing where examiners actually award marks changes how you write far more effectively than any list of tips.",
+            ],
+          },
+          {
+            heading: "The final week and the day itself",
+            body: [
+              "The last week is for consolidation, not new material. Cycle through your weakest topics using active recall, keep doing short timed sections, and stop adding new content that you won't have time to embed.",
+              "Sleep is part of revision, not a break from it. Memory consolidation happens overnight, and an all-nighter reliably costs more marks in lost accuracy than it gains in extra coverage.",
+              "On the day, read the whole paper first, allocate minutes per question in the margin, and start with the question you're most confident about to build momentum. Leave time at the end to return to anything you flagged — partial answers to every required question beat perfect answers to most of them.",
+            ],
+          },
+        ]}
         whatItDoes="StudyKro's free AI exam tips generator predicts the most likely questions for any subject and gives you a focused last-mile prep plan. Tell it the subject, an optional specific topic, and your exam type (midterm, final, or semester), and the AI returns likely exam questions, must-study topics, common student mistakes to avoid, last-minute tips, time management advice, and a scoring strategy. It's the smart way to spend the final 24–72 hours before exam day — instead of rereading everything, you focus on what's most likely to be tested."
         howToUse={[
           "Enter the subject, an optional specific topic, and choose your exam type.",
