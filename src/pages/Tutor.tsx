@@ -604,6 +604,38 @@ export default function Tutor() {
 
       <ToolSeoContent
         toolName="Free AI Tutor"
+        guideTitle="Getting real teaching out of an AI tutor"
+        guide={[
+          {
+            heading: "Ask for the reasoning, not the answer",
+            body: [
+              "The fastest way to waste a tutor is to request final answers. You get a number, copy it down, and learn nothing that transfers to the next question. Ask instead for the method: what principle applies here, why this step follows the last one, and what the common wrong turn looks like.",
+              "A good habit is to attempt the problem first, then paste your attempt and ask where it went wrong. Feedback on your own reasoning is far more useful than a clean worked solution you had no part in.",
+            ],
+          },
+          {
+            heading: "Give it your actual material",
+            body: [
+              "Generic explanations use generic notation and generic examples, which often don't match your course. Upload the lecture slides, the textbook chapter, or the problem sheet, and answers get anchored to the definitions and conventions your examiner will use.",
+              "Tell it your level too. 'I'm in first-year undergraduate physics and I've covered calculus but not differential equations' prevents both baby talk and explanations that assume tools you don't have yet.",
+            ],
+          },
+          {
+            heading: "Keep the conversation going",
+            body: [
+              "The advantage of a tutor over a textbook is that you can interrupt it. When a sentence loses you, say so immediately rather than reading on and hoping it resolves. Ask for a simpler version, a worked example, a counterexample, or an analogy — then ask where the analogy breaks.",
+              "Push back when something sounds wrong. Sometimes you're mistaken and the explanation will show you why; sometimes you've caught a genuine error, which is itself worth knowing.",
+            ],
+          },
+          {
+            heading: "Verify, then consolidate",
+            body: [
+              "AI systems can state incorrect things fluently. Treat explanations as a strong starting point, and check anything load-bearing — a formula, a date, a definition you'll rely on in an exam — against your notes or textbook. When answers are grounded in a document you uploaded, check the citation points where it says.",
+              "Once you understand something, do something with it the same day: write flashcards, sit a short quiz, or explain it aloud without looking. Understanding that is never retrieved fades quickly, and the tutoring session is only the first half of the work.",
+              "Come back a week later and try to reconstruct the explanation from memory. Whatever you can't reconstruct is your next question.",
+            ],
+          },
+        ]}
         whatItDoes="The StudyKro Free AI Tutor is an intelligent academic assistant that helps students learn faster using the Socratic method. Unlike generic chatbots, it adapts to your course material—upload a PDF, DOCX, PPTX, TXT, or even an image of your notes and every explanation is anchored to your own textbook with page-level citations. It asks guiding questions instead of spoon-feeding answers, corrects misconceptions gently, and can generate custom quizzes on demand to test your understanding."
         howToUse={[
           "Upload your course material (PDF, lecture slides, notes) or skip this step to ask general questions.",
