@@ -170,6 +170,39 @@ export default function Mnemonics() {
 
       <ToolSeoContent
         toolName="Free AI Mnemonic Generator"
+        guideTitle="How to build mnemonics that actually survive exam day"
+        guide={[
+          {
+            heading: "Why mnemonics work when re-reading doesn't",
+            body: [
+              "Rote repetition creates weak, isolated memory traces. A mnemonic does the opposite: it forces you to encode new material against something you already know well — a familiar word, a silly image, the layout of your kitchen. That extra structure gives your brain more than one route back to the information, which is exactly what you need under exam pressure when the obvious route goes blank.",
+              "The two mechanisms doing the heavy lifting are dual coding (pairing verbal information with a mental image) and elaborative encoding (connecting new facts to existing knowledge). Both are among the most consistently replicated findings in cognitive psychology, and both are things a plain list of terms gives you none of.",
+            ],
+          },
+          {
+            heading: "Choosing the right type of mnemonic for the material",
+            body: [
+              "Short, fixed-order lists — the planets, the order of operations, the stages of mitosis — are best served by an acronym or acrostic. The first letters carry the sequence, and one short phrase does all the work.",
+              "Longer lists of ten or more items, or lists where you need to recall each item in isolation, respond better to a memory palace. Placing items along a route you can walk in your head gives each one a unique retrieval cue, which is why competitive memorisers use nothing else.",
+              "Material that is conceptual rather than list-based — a process, a cause-and-effect chain, a legal test — usually sticks best as a short story, because the narrative itself encodes the order and the causal links at the same time.",
+            ],
+          },
+          {
+            heading: "Making a generated mnemonic your own",
+            body: [
+              "Treat whatever the generator returns as a first draft. Mnemonics are personal: the version that works is the one built from images and references that mean something to you. Swap in your own street, your own pets, your own in-jokes. A slightly clumsy mnemonic you invented usually beats a polished one you were handed.",
+              "Vivid, exaggerated, and mildly absurd beats tasteful every time. If an image makes you laugh or wince, it will still be there in three weeks.",
+            ],
+          },
+          {
+            heading: "Rehearsing so it lasts",
+            body: [
+              "A mnemonic is a retrieval scaffold, not a substitute for practice. Recite it from memory the same day you create it, again the next day, then after three days, a week, and two weeks. Each successful recall pushes the forgetting curve further out.",
+              "Always practise unpacking the mnemonic back into the real content. Knowing that 'My Very Educated Mother' exists is useless if you can't get from the M to Mercury. Test the expansion, not the phrase.",
+              "Finally, retire mnemonics you no longer need. Once a fact is genuinely automatic, the scaffold just adds a step — drop it and let the direct recall take over.",
+            ],
+          },
+        ]}
         whatItDoes="StudyKro's free AI mnemonic generator turns any list of items, terms, or facts into memorable hooks in seconds. You get six different memory aids in one shot: an acronym, an acrostic sentence, a short story, vivid visual imagery, a rhyme or song, and a step-by-step memory palace walkthrough. Cognitive science shows mnemonics dramatically improve recall by tying new information to vivid, multi-sensory cues. Whether you're memorizing the cranial nerves, the planets, periodic table groups, vocabulary, or historical dates, the AI mnemonic generator gives you several angles so at least one will stick."
         howToUse={[
           "Optionally enter a subject (e.g. Biology, History) to give the AI context.",
