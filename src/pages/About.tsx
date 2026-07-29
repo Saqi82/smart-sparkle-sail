@@ -81,26 +81,26 @@ export default function About() {
 
       <section className="mt-16 paper-panel p-8 sm:p-12">
         <Users className="h-8 w-8 text-primary" />
-        <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">Built by the team</h2>
+        <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">Built by the MSN</h2>
         <p className="mt-4 text-base leading-7 text-muted-foreground">
-          StudyKro is developed by <span className="font-semibold text-foreground">Saqib Nawaz</span> and his team
-          at <span className="font-semibold text-foreground">TEVTA</span>, Department of{" "}
-          <span className="font-semibold text-foreground">CIT (Computer Information Technology)</span>. The team
+          StudyKro is developed by <span className="font-semibold text-foreground">MSN</span> and vibe coded platform
+           <span className="font-semibold text-foreground">Lovable</span>, Core of{" "}
+          <span className="font-semibold text-foreground">Education tools</span>. Owner
           combines hands-on classroom insight with modern AI engineering to build study tools that actually help
           students learn — not just complete homework.
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           <div className="rounded-xl border border-border bg-background/40 p-4">
             <p className="text-xs uppercase tracking-wider text-muted-foreground">Lead Developer</p>
-            <p className="mt-1 font-display text-lg font-bold">Saqib Nawaz</p>
+            <p className="mt-1 font-display text-lg font-bold">MSN</p>
           </div>
           <div className="rounded-xl border border-border bg-background/40 p-4">
-            <p className="text-xs uppercase tracking-wider text-muted-foreground">Institution</p>
-            <p className="mt-1 font-display text-lg font-bold">TEVTA</p>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">Platform</p>
+            <p className="mt-1 font-display text-lg font-bold">Lovable</p>
           </div>
           <div className="rounded-xl border border-border bg-background/40 p-4">
-            <p className="text-xs uppercase tracking-wider text-muted-foreground">Department</p>
-            <p className="mt-1 font-display text-lg font-bold">CIT</p>
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">Core</p>
+            <p className="mt-1 font-display text-lg font-bold">Education</p>
           </div>
         </div>
       </section>
